@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit IV - Understanding Computer Forensics | AKTU Study Guide</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top"></button>
+    
+    <header>
+        <nav>
+            <div class="nav-container">
+                <a href="index.html" class="nav-brand">Cyber Security Guide</a>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="syllabus.html">Syllabus</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="active">Units</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="unit1.html">Unit I</a></li>
+                            <li><a href="unit2.html">Unit II</a></li>
+                            <li><a href="unit3.html">Unit III</a></li>
+                            <li><a href="unit4.html" class="active">Unit IV</a></li>
+                            <li><a href="unit5.html">Unit V</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="exam-prep.html">Exam Preparation</a></li>
+                    <li><a href="revision.html">Quick Revision</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="hero">
+            <h1>Unit IV</h1>
+            <p class="course-codes">Understanding Computer Forensics</p>
+        </section>
+
+        <!-- Unit Overview -->
+        <div class="unit-overview">
+            <h2>Unit Overview</h2>
+            <p>This unit covers the principles and practices of computer forensics, including digital evidence handling, the forensic investigation lifecycle, chain of custody requirements, and specialized forensic domains such as email, network, and social media forensics.</p>
+            
+            <div class="topics-covered">
+                <h3>Topics Covered</h3>
+                <ul>
+                    <li>Forensics Fundamentals</li>
+                    <li>Digital Evidence Types</li>
+                    <li>Investigation Lifecycle</li>
+                    <li>Chain of Custody</li>
+                    <li>Email Forensics</li>
+                    <li>Network Forensics</li>
+                    <li>Social Media Forensics</li>
+                    <li>Forensic Challenges</li>
+                </ul>
+            </div>
+        </div>
+
+        <section class="content-section">
+            <h2>4.1 Introduction to Computer Forensics</h2>
+
+            <div class="definition">
+                <strong>Computer Forensics</strong>
+                <p>Computer forensics is the application of investigation and analysis techniques to gather and preserve evidence from a particular computing device in a way that is suitable for presentation in a court of law. It involves the identification, preservation, examination, and analysis of digital evidence.</p>
+            </div>
+
+            <h3>Scope of Computer Forensics</h3>
+            <ul>
+                <li>Criminal investigations involving computers</li>
+                <li>Civil litigation and dispute resolution</li>
+                <li>Corporate investigations (fraud, policy violations)</li>
+                <li>Incident response and breach analysis</li>
+                <li>Intelligence and national security operations</li>
+            </ul>
+
+            <h3>Objectives of Computer Forensics</h3>
+            <ol>
+                <li><strong>Identify:</strong> Locate and identify digital evidence</li>
+                <li><strong>Preserve:</strong> Protect evidence from alteration or destruction</li>
+                <li><strong>Extract:</strong> Retrieve relevant data from storage media</li>
+                <li><strong>Analyze:</strong> Examine evidence to determine significance</li>
+                <li><strong>Document:</strong> Create comprehensive records of findings</li>
+                <li><strong>Present:</strong> Provide testimony and reports for legal proceedings</li>
+            </ol>
+
+            <h3>Principles of Computer Forensics</h3>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Principle</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Minimal Handling</td>
+                        <td>Handle evidence as little as possible to prevent contamination</td>
+                    </tr>
+                    <tr>
+                        <td>Documentation</td>
+                        <td>Record all actions taken during investigation</td>
+                    </tr>
+                    <tr>
+                        <td>Integrity</td>
+                        <td>Maintain evidence in its original state</td>
+                    </tr>
+                    <tr>
+                        <td>Reproducibility</td>
+                        <td>Results should be reproducible by other investigators</td>
+                    </tr>
+                    <tr>
+                        <td>Compliance</td>
+                        <td>Follow legal procedures and standards</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="key-points">
+                <h4>Key Points for Examination:</h4>
+                <ul>
+                    <li>Computer forensics focuses on legally admissible digital evidence</li>
+                    <li>Evidence must be preserved in its original state</li>
+                    <li>Documentation is critical throughout the process</li>
+                    <li>Findings must be reproducible and verifiable</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>4.2 Digital Forensics Science</h2>
+
+            <div class="definition">
+                <strong>Digital Forensics:</strong>
+                A broader term encompassing the recovery and investigation of material found in any digital device, including computers, mobile devices, networks, and cloud systems. It is a branch of forensic science that applies scientific methods to digital evidence.
+            </div>
+
+            <h3>Branches of Digital Forensics</h3>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Branch</th>
+                        <th>Focus Area</th>
+                        <th>Examples</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Computer Forensics</strong></td>
+                        <td>Desktop and laptop computers</td>
+                        <td>Hard drive analysis, file recovery</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mobile Forensics</strong></td>
+                        <td>Smartphones and tablets</td>
+                        <td>Call logs, messages, app data</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Network Forensics</strong></td>
+                        <td>Network traffic and logs</td>
+                        <td>Packet analysis, intrusion detection</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Memory Forensics</strong></td>
+                        <td>Volatile memory (RAM)</td>
+                        <td>Running processes, encryption keys</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Database Forensics</strong></td>
+                        <td>Database systems</td>
+                        <td>Transaction logs, data manipulation</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cloud Forensics</strong></td>
+                        <td>Cloud-based systems</td>
+                        <td>Virtual machine analysis, logs</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Forensic Tools Categories</h3>
+            <ul>
+                <li><strong>Acquisition Tools:</strong> Create forensic images of storage media</li>
+                <li><strong>Analysis Tools:</strong> Examine and analyze digital evidence</li>
+                <li><strong>Documentation Tools:</strong> Record findings and generate reports</li>
+                <li><strong>Password Recovery Tools:</strong> Access encrypted or protected data</li>
+                <li><strong>File Carving Tools:</strong> Recover deleted or fragmented files</li>
+            </ul>
+
+            <h3>Scientific Method in Digital Forensics</h3>
+            <ol>
+                <li><strong>Observation:</strong> Initial assessment of the situation</li>
+                <li><strong>Hypothesis:</strong> Formulating theories about what occurred</li>
+                <li><strong>Testing:</strong> Examining evidence to test hypotheses</li>
+                <li><strong>Analysis:</strong> Interpreting test results</li>
+                <li><strong>Conclusion:</strong> Drawing conclusions based on evidence</li>
+                <li><strong>Reporting:</strong> Documenting and presenting findings</li>
+            </ol>
+        </section>
+
+        <section class="content-section">
+            <h2>4.3 The Need for Computer Forensics</h2>
+
+            <h3>Reasons for Computer Forensics</h3>
+
+            <h4>1. Legal Requirements</h4>
+            <ul>
+                <li>Prosecuting computer-related crimes</li>
+                <li>Supporting civil litigation</li>
+                <li>Regulatory compliance investigations</li>
+                <li>Intellectual property disputes</li>
+            </ul>
+
+            <h4>2. Organizational Needs</h4>
+            <ul>
+                <li>Internal investigations of employee misconduct</li>
+                <li>Incident response and breach analysis</li>
+                <li>Policy violation investigations</li>
+                <li>Due diligence in mergers and acquisitions</li>
+            </ul>
+
+            <h4>3. Data Recovery</h4>
+            <ul>
+                <li>Recovering accidentally deleted files</li>
+                <li>Retrieving data from damaged storage media</li>
+                <li>Reconstructing events from system artifacts</li>
+            </ul>
+
+            <h3>Importance in Modern Context</h3>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Factor</th>
+                        <th>Impact on Forensics Need</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Increasing Cybercrime</td>
+                        <td>Growing need for investigation capabilities</td>
+                    </tr>
+                    <tr>
+                        <td>Digital Evidence</td>
+                        <td>Most crimes now have digital components</td>
+                    </tr>
+                    <tr>
+                        <td>Regulatory Compliance</td>
+                        <td>Legal requirements for data investigation</td>
+                    </tr>
+                    <tr>
+                        <td>Business Continuity</td>
+                        <td>Understanding breaches to prevent recurrence</td>
+                    </tr>
+                    <tr>
+                        <td>Legal Proceedings</td>
+                        <td>Digital evidence increasingly accepted in courts</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="key-points">
+                <h4>Key Points for Examination:</h4>
+                <ul>
+                    <li>Forensics is essential for prosecuting cybercrimes</li>
+                    <li>Organizations need forensics for internal investigations</li>
+                    <li>Digital evidence is present in most modern crimes</li>
+                    <li>Regulatory requirements drive forensic capabilities</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>4.4 Cyber Forensics and Digital Evidence</h2>
+
+            <div class="definition">
+                <strong>Digital Evidence:</strong>
+                Information stored or transmitted in digital form that may be used in court. It includes data from computers, networks, mobile devices, and other electronic sources that can establish facts relevant to an investigation.
+            </div>
+
+            <h3>Types of Digital Evidence</h3>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Description</th>
+                        <th>Examples</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Volatile Data</strong></td>
+                        <td>Data that is lost when power is removed</td>
+                        <td>RAM contents, running processes, network connections</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Non-Volatile Data</strong></td>
+                        <td>Data that persists after power off</td>
+                        <td>Hard drive contents, flash storage</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Transient Data</strong></td>
+                        <td>Temporary data during system operation</td>
+                        <td>Cache files, swap space</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Active Data</strong></td>
+                        <td>Currently accessible files and data</td>
+                        <td>User documents, applications</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Latent Data</strong></td>
+                        <td>Hidden or deleted data</td>
+                        <td>Deleted files, slack space</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Characteristics of Digital Evidence</h3>
+            <ul>
+                <li><strong>Fragility:</strong> Easily altered, damaged, or destroyed</li>
+                <li><strong>Invisibility:</strong> Not apparent without proper tools</li>
+                <li><strong>Volume:</strong> Large quantities requiring systematic analysis</li>
+                <li><strong>Mobility:</strong> Can be easily copied and transmitted</li>
+                <li><strong>Time Sensitivity:</strong> May be volatile or have limited retention</li>
+            </ul>
+
+            <h3>Sources of Digital Evidence</h3>
+            <ul>
+                <li>Computer hard drives and solid-state drives</li>
+                <li>Mobile devices and tablets</li>
+                <li>Removable storage media</li>
+                <li>Network devices and logs</li>
+                <li>Cloud storage and services</li>
+                <li>Email servers and archives</li>
+                <li>Social media platforms</li>
+                <li>IoT devices</li>
+            </ul>
+
+            <h3>Admissibility Requirements</h3>
+            <ol>
+                <li><strong>Authenticity:</strong> Evidence must be genuine and unaltered</li>
+                <li><strong>Integrity:</strong> Evidence must be complete and uncorrupted</li>
+                <li><strong>Reliability:</strong> Methods used must be reliable and accepted</li>
+                <li><strong>Relevance:</strong> Evidence must relate to the case</li>
+                <li><strong>Completeness:</strong> Evidence should provide full context</li>
+            </ol>
+
+            <div class="key-points">
+                <h4>Key Points for Examination:</h4>
+                <ul>
+                    <li>Volatile data must be collected before system shutdown</li>
+                    <li>Digital evidence is fragile and easily altered</li>
+                    <li>Authenticity and integrity are critical for admissibility</li>
+                    <li>Latent data includes deleted files and hidden information</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>4.5 Forensics Analysis of E-Mail</h2>
+
+            <h3>Email as Evidence</h3>
+            <p>Email is a significant source of digital evidence in investigations involving fraud, harassment, intellectual property theft, and other crimes. Email forensics involves examining email headers, content, and metadata to establish facts.</p>
+
+            <h3>Components of Email for Analysis</h3>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Component</th>
+                        <th>Information Provided</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Header</strong></td>
+                        <td>Sender, recipient, routing path, timestamps, server information</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Body</strong></td>
+                        <td>Message content, formatting, embedded links</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Attachments</strong></td>
+                        <td>File names, types, content, metadata</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Metadata</strong></td>
+                        <td>Creation date, modification date, client information</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Email Header Analysis</h3>
+            <p>Email headers contain valuable information for investigations:</p>
+            <ul>
+                <li><strong>Received:</strong> Shows the path email took through mail servers</li>
+                <li><strong>From:</strong> Sender's email address (can be spoofed)</li>
+                <li><strong>To:</strong> Recipient's email address</li>
+                <li><strong>Date:</strong> When the email was sent</li>
+                <li><strong>Message-ID:</strong> Unique identifier for the message</li>
+                <li><strong>X-Originating-IP:</strong> IP address of sender (if available)</li>
+            </ul>
+
+            <h3>Email Forensic Process</h3>
+            <ol>
+                <li><strong>Identification:</strong> Locate relevant email evidence</li>
+                <li><strong>Preservation:</strong> Create forensic copies of email data</li>
+                <li><strong>Extraction:</strong> Retrieve emails from servers, clients, or archives</li>
+                <li><strong>Analysis:</strong> Examine headers, content, and metadata</li>
+                <li><strong>Validation:</strong> Verify authenticity and trace origin</li>
+                <li><strong>Reporting:</strong> Document findings</li>
+            </ol>
+
+            <h3>Challenges in Email Forensics</h3>
+            <ul>
+                <li>Email header spoofing</li>
+                <li>Encrypted communications</li>
+                <li>Multiple email storage locations</li>
+                <li>Email deletion and overwriting</li>
+                <li>Cross-jurisdictional issues</li>
+            </ul>
+
+            <div class="key-points">
+                <h4>Key Points for Examination:</h4>
+                <ul>
+                    <li>Email headers contain routing and origin information</li>
+                    <li>Header information can be spoofed but leaves traces</li>
+                    <li>Received headers show the actual email path</li>
+                    <li>Attachments contain metadata valuable for investigation</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>4.6 Digital Forensics Life Cycle</h2>
+
+            <h3>Phases of Digital Forensics</h3>
+
+            <h4>1. Identification</h4>
+            <ul>
+                <li>Recognize and determine the nature of the incident</li>
+                <li>Identify potential sources of evidence</li>
+                <li>Prioritize evidence collection based on volatility</li>
+                <li>Document the scene and initial observations</li>
+            </ul>
+
+            <h4>2. Preservation</h4>
+            <ul>
+                <li>Secure the crime scene and evidence</li>
+                <li>Prevent unauthorized access or modification</li>
+                <li>Document chain of custody</li>
+                <li>Create forensic images of storage media</li>
+                <li>Verify integrity using hash values</li>
+            </ul>
+
+            <h4>3. Collection</h4>
+            <ul>
+                <li>Gather evidence following proper procedures</li>
+                <li>Collect volatile data first (RAM, network connections)</li>
+                <li>Create bit-for-bit copies of storage media</li>
+                <li>Document all collection activities</li>
+            </ul>
+
+            <h4>4. Examination</h4>
+            <ul>
+                <li>Process collected data using forensic tools</li>
+                <li>Extract relevant information</li>
+                <li>Recover deleted files and hidden data</li>
+                <li>Decrypt encrypted content when possible</li>
+            </ul>
+
+            <h4>5. Analysis</h4>
+            <ul>
+                <li>Interpret extracted data</li>
+                <li>Correlate evidence from multiple sources</li>
+                <li>Construct timeline of events</li>
+                <li>Draw conclusions based on evidence</li>
+            </ul>
+
+            <h4>6. Presentation</h4>
+            <ul>
+                <li>Prepare comprehensive reports</li>
+                <li>Present findings in understandable manner</li>
+                <li>Provide expert testimony when required</li>
+                <li>Maintain objectivity and accuracy</li>
+            </ul>
+
+            <h3>Order of Volatility</h3>
+            <p>Evidence should be collected in order of volatility (most volatile first):</p>
+            <ol>
+                <li>CPU registers and cache</li>
+                <li>RAM (Random Access Memory)</li>
+                <li>Network connections and routing tables</li>
+                <li>Running processes</li>
+                <li>Hard disk and storage media</li>
+                <li>Remote logging and monitoring data</li>
+                <li>Physical configuration and network topology</li>
+                <li>Archival media (backups, tapes)</li>
+            </ol>
+
+            <div class="key-points">
+                <h4>Key Points for Examination:</h4>
+                <ul>
+                    <li>Six phases: Identification, Preservation, Collection, Examination, Analysis, Presentation</li>
+                    <li>Volatile evidence must be collected first</li>
+                    <li>Documentation is required at every phase</li>
+                    <li>Integrity verification uses hash values</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>4.7 Chain of Custody Concept</h2>
+
+            <div class="definition">
+                <strong>Chain of Custody:</strong>
+                The chronological documentation or paper trail that records the sequence of custody, control, transfer, analysis, and disposition of physical or electronic evidence. It establishes the integrity of evidence from collection to court presentation.
+            </div>
+
+            <h3>Purpose of Chain of Custody</h3>
+            <ul>
+                <li>Prove evidence has not been tampered with</li>
+                <li>Establish accountability for evidence handling</li>
+                <li>Ensure admissibility in legal proceedings</li>
+                <li>Document who handled evidence and when</li>
+                <li>Record all actions taken with evidence</li>
+            </ul>
+
+            <h3>Elements of Chain of Custody Documentation</h3>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Element</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Description of Evidence</td>
+                        <td>Detailed description including serial numbers, make, model</td>
+                    </tr>
+                    <tr>
+                        <td>Collection Information</td>
+                        <td>Date, time, location of collection</td>
+                    </tr>
+                    <tr>
+                        <td>Collector Identity</td>
+                        <td>Name and signature of person collecting evidence</td>
+                    </tr>
+                    <tr>
+                        <td>Transfer Records</td>
+                        <td>Each transfer documented with signatures</td>
+                    </tr>
+                    <tr>
+                        <td>Storage Conditions</td>
+                        <td>Where and how evidence was stored</td>
+                    </tr>
+                    <tr>
+                        <td>Access Log</td>
+                        <td>Record of each person accessing evidence</td>
+                    </tr>
+                    <tr>
+                        <td>Hash Values</td>
+                        <td>Cryptographic hashes for integrity verification</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Best Practices</h3>
+            <ol>
+                <li>Minimize the number of people handling evidence</li>
+                <li>Use tamper-evident packaging</li>
+                <li>Label all evidence clearly and uniquely</li>
+                <li>Obtain signatures for all transfers</li>
+                <li>Store evidence in secure, access-controlled locations</li>
+                <li>Calculate and verify hash values at each transfer</li>
+                <li>Photograph evidence before and after handling</li>
+            </ol>
+
+            <h3>Breaking Chain of Custody</h3>
+            <p>Chain of custody can be broken by:</p>
+            <ul>
+                <li>Gaps in documentation</li>
+                <li>Missing signatures</li>
+                <li>Improper storage conditions</li>
+                <li>Unauthorized access</li>
+                <li>Hash value changes indicating alteration</li>
+            </ul>
+
+            <div class="key-points">
+                <h4>Key Points for Examination:</h4>
+                <ul>
+                    <li>Chain of custody ensures evidence integrity</li>
+                    <li>Every transfer must be documented with signatures</li>
+                    <li>Hash values verify that evidence is unaltered</li>
+                    <li>Broken chain can make evidence inadmissible</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>4.8 Network Forensics</h2>
+
+            <div class="definition">
+                <strong>Network Forensics:</strong>
+                The capture, recording, and analysis of network events in order to discover the source of security attacks or other problem incidents. It involves monitoring and analysis of computer network traffic for the purposes of information gathering, legal evidence, or intrusion detection.
+            </div>
+
+            <h3>Network Forensics Approaches</h3>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Approach</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Catch-it-as-you-can</strong></td>
+                        <td>Capture all network packets for later analysis</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Stop, look, and listen</strong></td>
+                        <td>Analyze packets in real-time, storing only relevant data</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Data Sources for Network Forensics</h3>
+            <ul>
+                <li><strong>Full Packet Capture:</strong> Complete network traffic recording</li>
+                <li><strong>Flow Data:</strong> NetFlow, IPFIX records of connections</li>
+                <li><strong>Firewall Logs:</strong> Allowed and blocked traffic records</li>
+                <li><strong>IDS/IPS Alerts:</strong> Security event notifications</li>
+                <li><strong>DNS Logs:</strong> Domain name resolution records</li>
+                <li><strong>DHCP Logs:</strong> IP address assignment records</li>
+                <li><strong>Proxy Logs:</strong> Web traffic records</li>
+                <li><strong>Authentication Logs:</strong> Login attempts and results</li>
+            </ul>
+
+            <h3>Network Forensics Process</h3>
+            <ol>
+                <li><strong>Preparation:</strong> Deploy capture and logging infrastructure</li>
+                <li><strong>Detection:</strong> Identify anomalous network activity</li>
+                <li><strong>Capture:</strong> Record relevant network traffic</li>
+                <li><strong>Analysis:</strong> Examine captured data for evidence</li>
+                <li><strong>Correlation:</strong> Link network events with other evidence</li>
+                <li><strong>Reporting:</strong> Document findings and conclusions</li>
+            </ol>
+
+            <h3>Challenges in Network Forensics</h3>
+            <ul>
+                <li>High volume of network traffic</li>
+                <li>Encrypted traffic obscuring content</li>
+                <li>Storage requirements for full packet capture</li>
+                <li>Real-time analysis demands</li>
+                <li>Distributed nature of network attacks</li>
+                <li>IP address spoofing and anonymization</li>
+            </ul>
+
+            <div class="key-points">
+                <h4>Key Points for Examination:</h4>
+                <ul>
+                    <li>Network forensics analyzes network traffic for evidence</li>
+                    <li>Two approaches: full capture or real-time analysis</li>
+                    <li>Multiple data sources provide comprehensive view</li>
+                    <li>Encrypted traffic is a significant challenge</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>4.9 Approaching a Computer Forensics Investigation</h2>
+
+            <h3>Initial Response Steps</h3>
+
+            <h4>1. Secure the Scene</h4>
+            <ul>
+                <li>Restrict access to the investigation area</li>
+                <li>Document the initial state (photographs, notes)</li>
+                <li>Identify all devices and potential evidence</li>
+                <li>Record the condition of systems (powered on/off)</li>
+            </ul>
+
+            <h4>2. Assess the Situation</h4>
+            <ul>
+                <li>Determine the nature and scope of the incident</li>
+                <li>Identify the type of investigation required</li>
+                <li>Evaluate legal and regulatory requirements</li>
+                <li>Establish preliminary timeline</li>
+            </ul>
+
+            <h4>3. Plan the Investigation</h4>
+            <ul>
+                <li>Define investigation objectives and scope</li>
+                <li>Identify required resources and tools</li>
+                <li>Assign roles and responsibilities</li>
+                <li>Establish communication protocols</li>
+            </ul>
+
+            <h3>Evidence Collection Procedures</h3>
+
+            <h4>For Powered-On Systems:</h4>
+            <ol>
+                <li>Capture volatile data (RAM, network connections)</li>
+                <li>Document running processes and open files</li>
+                <li>Record logged-in users and network configurations</li>
+                <li>Perform orderly shutdown if appropriate</li>
+                <li>Create forensic image of storage media</li>
+            </ol>
+
+            <h4>For Powered-Off Systems:</h4>
+            <ol>
+                <li>Do not power on the system</li>
+                <li>Remove storage media carefully</li>
+                <li>Use write blockers when connecting media</li>
+                <li>Create forensic image of storage media</li>
+                <li>Verify image integrity with hash values</li>
+            </ol>
+
+            <h3>Investigation Workflow</h3>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Phase</th>
+                        <th>Activities</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Authorization</td>
+                        <td>Obtain proper legal authority for investigation</td>
+                    </tr>
+                    <tr>
+                        <td>Documentation</td>
+                        <td>Maintain detailed records throughout</td>
+                    </tr>
+                    <tr>
+                        <td>Collection</td>
+                        <td>Gather evidence following proper procedures</td>
+                    </tr>
+                    <tr>
+                        <td>Preservation</td>
+                        <td>Protect evidence integrity</td>
+                    </tr>
+                    <tr>
+                        <td>Analysis</td>
+                        <td>Examine evidence systematically</td>
+                    </tr>
+                    <tr>
+                        <td>Reporting</td>
+                        <td>Document and present findings</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="key-points">
+                <h4>Key Points for Examination:</h4>
+                <ul>
+                    <li>Secure the scene before beginning investigation</li>
+                    <li>Volatile data must be captured before shutdown</li>
+                    <li>Never power on a powered-off system without preparation</li>
+                    <li>Write blockers prevent evidence modification</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>4.10 Forensics and Social Networking Sites</h2>
+
+            <h3>Social Media as Evidence Source</h3>
+            <p>Social networking sites contain vast amounts of potentially relevant evidence including communications, relationships, locations, and activities.</p>
+
+            <h3>Types of Evidence from Social Media</h3>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Evidence Type</th>
+                        <th>Examples</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Profile Information</td>
+                        <td>Name, location, employment, education, relationships</td>
+                    </tr>
+                    <tr>
+                        <td>Communications</td>
+                        <td>Messages, comments, posts, chat logs</td>
+                    </tr>
+                    <tr>
+                        <td>Media Content</td>
+                        <td>Photos, videos with metadata (location, time)</td>
+                    </tr>
+                    <tr>
+                        <td>Connections</td>
+                        <td>Friends, followers, group memberships</td>
+                    </tr>
+                    <tr>
+                        <td>Activity Logs</td>
+                        <td>Login times, locations, device information</td>
+                    </tr>
+                    <tr>
+                        <td>Check-ins</td>
+                        <td>Location history and timestamps</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Security and Privacy Threats</h3>
+            <ul>
+                <li><strong>Identity Theft:</strong> Personal information used for fraud</li>
+                <li><strong>Social Engineering:</strong> Information used to manipulate victims</li>
+                <li><strong>Stalking:</strong> Location and activity tracking</li>
+                <li><strong>Reputation Damage:</strong> Misuse of shared content</li>
+                <li><strong>Data Mining:</strong> Aggregation of personal information</li>
+            </ul>
+
+            <h3>Forensic Challenges</h3>
+            <ul>
+                <li>Data stored on remote servers</li>
+                <li>Privacy settings limiting access</li>
+                <li>Platform cooperation requirements</li>
+                <li>Content deletion by users</li>
+                <li>Cross-jurisdictional legal issues</li>
+                <li>Volume and variety of data</li>
+            </ul>
+
+            <h3>Collection Methods</h3>
+            <ul>
+                <li>Legal requests to platforms (subpoenas, warrants)</li>
+                <li>User account data exports</li>
+                <li>Public content preservation</li>
+                <li>Third-party archiving services</li>
+                <li>Local device examination</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>4.11 Challenges in Computer Forensics</h2>
+
+            <h3>Technical Challenges</h3>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Challenge</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Encryption</strong></td>
+                        <td>Data protected by strong encryption may be inaccessible</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Anti-Forensics</strong></td>
+                        <td>Techniques designed to thwart forensic investigation</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Volume of Data</strong></td>
+                        <td>Large storage capacities require extensive analysis time</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cloud Computing</strong></td>
+                        <td>Data distributed across multiple jurisdictions</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Volatile Evidence</strong></td>
+                        <td>Temporary data lost if not captured promptly</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Diverse Platforms</strong></td>
+                        <td>Various operating systems and file systems</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Legal and Procedural Challenges</h3>
+            <ul>
+                <li><strong>Jurisdiction:</strong> Crimes spanning multiple legal jurisdictions</li>
+                <li><strong>Privacy Laws:</strong> Restrictions on evidence collection</li>
+                <li><strong>Admissibility Standards:</strong> Varying requirements across jurisdictions</li>
+                <li><strong>Chain of Custody:</strong> Maintaining evidence integrity</li>
+                <li><strong>Expert Testimony:</strong> Explaining technical findings to non-experts</li>
+            </ul>
+
+            <h3>Anti-Forensics Techniques</h3>
+            <ul>
+                <li><strong>Data Destruction:</strong> Secure deletion and wiping</li>
+                <li><strong>Data Hiding:</strong> Steganography, encrypted containers</li>
+                <li><strong>Trail Obfuscation:</strong> Log manipulation, timestamp alteration</li>
+                <li><strong>Artifact Elimination:</strong> Removing traces of activity</li>
+                <li><strong>Attack Against Tools:</strong> Exploiting forensic tool vulnerabilities</li>
+            </ul>
+
+            <h3>Emerging Challenges</h3>
+            <ul>
+                <li>Internet of Things (IoT) devices</li>
+                <li>Cryptocurrency and blockchain</li>
+                <li>Artificial intelligence and automation</li>
+                <li>5G and advanced networking</li>
+                <li>Quantum computing implications</li>
+            </ul>
+
+            <div class="key-points">
+                <h4>Key Points for Examination</h4>
+                <ul>
+                    <li>Encryption is a major barrier to evidence access</li>
+                    <li>Anti-forensics actively counters investigation efforts</li>
+                    <li>Cloud and distributed computing complicate jurisdiction</li>
+                    <li>Continuous evolution of technology requires ongoing adaptation</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Unit Summary -->
+        <div class="unit-summary">
+            <h3>Unit IV Summary</h3>
+            <ul>
+                <li><strong>Computer forensics</strong> applies investigation techniques to gather legally admissible digital evidence for court proceedings.</li>
+                <li><strong>Digital forensics lifecycle</strong> includes six phases: identification, preservation, collection, examination, analysis, and presentation.</li>
+                <li><strong>Evidence types</strong> include volatile (lost when power removed) and non-volatile (persists after power off), with volatile evidence collected first.</li>
+                <li><strong>Order of volatility</strong> prioritizes collection from CPU registers/cache, RAM, network connections, running processes, hard disk, to archival media.</li>
+                <li><strong>Chain of custody</strong> documents evidence handling from collection to court; broken chain may render evidence inadmissible.</li>
+                <li><strong>Email forensics</strong> examines email headers, content, and metadata; headers contain routing information and authentication records.</li>
+                <li><strong>Network forensics</strong> captures and analyzes network traffic to detect intrusions and reconstruct events.</li>
+                <li><strong>Social media forensics</strong> collects evidence from social platforms including posts, messages, and metadata.</li>
+                <li><strong>Challenges</strong> include encryption, anti-forensics techniques, cloud computing, data volume, and jurisdictional issues.</li>
+            </ul>
+        </div>
+
+        <div class="unit-nav">
+            <a href="unit3.html">Previous: Unit III - Tools and Methods</a>
+            <a href="unit5.html">Next: Unit V - Security Policies and Laws</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>Cyber Security Study Guide | BCC301/BCC401 | AKTU</p>
+        <p>Academic Reference Material for Examination Preparation</p>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

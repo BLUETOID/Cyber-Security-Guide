@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit III - Tools and Methods Used in Cybercrime | AKTU Study Guide</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top"></button>
+    
+    <header>
+        <nav>
+            <div class="nav-container">
+                <a href="index.html" class="nav-brand">Cyber Security Guide</a>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="syllabus.html">Syllabus</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="active">Units</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="unit1.html">Unit I</a></li>
+                            <li><a href="unit2.html">Unit II</a></li>
+                            <li><a href="unit3.html" class="active">Unit III</a></li>
+                            <li><a href="unit4.html">Unit IV</a></li>
+                            <li><a href="unit5.html">Unit V</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="exam-prep.html">Exam Preparation</a></li>
+                    <li><a href="revision.html">Quick Revision</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="hero">
+            <h1>Unit III</h1>
+            <p class="course-codes">Tools and Methods Used in Cybercrime</p>
+        </section>
+
+        <!-- Unit Overview -->
+        <div class="unit-overview">
+            <h2>Unit Overview</h2>
+            <p>This unit examines the various tools and methods employed by cybercriminals to conduct malicious activities. Understanding these techniques is essential for developing effective defensive strategies and recognizing potential threats.</p>
+            
+            <div class="topics-covered">
+                <h3>Topics Covered</h3>
+                <ul>
+                    <li>Proxy Servers</li>
+                    <li>Phishing Attacks</li>
+                    <li>Password Cracking</li>
+                    <li>Keyloggers and Spyware</li>
+                    <li>Malware Types</li>
+                    <li>Steganography</li>
+                    <li>DoS/DDoS Attacks</li>
+                    <li>SQL Injection</li>
+                    <li>Wireless Attacks</li>
+                    <li>Identity Theft</li>
+                </ul>
+            </div>
+        </div>
+
+        <section class="content-section">
+            <h2>3.1 Introduction</h2>
+            
+            <p>This unit examines the various tools and methods employed by cybercriminals to conduct malicious activities. Understanding these techniques is essential for developing effective defensive strategies and for recognizing potential threats.</p>
+
+            <p>Cybercriminals utilize a diverse arsenal of tools ranging from simple scripts to sophisticated software frameworks. These tools are used for reconnaissance, exploitation, maintaining access, and covering tracks. The methods may be automated or require significant manual expertise.</p>
+
+            <div class="content-block">
+                <h4>Categories of Cybercrime Tools</h4>
+                <ul>
+                    <li><strong>Reconnaissance Tools:</strong> Used to gather information about targets</li>
+                    <li><strong>Exploitation Tools:</strong> Used to take advantage of vulnerabilities</li>
+                    <li><strong>Malware:</strong> Malicious software for various purposes</li>
+                    <li><strong>Attack Tools:</strong> Used to conduct specific types of attacks</li>
+                    <li><strong>Evasion Tools:</strong> Used to hide identity and activities</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>3.2 Proxy Servers and Anonymizers</h2>
+
+            <div class="definition">
+                <strong>Proxy Server:</strong>
+                An intermediary server that acts as a gateway between a user and the internet. It receives requests from clients, forwards them to target servers, and returns responses to clients, effectively hiding the client's original IP address.
+            </div>
+
+            <div class="definition">
+                <strong>Anonymizer:</strong>
+                A tool or service that makes internet activity untraceable by masking the user's identity and location. Anonymizers route traffic through multiple servers to obscure the origin of communications.
+            </div>
+
+            <h3>Types of Proxy Servers</h3>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Description</th>
+                        <th>Anonymity Level</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Transparent Proxy</strong></td>
+                        <td>Identifies itself as a proxy, passes original IP</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Anonymous Proxy</strong></td>
+                        <td>Identifies as proxy but hides original IP</td>
+                        <td>Moderate</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Elite/High Anonymity Proxy</strong></td>
+                        <td>Does not identify as proxy, hides all information</td>
+                        <td>High</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Distorting Proxy</strong></td>
+                        <td>Provides false IP address</td>
+                        <td>Moderate</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Anonymization Technologies</h3>
+
+            <h4>1. The Onion Router (Tor)</h4>
+            <p>Tor is a network of volunteer-operated servers that enables anonymous communication by routing traffic through multiple relays, encrypting data at each hop. Each relay only knows the previous and next hop, making traffic analysis difficult.</p>
+
+            <h4>2. Virtual Private Networks (VPN)</h4>
+            <p>VPNs create encrypted tunnels between user devices and VPN servers, masking the user's IP address and encrypting all traffic. While primarily for privacy, VPNs can be misused for anonymous criminal activity.</p>
+
+            <h4>3. Proxy Chains</h4>
+            <p>Using multiple proxies in sequence to increase anonymity by adding layers of indirection between the user and the destination.</p>
+
+            <h3>Legitimate vs. Malicious Uses</h3>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Legitimate Uses</th>
+                        <th>Malicious Uses</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Privacy protection</td>
+                        <td>Hiding criminal activity</td>
+                    </tr>
+                    <tr>
+                        <td>Bypassing censorship</td>
+                        <td>Evading law enforcement</td>
+                    </tr>
+                    <tr>
+                        <td>Secure communications for journalists</td>
+                        <td>Conducting cyber attacks anonymously</td>
+                    </tr>
+                    <tr>
+                        <td>Corporate security</td>
+                        <td>Distributing illegal content</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="key-points">
+                <h4>Key Points for Examination:</h4>
+                <ul>
+                    <li>Proxies act as intermediaries between users and the internet</li>
+                    <li>Tor provides layered encryption through multiple relays</li>
+                    <li>Anonymizers have both legitimate and malicious applications</li>
+                    <li>Elite proxies provide highest anonymity by not identifying as proxies</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>3.3 Phishing</h2>
+
+            <div class="definition">
+                <strong>Definition:</strong>
+                Phishing is a social engineering attack that uses fraudulent communications, typically emails, to deceive recipients into revealing sensitive information, clicking malicious links, or downloading malware. The attacker impersonates a legitimate entity to gain the victim's trust.
+            </div>
+
+            <h3>Types of Phishing Attacks</h3>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Description</th>
+                        <th>Target</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Email Phishing</strong></td>
+                        <td>Mass emails impersonating legitimate organizations</td>
+                        <td>General population</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Spear Phishing</strong></td>
+                        <td>Targeted attacks using personalized information</td>
+                        <td>Specific individuals</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Whaling</strong></td>
+                        <td>Targeting high-level executives</td>
+                        <td>C-level executives</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Clone Phishing</strong></td>
+                        <td>Replicating legitimate emails with malicious modifications</td>
+                        <td>Previous recipients of legitimate emails</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Vishing</strong></td>
+                        <td>Voice-based phishing using phone calls</td>
+                        <td>Phone users</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Smishing</strong></td>
+                        <td>SMS-based phishing</td>
+                        <td>Mobile phone users</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Phishing Attack Components</h3>
+            <ol>
+                <li><strong>Lure:</strong> The bait that attracts victim's attention (urgency, fear, reward)</li>
+                <li><strong>Hook:</strong> The mechanism that captures victim's data (fake website, form)</li>
+                <li><strong>Catch:</strong> The exploitation of captured information</li>
+            </ol>
+
+            <h3>Identifying Phishing Attempts</h3>
+            <ul>
+                <li>Suspicious sender email addresses (misspelled domains)</li>
+                <li>Generic greetings instead of personalized salutations</li>
+                <li>Urgent or threatening language</li>
+                <li>Requests for sensitive information</li>
+                <li>Mismatched or suspicious URLs</li>
+                <li>Poor grammar and spelling errors</li>
+                <li>Unexpected attachments</li>
+            </ul>
+
+            <h3>Prevention Measures</h3>
+            <ul>
+                <li>Email filtering and anti-phishing tools</li>
+                <li>User awareness training</li>
+                <li>Multi-factor authentication</li>
+                <li>URL verification before clicking</li>
+                <li>Reporting suspicious emails</li>
+            </ul>
+
+            <div class="key-points">
+                <h4>Key Points for Examination:</h4>
+                <ul>
+                    <li>Phishing exploits human psychology, not technical vulnerabilities</li>
+                    <li>Spear phishing targets specific individuals with personalized attacks</li>
+                    <li>Whaling targets senior executives with high-value access</li>
+                    <li>User training is the primary defense against phishing</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>3.4 Password Cracking</h2>
+
+            <div class="definition">
+                <strong>Definition:</strong>
+                Password cracking is the process of recovering passwords from stored data or from data transmitted over a network. It may be used legitimately for password recovery or maliciously for unauthorized access.
+            </div>
+
+            <h3>Password Cracking Techniques</h3>
+
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Technique</th>
+                        <th>Description</th>
+                        <th>Time Required</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Brute Force</strong></td>
+                        <td>Trying all possible combinations systematically</td>
+                        <td>Very long for complex passwords</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Dictionary Attack</strong></td>
+                        <td>Using a list of common words and phrases</td>
+                        <td>Fast for common passwords</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Rainbow Table</strong></td>
+                        <td>Using pre-computed hash chains</td>
+                        <td>Fast once tables are generated</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Hybrid Attack</strong></td>
+                        <td>Combining dictionary words with variations</td>
+                        <td>Moderate</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Rule-Based Attack</strong></td>
+                        <td>Applying transformation rules to wordlists</td>
+                        <td>Moderate</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Password Storage Methods</h3>
+            <ul>
+                <li><strong>Plain Text:</strong> Highly insecure, passwords stored as-is</li>
+                <li><strong>Hashing:</strong> One-way mathematical function (MD5, SHA-1, SHA-256)</li>
+                <li><strong>Salted Hashing:</strong> Random data added before hashing</li>
+                <li><strong>Key Stretching:</strong> Computationally intensive hashing (bcrypt, PBKDF2)</li>
+            </ul>
+
+            <h3>Defense Against Password Cracking</h3>
+            <ul>
+                <li>Use strong, complex passwords (length, character variety)</li>
+                <li>Implement account lockout policies</li>
+                <li>Use salted hashes with key stretching</li>
+                <li>Enable multi-factor authentication</li>
+                <li>Regular password rotation</li>
+                <li>Password strength enforcement</li>
+            </ul>
+
+            <div class="key-points">
+                <h4>Key Points for Examination:</h4>
+                <ul>
+                    <li>Brute force attacks try all possible combinations</li>
+                    <li>Dictionary attacks use lists of common passwords</li>
+                    <li>Rainbow tables trade storage for computation time</li>
+                    <li>Salting prevents rainbow table attacks</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>3.5 Keyloggers and Spywares</h2>
+
+            <div class="definition">
+                <strong>Keylogger:</strong>
+                A keylogger is a surveillance tool that records keystrokes made on a computer or mobile device. It captures all typed information including passwords, messages, and other sensitive data.
+            </div>
+
+            <div class="definition">
+                <strong>Spyware:</strong>
+                Spyware is software that secretly monitors and collects information about user activities without consent. It may track browsing habits, capture screenshots, record audio/video, and steal personal data.
+            </div>
+
+            <h3>Types of Keyloggers</h3>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Description</th>
+                        <th>Detection Difficulty</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Hardware Keyloggers</strong></td>
+                        <td>Physical devices attached between keyboard and computer</td>
+                        <td>Easy (visual inspection)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Software Keyloggers</strong></td>
+                        <td>Programs installed on the target system</td>
+                        <td>Moderate (antivirus detection)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Kernel-Level Keyloggers</strong></td>
+                        <td>Operating at the OS kernel level</td>
+                        <td>Difficult</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Form Grabbers</strong></td>
+                        <td>Capture form data before encryption</td>
+                        <td>Difficult</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Memory-Injection Keyloggers</strong></td>
+                        <td>Inject code into running processes</td>
+                        <td>Very Difficult</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Spyware Capabilities</h3>
+            <ul>
+                <li>Keystroke logging</li>
+                <li>Screen capture and recording</li>
+                <li>Audio/video recording through microphone and camera</li>
+                <li>Browser history and cookie monitoring</li>
+                <li>Email and message interception</li>
+                <li>File system monitoring</li>
+                <li>Location tracking (mobile devices)</li>
+                <li>Credential harvesting</li>
+            </ul>
+
+            <h3>Distribution Methods</h3>
+            <ul>
+                <li>Bundled with free software</li>
+                <li>Malicious email attachments</li>
+                <li>Drive-by downloads</li>
+                <li>Exploiting software vulnerabilities</li>
+                <li>Social engineering</li>
+            </ul>
+
+            <h3>Detection and Prevention</h3>
+            <ul>
+                <li>Anti-spyware and antivirus software</li>
+                <li>Regular system scans</li>
+                <li>Monitoring for unusual system behavior</li>
+                <li>Using virtual keyboards for sensitive input</li>
+                <li>Regular software updates</li>
+                <li>Physical inspection for hardware keyloggers</li>
+            </ul>
+
+            <div class="key-points">
+                <h4>Key Points for Examination:</h4>
+                <ul>
+                    <li>Keyloggers can be hardware or software-based</li>
+                    <li>Spyware monitors user activities without consent</li>
+                    <li>Kernel-level keyloggers are most difficult to detect</li>
+                    <li>Virtual keyboards can mitigate software keylogger risks</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>3.6 Virus and Worms</h2>
+
+            <div class="definition">
+                <strong>Computer Virus:</strong>
+                A virus is a malicious program that attaches itself to a legitimate program or file and requires human action to spread. When the infected program is executed, the virus activates and can replicate, corrupt data, or perform other malicious actions.
+            </div>
+
+            <div class="definition">
+                <strong>Computer Worm:</strong>
+                A worm is a self-replicating malware that spreads automatically across networks without requiring human intervention or attachment to host programs. Worms exploit vulnerabilities to propagate.
+            </div>
+
+            <h3>Comparison: Virus vs. Worm</h3>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Characteristic</th>
+                        <th>Virus</th>
+                        <th>Worm</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Host Requirement</td>
+                        <td>Requires host file or program</td>
+                        <td>Standalone, no host needed</td>
+                    </tr>
+                    <tr>
+                        <td>Propagation</td>
+                        <td>Requires user action</td>
+                        <td>Self-propagating</td>
+                    </tr>
+                    <tr>
+                        <td>Spread Speed</td>
+                        <td>Slower</td>
+                        <td>Faster</td>
+                    </tr>
+                    <tr>
+                        <td>Network Impact</td>
+                        <td>Limited</td>
+                        <td>Can consume bandwidth significantly</td>
+                    </tr>
+                    <tr>
+                        <td>Primary Damage</td>
+                        <td>File/system corruption</td>
+                        <td>Network congestion, payload delivery</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Types of Viruses</h3>
+            <ul>
+                <li><strong>Boot Sector Virus:</strong> Infects the master boot record</li>
+                <li><strong>File Infector:</strong> Attaches to executable files</li>
+                <li><strong>Macro Virus:</strong> Infects document macros (Word, Excel)</li>
+                <li><strong>Polymorphic Virus:</strong> Changes its code to evade detection</li>
+                <li><strong>Metamorphic Virus:</strong> Completely rewrites itself</li>
+                <li><strong>Multipartite Virus:</strong> Infects multiple targets (boot sector and files)</li>
+            </ul>
+
+            <h3>Notable Worms</h3>
+            <ul>
+                <li><strong>Morris Worm (1988):</strong> First worm to gain significant attention</li>
+                <li><strong>ILOVEYOU (2000):</strong> Spread via email, caused billions in damage</li>
+                <li><strong>Code Red (2001):</strong> Exploited IIS vulnerability</li>
+                <li><strong>Slammer (2003):</strong> Fastest spreading worm, caused internet slowdowns</li>
+                <li><strong>Conficker (2008):</strong> Infected millions of computers worldwide</li>
+                <li><strong>WannaCry (2017):</strong> Ransomware worm exploiting EternalBlue</li>
+            </ul>
+
+            <div class="key-points">
+                <h4>Key Points for Examination:</h4>
+                <ul>
+                    <li>Viruses require host programs; worms are standalone</li>
+                    <li>Worms spread automatically without user intervention</li>
+                    <li>Polymorphic viruses change code to evade detection</li>
+                    <li>Worms can cause significant network congestion</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>3.7 Trojan Horses and Backdoors</h2>
+
+            <div class="definition">
+                <strong>Trojan Horse:</strong>
+                A Trojan is malicious software disguised as legitimate software. Unlike viruses and worms, Trojans do not self-replicate. They trick users into installing them by appearing useful or harmless, then execute malicious functions.
+            </div>
+
+            <div class="definition">
+                <strong>Backdoor:</strong>
+                A backdoor is a method of bypassing normal authentication to gain remote access to a system. Backdoors may be installed by Trojans or intentionally created by developers (which may later be discovered and exploited).
+            </div>
+
+            <h3>Types of Trojans</h3>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Remote Access Trojan (RAT)</strong></td>
+                        <td>Provides remote control over infected systems</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Banking Trojan</strong></td>
+                        <td>Steals financial credentials and banking information</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Downloader Trojan</strong></td>
+                        <td>Downloads and installs additional malware</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Dropper Trojan</strong></td>
+                        <td>Contains and installs other malware payloads</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ransomware Trojan</strong></td>
+                        <td>Encrypts files and demands ransom</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Rootkit</strong></td>
+                        <td>Hides its presence and other malware from detection</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Backdoor Characteristics</h3>
+            <ul>
+                <li>Bypasses normal authentication mechanisms</li>
+                <li>Provides persistent access to compromised systems</li>
+                <li>May be hidden within legitimate software</li>
+                <li>Often uses encryption to hide communications</li>
+                <li>May use common ports to blend with normal traffic</li>
+            </ul>
+
+            <h3>Detection and Prevention</h3>
+            <ul>
+                <li>Antivirus and anti-malware software</li>
+                <li>Network traffic monitoring</li>
+                <li>File integrity monitoring</li>
+                <li>Application whitelisting</li>
+                <li>Download software only from trusted sources</li>
+                <li>Regular security audits</li>
+            </ul>
+
+            <div class="key-points">
+                <h4>Key Points for Examination:</h4>
+                <ul>
+                    <li>Trojans do not self-replicate; they rely on social engineering</li>
+                    <li>RATs provide complete remote control to attackers</li>
+                    <li>Backdoors enable persistent unauthorized access</li>
+                    <li>Rootkits actively hide malware presence</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>3.8 Steganography</h2>
+
+            <div class="definition">
+                <strong>Definition:</strong>
+                Steganography is the practice of concealing messages or information within non-secret data or physical objects to avoid detection. Unlike cryptography, which makes data unreadable, steganography hides the very existence of the data.
+            </div>
+
+            <h3>Steganography vs. Cryptography</h3>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Aspect</th>
+                        <th>Steganography</th>
+                        <th>Cryptography</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Purpose</td>
+                        <td>Hide existence of message</td>
+                        <td>Make message unreadable</td>
+                    </tr>
+                    <tr>
+                        <td>Detection</td>
+                        <td>Difficult to detect</td>
+                        <td>Presence obvious</td>
+                    </tr>
+                    <tr>
+                        <td>Medium</td>
+                        <td>Images, audio, video, text</td>
+                        <td>Any data format</td>
+                    </tr>
+                    <tr>
+                        <td>If Discovered</td>
+                        <td>Message may be readable</td>
+                        <td>Message still protected</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Types of Steganography</h3>
+            <ul>
+                <li><strong>Image Steganography:</strong> Hiding data in image files using LSB manipulation</li>
+                <li><strong>Audio Steganography:</strong> Embedding data in audio files</li>
+                <li><strong>Video Steganography:</strong> Hiding information in video streams</li>
+                <li><strong>Text Steganography:</strong> Using formatting, whitespace, or linguistic methods</li>
+                <li><strong>Network Steganography:</strong> Hiding data in network protocols</li>
+            </ul>
+
+            <h3>LSB (Least Significant Bit) Technique</h3>
+            <p>The most common image steganography technique involves replacing the least significant bits of pixel values with message bits. Since the change is minimal, it is imperceptible to human vision.</p>
+
+            <h3>Malicious Uses</h3>
+            <ul>
+                <li>Concealing malware in images or documents</li>
+                <li>Covert communication by criminals or terrorists</li>
+                <li>Data exfiltration from organizations</li>
+                <li>Hiding command and control communications</li>
+            </ul>
+
+            <h3>Detection (Steganalysis)</h3>
+            <ul>
+                <li>Statistical analysis of carrier files</li>
+                <li>Comparison with known clean files</li>
+                <li>Specialized detection software</li>
+                <li>Visual and signature-based detection</li>
+            </ul>
+
+            <div class="key-points">
+                <h4>Key Points for Examination:</h4>
+                <ul>
+                    <li>Steganography hides the existence of data, not its content</li>
+                    <li>LSB technique is common for image steganography</li>
+                    <li>Often combined with encryption for additional security</li>
+                    <li>Steganalysis is the detection of hidden data</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>3.9 DoS and DDoS Attacks</h2>
+
+            <div class="definition">
+                <strong>Denial of Service (DoS):</strong>
+                A DoS attack is an attempt to make a system or network resource unavailable to legitimate users by overwhelming it with traffic or exploiting vulnerabilities. The attack originates from a single source.
+            </div>
+
+            <div class="definition">
+                <strong>Distributed Denial of Service (DDoS):</strong>
+                A DDoS attack uses multiple compromised systems (botnet) to launch a coordinated attack against a target, making it significantly more powerful and difficult to mitigate than a simple DoS attack.
+            </div>
+
+            <h3>Types of DoS/DDoS Attacks</h3>
+
+            <h4>1. Volume-Based Attacks</h4>
+            <ul>
+                <li><strong>UDP Flood:</strong> Overwhelming target with UDP packets</li>
+                <li><strong>ICMP Flood:</strong> Ping flood attacks</li>
+                <li><strong>DNS Amplification:</strong> Using DNS servers to amplify attack traffic</li>
+            </ul>
+
+            <h4>2. Protocol Attacks</h4>
+            <ul>
+                <li><strong>SYN Flood:</strong> Exploiting TCP handshake</li>
+                <li><strong>Ping of Death:</strong> Sending malformed ping packets</li>
+                <li><strong>Smurf Attack:</strong> ICMP amplification using broadcast addresses</li>
+            </ul>
+
+            <h4>3. Application Layer Attacks</h4>
+            <ul>
+                <li><strong>HTTP Flood:</strong> Overwhelming web servers with HTTP requests</li>
+                <li><strong>Slowloris:</strong> Keeping connections open with partial requests</li>
+                <li><strong>Zero-Day DDoS:</strong> Exploiting unknown vulnerabilities</li>
+            </ul>
+
+            <h3>DoS vs. DDoS Comparison</h3>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Aspect</th>
+                        <th>DoS</th>
+                        <th>DDoS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Attack Source</td>
+                        <td>Single system</td>
+                        <td>Multiple systems (botnet)</td>
+                    </tr>
+                    <tr>
+                        <td>Attack Power</td>
+                        <td>Limited</td>
+                        <td>Massive</td>
+                    </tr>
+                    <tr>
+                        <td>Blocking</td>
+                        <td>Relatively easy (block source IP)</td>
+                        <td>Difficult (many sources)</td>
+                    </tr>
+                    <tr>
+                        <td>Detection</td>
+                        <td>Easier</td>
+                        <td>More complex</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Mitigation Strategies</h3>
+            <ul>
+                <li>Rate limiting and traffic filtering</li>
+                <li>Content Delivery Networks (CDN)</li>
+                <li>DDoS protection services</li>
+                <li>Redundant infrastructure</li>
+                <li>Black hole routing</li>
+                <li>Web Application Firewalls (WAF)</li>
+            </ul>
+
+            <div class="key-points">
+                <h4>Key Points for Examination:</h4>
+                <ul>
+                    <li>DoS uses single source; DDoS uses multiple sources</li>
+                    <li>SYN flood exploits TCP three-way handshake</li>
+                    <li>Amplification attacks use third-party servers to magnify traffic</li>
+                    <li>Application layer attacks are harder to detect</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>3.10 SQL Injection</h2>
+
+            <div class="definition">
+                <strong>Definition:</strong>
+                SQL Injection is a code injection technique that exploits vulnerabilities in applications that use SQL databases. Attackers insert malicious SQL statements into input fields to manipulate or extract data from the database.
+            </div>
+
+            <h3>How SQL Injection Works</h3>
+            <p>SQL injection occurs when user input is incorrectly filtered or not properly sanitized before being included in SQL queries. The attacker's input becomes part of the SQL command executed by the database.</p>
+
+            <h4>Example:</h4>
+            <p>Vulnerable Query:</p>
+            <pre>SELECT * FROM users WHERE username = '[user_input]' AND password = '[password]'</pre>
+            
+            <p>Malicious Input: <code>' OR '1'='1</code></p>
+            
+            <p>Resulting Query:</p>
+            <pre>SELECT * FROM users WHERE username = '' OR '1'='1' AND password = ''</pre>
+
+            <h3>Types of SQL Injection</h3>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>In-band SQLi</strong></td>
+                        <td>Attacker receives results in the same channel used for attack</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Error-based SQLi</strong></td>
+                        <td>Uses error messages to extract information</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Union-based SQLi</strong></td>
+                        <td>Uses UNION operator to combine queries</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Blind SQLi</strong></td>
+                        <td>No direct feedback; uses time delays or boolean conditions</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Out-of-band SQLi</strong></td>
+                        <td>Uses different channels (DNS, HTTP) to retrieve data</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Prevention Measures</h3>
+            <ul>
+                <li><strong>Parameterized Queries:</strong> Use prepared statements with bound parameters</li>
+                <li><strong>Input Validation:</strong> Validate and sanitize all user inputs</li>
+                <li><strong>Stored Procedures:</strong> Use stored procedures for database access</li>
+                <li><strong>Least Privilege:</strong> Database accounts with minimal permissions</li>
+                <li><strong>Web Application Firewall:</strong> Filter malicious requests</li>
+                <li><strong>Error Handling:</strong> Suppress detailed error messages</li>
+            </ul>
+
+            <div class="key-points">
+                <h4>Key Points for Examination:</h4>
+                <ul>
+                    <li>SQL injection exploits improper input handling</li>
+                    <li>Parameterized queries are the primary defense</li>
+                    <li>Blind SQL injection works without visible error messages</li>
+                    <li>Can result in data theft, modification, or destruction</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>3.11 Buffer Overflow</h2>
+
+            <div class="definition">
+                <strong>Definition:</strong>
+                A buffer overflow occurs when a program writes data beyond the boundaries of a fixed-size buffer, overwriting adjacent memory. This can lead to crashes, data corruption, or code execution if the attacker can control the overwritten memory.
+            </div>
+
+            <h3>Types of Buffer Overflow</h3>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Stack-based</strong></td>
+                        <td>Overflow occurs in stack memory; can overwrite return addresses</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Heap-based</strong></td>
+                        <td>Overflow occurs in heap memory; more complex to exploit</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Integer Overflow</strong></td>
+                        <td>Arithmetic overflow leads to buffer miscalculation</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Format String</strong></td>
+                        <td>Exploits improper use of format functions</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Exploitation Process</h3>
+            <ol>
+                <li>Identify vulnerable input point</li>
+                <li>Determine buffer size and memory layout</li>
+                <li>Craft payload including shellcode</li>
+                <li>Overflow buffer to overwrite return address</li>
+                <li>Redirect execution to shellcode</li>
+            </ol>
+
+            <h3>Prevention Mechanisms</h3>
+            <ul>
+                <li><strong>Address Space Layout Randomization (ASLR):</strong> Randomizes memory addresses</li>
+                <li><strong>Data Execution Prevention (DEP):</strong> Prevents code execution in data segments</li>
+                <li><strong>Stack Canaries:</strong> Detection values placed before return addresses</li>
+                <li><strong>Bounds Checking:</strong> Validate input lengths before copying</li>
+                <li><strong>Safe Functions:</strong> Use secure alternatives (strncpy instead of strcpy)</li>
+                <li><strong>Code Review:</strong> Regular security audits of code</li>
+            </ul>
+
+            <div class="key-points">
+                <h4>Key Points for Examination:</h4>
+                <ul>
+                    <li>Buffer overflow writes data beyond allocated memory</li>
+                    <li>Stack-based overflows can overwrite return addresses</li>
+                    <li>ASLR and DEP are primary OS-level protections</li>
+                    <li>Safe programming practices prevent buffer overflows</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>3.12 Attacks on Wireless Networks</h2>
+
+            <h3>Types of Wireless Network Attacks</h3>
+
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Attack</th>
+                        <th>Description</th>
+                        <th>Target</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Evil Twin</strong></td>
+                        <td>Rogue access point mimicking legitimate networks</td>
+                        <td>User credentials, traffic</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Rogue Access Point</strong></td>
+                        <td>Unauthorized AP connected to network</td>
+                        <td>Network access</td>
+                    </tr>
+                    <tr>
+                        <td><strong>War Driving</strong></td>
+                        <td>Searching for wireless networks while moving</td>
+                        <td>Network discovery</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Packet Sniffing</strong></td>
+                        <td>Intercepting wireless traffic</td>
+                        <td>Data, credentials</td>
+                    </tr>
+                    <tr>
+                        <td><strong>WEP Cracking</strong></td>
+                        <td>Breaking weak WEP encryption</td>
+                        <td>Network access</td>
+                    </tr>
+                    <tr>
+                        <td><strong>WPA Cracking</strong></td>
+                        <td>Dictionary attacks on WPA/WPA2-PSK</td>
+                        <td>Network access</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Deauthentication Attack</strong></td>
+                        <td>Forcing clients to disconnect</td>
+                        <td>Service disruption, capture handshakes</td>
+                    </tr>
+                    <tr>
+                        <td><strong>KRACK Attack</strong></td>
+                        <td>Key Reinstallation Attack on WPA2</td>
+                        <td>Traffic decryption</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Wireless Security Protocols</h3>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Protocol</th>
+                        <th>Security Level</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>WEP</td>
+                        <td>Very Weak</td>
+                        <td>Deprecated, easily cracked</td>
+                    </tr>
+                    <tr>
+                        <td>WPA</td>
+                        <td>Moderate</td>
+                        <td>Superseded, TKIP vulnerabilities</td>
+                    </tr>
+                    <tr>
+                        <td>WPA2</td>
+                        <td>Strong</td>
+                        <td>Widely used, KRACK vulnerability</td>
+                    </tr>
+                    <tr>
+                        <td>WPA3</td>
+                        <td>Very Strong</td>
+                        <td>Current standard, SAE handshake</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Prevention Measures</h3>
+            <ul>
+                <li>Use WPA3 or WPA2 with strong passphrases</li>
+                <li>Disable WPS (Wi-Fi Protected Setup)</li>
+                <li>Use 802.1X authentication for enterprise networks</li>
+                <li>Implement wireless intrusion detection</li>
+                <li>Regular security assessments</li>
+                <li>Network segmentation</li>
+            </ul>
+
+            <div class="key-points">
+                <h4>Key Points for Examination:</h4>
+                <ul>
+                    <li>WEP is deprecated due to fundamental weaknesses</li>
+                    <li>Evil twin attacks create fake access points</li>
+                    <li>WPA3 provides strongest current protection</li>
+                    <li>Enterprise networks should use 802.1X authentication</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>3.13 Identity Theft</h2>
+
+            <div class="definition">
+                <strong>Definition:</strong>
+                Identity theft is the fraudulent acquisition and use of another person's personal identifying information, typically for financial gain. It involves obtaining and misusing personal data such as name, social security number, credit card details, or other identifying information.
+            </div>
+
+            <h3>Types of Identity Theft</h3>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Financial Identity Theft</strong></td>
+                        <td>Using stolen information for financial fraud</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Criminal Identity Theft</strong></td>
+                        <td>Using another's identity when apprehended for crimes</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Medical Identity Theft</strong></td>
+                        <td>Using stolen information to obtain medical services</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Synthetic Identity Theft</strong></td>
+                        <td>Creating new identities combining real and fake information</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Child Identity Theft</strong></td>
+                        <td>Using a minor's information for fraud</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tax Identity Theft</strong></td>
+                        <td>Filing fraudulent tax returns using stolen information</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Methods of Information Theft</h3>
+            <ul>
+                <li>Phishing and social engineering</li>
+                <li>Data breaches</li>
+                <li>Dumpster diving (physical document theft)</li>
+                <li>Mail theft</li>
+                <li>Skimming devices</li>
+                <li>Malware (keyloggers, spyware)</li>
+                <li>Dark web purchases</li>
+            </ul>
+
+            <h3>Prevention Measures</h3>
+            <ul>
+                <li>Monitor credit reports regularly</li>
+                <li>Use strong, unique passwords</li>
+                <li>Enable fraud alerts</li>
+                <li>Shred sensitive documents</li>
+                <li>Be cautious with personal information</li>
+                <li>Use credit monitoring services</li>
+                <li>Freeze credit when not applying for new credit</li>
+            </ul>
+
+            <div class="key-points">
+                <h4>Key Points for Examination</h4>
+                <ul>
+                    <li>Identity theft uses personal information for fraudulent purposes</li>
+                    <li>Phishing is a primary method for obtaining personal data</li>
+                    <li>Financial identity theft is the most common type</li>
+                    <li>Regular monitoring helps detect identity theft early</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Unit Summary -->
+        <div class="unit-summary">
+            <h3>Unit III Summary</h3>
+            <ul>
+                <li><strong>Proxy servers</strong> act as intermediaries, with types including transparent, anonymous, and elite proxies; VPNs and Tor provide enhanced anonymity.</li>
+                <li><strong>Phishing</strong> uses fraudulent communications to steal data, with variants including spear phishing, whaling, vishing, and smishing.</li>
+                <li><strong>Password cracking</strong> techniques include brute force, dictionary attacks, and rainbow tables; defenses include salting and key stretching.</li>
+                <li><strong>Keyloggers</strong> capture keystrokes while <strong>spyware</strong> monitors broader system activity for malicious purposes.</li>
+                <li><strong>Malware types</strong> include viruses (require host), worms (self-propagating), Trojans (disguised), and ransomware (encryption-based extortion).</li>
+                <li><strong>Steganography</strong> hides messages within media files, distinct from cryptography which makes content unreadable.</li>
+                <li><strong>DoS/DDoS attacks</strong> overwhelm targets with traffic; DDoS uses distributed botnets for greater impact.</li>
+                <li><strong>SQL injection</strong> exploits improper input handling; prevention requires parameterized queries and input validation.</li>
+                <li><strong>Buffer overflow</strong> exploits memory handling flaws to execute arbitrary code.</li>
+                <li><strong>Wireless attacks</strong> include rogue APs, evil twins, and deauthentication attacks; WPA3 provides strongest protection.</li>
+                <li><strong>Identity theft</strong> involves using stolen personal information for fraud, with phishing being the primary acquisition method.</li>
+            </ul>
+        </div>
+
+        <div class="unit-nav">
+            <a href="unit2.html">Previous: Unit II - Mobile Security</a>
+            <a href="unit4.html">Next: Unit IV - Computer Forensics</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>Cyber Security Study Guide | BCC301/BCC401 | AKTU</p>
+        <p>Academic Reference Material for Examination Preparation</p>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

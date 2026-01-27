@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit II - Cyber Crime in Mobile and Wireless Devices | AKTU Study Guide</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top"></button>
+    
+    <header>
+        <nav>
+            <div class="nav-container">
+                <a href="index.html" class="nav-brand">Cyber Security Guide</a>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="syllabus.html">Syllabus</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="active">Units</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="unit1.html">Unit I</a></li>
+                            <li><a href="unit2.html" class="active">Unit II</a></li>
+                            <li><a href="unit3.html">Unit III</a></li>
+                            <li><a href="unit4.html">Unit IV</a></li>
+                            <li><a href="unit5.html">Unit V</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="exam-prep.html">Exam Preparation</a></li>
+                    <li><a href="revision.html">Quick Revision</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="hero">
+            <h1>Unit II</h1>
+            <p class="course-codes">Cyber Crime in Mobile and Wireless Devices</p>
+        </section>
+
+        <!-- Unit Overview -->
+        <div class="unit-overview">
+            <h2>Unit Overview</h2>
+            <p>This unit examines security challenges specific to mobile and wireless computing environments. It covers the evolution of mobile networks, unique security vulnerabilities, authentication mechanisms, and organizational policies for managing mobile device security.</p>
+            
+            <div class="topics-covered">
+                <h3>Topics Covered</h3>
+                <ul>
+                    <li>Mobile Device Characteristics</li>
+                    <li>Network Evolution (1G-5G)</li>
+                    <li>Security Challenges</li>
+                    <li>Credit Card Fraud</li>
+                    <li>Mobile Attack Types</li>
+                    <li>Authentication Methods</li>
+                    <li>Organizational Policies</li>
+                </ul>
+            </div>
+        </div>
+
+        <section class="content-section">
+            <h2>2.1 Mobile and Wireless Devices: Introduction</h2>
+
+            <div class="definition">
+                <strong>Mobile Devices</strong>
+                <p>Portable computing devices that can access network resources and perform various functions including communication, data storage, and application execution. Examples include smartphones, tablets, laptops, and wearable devices.</p>
+            </div>
+
+            <div class="definition">
+                <strong>Wireless Devices:</strong>
+                Electronic devices that can connect to networks or other devices without physical wired connections, using technologies such as Wi-Fi, Bluetooth, cellular networks, or NFC.
+            </div>
+
+            <h3>Characteristics of Mobile Devices</h3>
+            <ul>
+                <li><strong>Portability:</strong> Small form factor enabling mobility</li>
+                <li><strong>Connectivity:</strong> Multiple wireless connection options</li>
+                <li><strong>Computing Power:</strong> Significant processing capabilities</li>
+                <li><strong>Storage:</strong> Large data storage capacity</li>
+                <li><strong>Sensors:</strong> GPS, accelerometer, camera, biometric sensors</li>
+                <li><strong>Personal Nature:</strong> Contain sensitive personal and professional data</li>
+            </ul>
+
+            <h3>Evolution of Mobile Computing</h3>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Generation</th>
+                        <th>Technology</th>
+                        <th>Characteristics</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1G</td>
+                        <td>Analog Cellular</td>
+                        <td>Voice-only communication</td>
+                    </tr>
+                    <tr>
+                        <td>2G</td>
+                        <td>Digital (GSM, CDMA)</td>
+                        <td>Voice and SMS, limited data</td>
+                    </tr>
+                    <tr>
+                        <td>3G</td>
+                        <td>UMTS, HSPA</td>
+                        <td>Mobile internet, multimedia</td>
+                    </tr>
+                    <tr>
+                        <td>4G</td>
+                        <td>LTE, LTE-Advanced</td>
+                        <td>High-speed broadband</td>
+                    </tr>
+                    <tr>
+                        <td>5G</td>
+                        <td>NR (New Radio)</td>
+                        <td>Ultra-high speed, IoT support</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="content-section">
+            <h2>2.2 Proliferation of Mobile and Wireless Devices</h2>
+
+            <p>The rapid proliferation of mobile and wireless devices has fundamentally transformed how individuals and organizations operate. This expansion has created new security challenges.</p>
+
+            <h3>Factors Driving Proliferation</h3>
+            <ul>
+                <li><strong>Decreasing Costs:</strong> Affordable smartphones and wireless infrastructure</li>
+                <li><strong>Improved Connectivity:</strong> Widespread availability of cellular and Wi-Fi networks</li>
+                <li><strong>Enhanced Capabilities:</strong> Devices increasingly powerful and feature-rich</li>
+                <li><strong>Application Ecosystem:</strong> Extensive availability of mobile applications</li>
+                <li><strong>Work Culture Changes:</strong> Remote work and BYOD (Bring Your Own Device) policies</li>
+            </ul>
+
+            <h3>Security Implications of Proliferation</h3>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Factor</th>
+                        <th>Security Concern</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Increased Attack Surface</td>
+                        <td>More devices create more potential entry points for attackers</td>
+                    </tr>
+                    <tr>
+                        <td>Data Mobility</td>
+                        <td>Sensitive data accessible from multiple locations and devices</td>
+                    </tr>
+                    <tr>
+                        <td>Diverse Platforms</td>
+                        <td>Multiple operating systems complicate security management</td>
+                    </tr>
+                    <tr>
+                        <td>Personal Use</td>
+                        <td>Mixing personal and professional use increases risk</td>
+                    </tr>
+                    <tr>
+                        <td>Lost/Stolen Devices</td>
+                        <td>Physical loss leads to potential data breaches</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="key-points">
+                <h4>Key Points for Examination:</h4>
+                <ul>
+                    <li>Mobile device proliferation has expanded the attack surface</li>
+                    <li>BYOD policies create management and security challenges</li>
+                    <li>Data mobility increases exposure to unauthorized access</li>
+                    <li>Platform diversity complicates security implementation</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>2.3 Trends in Mobility</h2>
+
+            <h3>Current Trends</h3>
+
+            <h4>1. Internet of Things (IoT)</h4>
+            <p>The proliferation of connected devices beyond traditional computers and phones, including smart home devices, wearables, industrial sensors, and vehicles. IoT devices often lack robust security features.</p>
+
+            <h4>2. 5G Networks</h4>
+            <p>Fifth-generation cellular networks providing higher speeds, lower latency, and greater capacity. While enabling new applications, 5G also introduces new security considerations.</p>
+
+            <h4>3. Mobile Cloud Computing</h4>
+            <p>Integration of cloud services with mobile devices, enabling storage, processing, and application delivery from remote servers.</p>
+
+            <h4>4. Mobile Payments</h4>
+            <p>Use of mobile devices for financial transactions through NFC, QR codes, and mobile banking applications. Requires robust security for financial data protection.</p>
+
+            <h4>5. Edge Computing</h4>
+            <p>Processing data closer to the source rather than centralized data centers, reducing latency but creating distributed security challenges.</p>
+
+            <h3>Security Implications of Mobility Trends</h3>
+            <ul>
+                <li>IoT devices expand attack surfaces with limited security capabilities</li>
+                <li>5G network architecture requires new security frameworks</li>
+                <li>Cloud dependency creates data sovereignty and access control issues</li>
+                <li>Mobile payments require protection against financial fraud</li>
+                <li>Edge computing distributes security responsibilities</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>2.4 Credit Card Frauds in Mobile and Wireless Computing Era</h2>
+
+            <div class="definition">
+                <strong>Credit Card Fraud:</strong>
+                Unauthorized use of credit or debit card information to make purchases or withdraw funds. In the mobile era, this includes digital wallet fraud, mobile payment exploitation, and card-not-present transactions.
+            </div>
+
+            <h3>Types of Mobile Credit Card Fraud</h3>
+
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Description</th>
+                        <th>Method</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Card-Not-Present (CNP)</strong></td>
+                        <td>Fraud using card details without physical card</td>
+                        <td>Online purchases, phone orders</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mobile Wallet Compromise</strong></td>
+                        <td>Unauthorized access to digital wallets</td>
+                        <td>Device theft, credential theft</td>
+                    </tr>
+                    <tr>
+                        <td><strong>SIM Swapping</strong></td>
+                        <td>Taking control of victim's phone number</td>
+                        <td>Social engineering carrier support</td>
+                    </tr>
+                    <tr>
+                        <td><strong>App-Based Fraud</strong></td>
+                        <td>Malicious apps stealing payment data</td>
+                        <td>Fake banking apps, keyloggers</td>
+                    </tr>
+                    <tr>
+                        <td><strong>NFC Skimming</strong></td>
+                        <td>Intercepting contactless payment data</td>
+                        <td>Proximity-based data capture</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Prevention Measures</h3>
+            <ul>
+                <li>Enable two-factor authentication for mobile payments</li>
+                <li>Use device encryption and strong passwords</li>
+                <li>Monitor transaction alerts and statements</li>
+                <li>Download apps only from official stores</li>
+                <li>Enable remote wipe capabilities</li>
+                <li>Use tokenization for payment transactions</li>
+            </ul>
+
+            <div class="key-points">
+                <h4>Key Points for Examination:</h4>
+                <ul>
+                    <li>CNP fraud dominates in mobile commerce</li>
+                    <li>SIM swapping bypasses SMS-based authentication</li>
+                    <li>Tokenization protects actual card numbers</li>
+                    <li>Two-factor authentication is essential for mobile payments</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>2.5 Security Challenges Posed by Mobile Devices</h2>
+
+            <h3>Technical Challenges</h3>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Challenge</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Limited Resources</strong></td>
+                        <td>Battery, processing power, and memory constraints limit security implementations</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Diverse Platforms</strong></td>
+                        <td>Multiple operating systems (Android, iOS, others) with different security models</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Rapid Updates</strong></td>
+                        <td>Frequent OS and app updates create patch management challenges</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Wireless Vulnerabilities</strong></td>
+                        <td>Multiple wireless interfaces (Wi-Fi, Bluetooth, NFC) each with vulnerabilities</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Data Storage</strong></td>
+                        <td>Local storage of sensitive data vulnerable to extraction</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Operational Challenges</h3>
+            <ul>
+                <li><strong>Device Management:</strong> Tracking and managing numerous mobile devices</li>
+                <li><strong>Policy Enforcement:</strong> Ensuring compliance with security policies</li>
+                <li><strong>User Behavior:</strong> Users may disable security features for convenience</li>
+                <li><strong>Physical Security:</strong> Devices easily lost or stolen</li>
+                <li><strong>Application Control:</strong> Managing third-party application installation</li>
+            </ul>
+
+            <h3>Data-Related Challenges</h3>
+            <ul>
+                <li>Data leakage through applications</li>
+                <li>Unauthorized data synchronization</li>
+                <li>Backup and recovery complexities</li>
+                <li>Data residue on disposed devices</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>2.6 Registry Settings for Mobile Devices</h2>
+
+            <p>Registry and configuration settings on mobile devices control security features and system behavior. Proper configuration is essential for security.</p>
+
+            <h3>Android Security Settings</h3>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Setting</th>
+                        <th>Purpose</th>
+                        <th>Recommended Configuration</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Screen Lock</td>
+                        <td>Prevents unauthorized access</td>
+                        <td>PIN, pattern, or biometric enabled</td>
+                    </tr>
+                    <tr>
+                        <td>Encryption</td>
+                        <td>Protects stored data</td>
+                        <td>Full device encryption enabled</td>
+                    </tr>
+                    <tr>
+                        <td>Unknown Sources</td>
+                        <td>Controls app installation</td>
+                        <td>Disabled (allow only Play Store)</td>
+                    </tr>
+                    <tr>
+                        <td>USB Debugging</td>
+                        <td>Developer access to device</td>
+                        <td>Disabled for regular users</td>
+                    </tr>
+                    <tr>
+                        <td>Location Services</td>
+                        <td>GPS and location tracking</td>
+                        <td>Limited to necessary apps</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>iOS Security Settings</h3>
+            <ul>
+                <li><strong>Passcode:</strong> Strong alphanumeric passcode</li>
+                <li><strong>Face ID/Touch ID:</strong> Biometric authentication</li>
+                <li><strong>Find My iPhone:</strong> Remote tracking and wipe</li>
+                <li><strong>App Permissions:</strong> Granular control over app access</li>
+                <li><strong>Automatic Updates:</strong> Keep system and apps current</li>
+            </ul>
+
+            <h3>Enterprise Configuration Management</h3>
+            <p>Organizations use Mobile Device Management (MDM) solutions to enforce security configurations:</p>
+            <ul>
+                <li>Enforce password policies</li>
+                <li>Mandate encryption</li>
+                <li>Control application installation</li>
+                <li>Enable remote wipe capabilities</li>
+                <li>Monitor device compliance</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>2.7 Authentication Service Security</h2>
+
+            <div class="definition">
+                <strong>Authentication:</strong>
+                The process of verifying the identity of a user, device, or system before granting access to resources. Mobile authentication presents unique challenges due to device constraints and use patterns.
+            </div>
+
+            <h3>Authentication Methods for Mobile Devices</h3>
+
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Method</th>
+                        <th>Description</th>
+                        <th>Security Level</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>PIN/Password</strong></td>
+                        <td>Knowledge-based numeric or alphanumeric codes</td>
+                        <td>Moderate (depends on complexity)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pattern Lock</strong></td>
+                        <td>Gesture-based authentication</td>
+                        <td>Low to Moderate</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Fingerprint</strong></td>
+                        <td>Biometric using fingerprint sensor</td>
+                        <td>High</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Facial Recognition</strong></td>
+                        <td>Biometric using camera-based face matching</td>
+                        <td>Moderate to High</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Iris Scan</strong></td>
+                        <td>Biometric using iris patterns</td>
+                        <td>Very High</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Two-Factor Authentication</strong></td>
+                        <td>Combination of two different methods</td>
+                        <td>High</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Multi-Factor Authentication (MFA)</h3>
+            <p>MFA combines two or more of the following factors:</p>
+            <ul>
+                <li><strong>Something You Know:</strong> Password, PIN, security questions</li>
+                <li><strong>Something You Have:</strong> Phone, token, smart card</li>
+                <li><strong>Something You Are:</strong> Biometrics (fingerprint, face, iris)</li>
+                <li><strong>Somewhere You Are:</strong> Location-based authentication</li>
+                <li><strong>Something You Do:</strong> Behavioral biometrics</li>
+            </ul>
+
+            <h3>Security Considerations</h3>
+            <ul>
+                <li>SMS-based OTP is vulnerable to SIM swapping</li>
+                <li>Biometric data must be securely stored</li>
+                <li>Fallback mechanisms should be equally secure</li>
+                <li>Session management is critical after authentication</li>
+            </ul>
+
+            <div class="key-points">
+                <h4>Key Points for Examination:</h4>
+                <ul>
+                    <li>Multi-factor authentication significantly improves security</li>
+                    <li>Biometrics provide convenience but require secure storage</li>
+                    <li>SMS-based authentication has known vulnerabilities</li>
+                    <li>Authentication is only one component of access control</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>2.8 Attacks on Mobile/Cell Phones</h2>
+
+            <h3>Categories of Mobile Attacks</h3>
+
+            <h4>1. Malware-Based Attacks</h4>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Mobile Trojans</td>
+                        <td>Malicious apps disguised as legitimate software</td>
+                    </tr>
+                    <tr>
+                        <td>Spyware</td>
+                        <td>Secretly monitors user activity and collects data</td>
+                    </tr>
+                    <tr>
+                        <td>Ransomware</td>
+                        <td>Encrypts data and demands payment for decryption</td>
+                    </tr>
+                    <tr>
+                        <td>Banking Trojans</td>
+                        <td>Specifically targets banking and payment applications</td>
+                    </tr>
+                    <tr>
+                        <td>Adware</td>
+                        <td>Displays unwanted advertisements, may collect data</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4>2. Network-Based Attacks</h4>
+            <ul>
+                <li><strong>Man-in-the-Middle (MITM):</strong> Intercepting communications between device and server</li>
+                <li><strong>Rogue Access Points:</strong> Fake Wi-Fi networks that intercept traffic</li>
+                <li><strong>Bluetooth Attacks:</strong> Bluejacking, Bluesnarfing, Bluebugging</li>
+                <li><strong>SS7 Vulnerabilities:</strong> Exploiting signaling system weaknesses</li>
+            </ul>
+
+            <h4>3. Application-Level Attacks</h4>
+            <ul>
+                <li><strong>Repackaged Apps:</strong> Legitimate apps modified with malicious code</li>
+                <li><strong>Overlay Attacks:</strong> Fake screens overlaid on legitimate apps</li>
+                <li><strong>Permission Abuse:</strong> Apps requesting excessive permissions</li>
+                <li><strong>API Exploitation:</strong> Targeting application programming interfaces</li>
+            </ul>
+
+            <h4>4. Physical Attacks</h4>
+            <ul>
+                <li><strong>Device Theft:</strong> Physical stealing of the device</li>
+                <li><strong>Shoulder Surfing:</strong> Observing screen or keypad input</li>
+                <li><strong>Juice Jacking:</strong> Malicious charging stations</li>
+                <li><strong>Evil Maid Attacks:</strong> Physical access to unattended devices</li>
+            </ul>
+
+            <h3>Bluetooth-Specific Attacks</h3>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Attack</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Bluejacking</strong></td>
+                        <td>Sending unsolicited messages to Bluetooth-enabled devices</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Bluesnarfing</strong></td>
+                        <td>Unauthorized access to information from a wireless device</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Bluebugging</strong></td>
+                        <td>Taking control of a device through Bluetooth vulnerabilities</td>
+                    </tr>
+                    <tr>
+                        <td><strong>BlueBorne</strong></td>
+                        <td>Attack vector affecting devices through Bluetooth implementation flaws</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="key-points">
+                <h4>Key Points for Examination:</h4>
+                <ul>
+                    <li>Mobile malware is distributed primarily through third-party app stores</li>
+                    <li>Network attacks exploit wireless communication vulnerabilities</li>
+                    <li>Bluetooth should be disabled when not in use</li>
+                    <li>Physical security of devices is equally important</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>2.9 Mobile Devices: Security Implications for Organizations</h2>
+
+            <h3>Organizational Risks</h3>
+            <ul>
+                <li><strong>Data Leakage:</strong> Sensitive corporate data exposed through personal devices</li>
+                <li><strong>Compliance Violations:</strong> Regulatory requirements may be breached</li>
+                <li><strong>Network Compromise:</strong> Infected devices connecting to corporate networks</li>
+                <li><strong>Intellectual Property Theft:</strong> Trade secrets and proprietary information at risk</li>
+                <li><strong>Reputation Damage:</strong> Security breaches affecting organizational image</li>
+            </ul>
+
+            <h3>BYOD (Bring Your Own Device) Challenges</h3>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Challenge</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Device Diversity</td>
+                        <td>Multiple device types and operating systems to manage</td>
+                    </tr>
+                    <tr>
+                        <td>Ownership Issues</td>
+                        <td>Balancing personal privacy with corporate security</td>
+                    </tr>
+                    <tr>
+                        <td>Data Separation</td>
+                        <td>Isolating corporate data from personal data</td>
+                    </tr>
+                    <tr>
+                        <td>Support Complexity</td>
+                        <td>Providing security support for diverse devices</td>
+                    </tr>
+                    <tr>
+                        <td>Exit Procedures</td>
+                        <td>Handling devices when employees leave</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="content-section">
+            <h2>2.10 Organizational Measures for Handling Mobile Devices</h2>
+
+            <h3>Technical Measures</h3>
+            <ul>
+                <li><strong>Mobile Device Management (MDM):</strong> Centralized management and control of devices</li>
+                <li><strong>Mobile Application Management (MAM):</strong> Control over applications and their data</li>
+                <li><strong>Containerization:</strong> Separating corporate and personal data on devices</li>
+                <li><strong>VPN:</strong> Secure tunnel for corporate network access</li>
+                <li><strong>Encryption:</strong> Data-at-rest and data-in-transit encryption</li>
+                <li><strong>Remote Wipe:</strong> Capability to erase data from lost devices</li>
+            </ul>
+
+            <h3>Administrative Measures</h3>
+            <ul>
+                <li><strong>Acceptable Use Policy:</strong> Define permitted and prohibited activities</li>
+                <li><strong>Security Training:</strong> Regular awareness programs for employees</li>
+                <li><strong>Incident Response:</strong> Procedures for handling security incidents</li>
+                <li><strong>Access Control:</strong> Role-based access to corporate resources</li>
+                <li><strong>Regular Audits:</strong> Periodic security assessments</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>2.11 Organizational Security Policies and Measures in Mobile Computing Era</h2>
+
+            <h3>Essential Policy Components</h3>
+
+            <h4>1. Device Security Policy</h4>
+            <ul>
+                <li>Minimum security requirements for devices accessing corporate resources</li>
+                <li>Mandatory security features (encryption, passcode, etc.)</li>
+                <li>Approved device list and operating system versions</li>
+                <li>Jailbroken/rooted device restrictions</li>
+            </ul>
+
+            <h4>2. Application Policy</h4>
+            <ul>
+                <li>Approved application sources (enterprise app store, official stores)</li>
+                <li>Prohibited application categories</li>
+                <li>Application vetting and approval process</li>
+                <li>Application update requirements</li>
+            </ul>
+
+            <h4>3. Data Protection Policy</h4>
+            <ul>
+                <li>Data classification and handling procedures</li>
+                <li>Encryption requirements for sensitive data</li>
+                <li>Cloud storage restrictions</li>
+                <li>Data backup and retention policies</li>
+            </ul>
+
+            <h4>4. Network Access Policy</h4>
+            <ul>
+                <li>Wi-Fi connection guidelines</li>
+                <li>VPN usage requirements</li>
+                <li>Public network restrictions</li>
+                <li>Network access control procedures</li>
+            </ul>
+
+            <h3>Implementation Framework</h3>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Phase</th>
+                        <th>Activities</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Assessment</td>
+                        <td>Identify risks, current state analysis, requirement gathering</td>
+                    </tr>
+                    <tr>
+                        <td>Policy Development</td>
+                        <td>Create policies aligned with business needs and security requirements</td>
+                    </tr>
+                    <tr>
+                        <td>Technology Selection</td>
+                        <td>Choose appropriate MDM, MAM, and security tools</td>
+                    </tr>
+                    <tr>
+                        <td>Deployment</td>
+                        <td>Roll out solutions, enroll devices, train users</td>
+                    </tr>
+                    <tr>
+                        <td>Monitoring</td>
+                        <td>Continuous monitoring, compliance checking, incident response</td>
+                    </tr>
+                    <tr>
+                        <td>Review</td>
+                        <td>Regular policy review and updates</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="key-points">
+                <h4>Key Points for Examination</h4>
+                <ul>
+                    <li>Mobile security requires comprehensive policies covering devices, apps, data, and networks</li>
+                    <li>MDM solutions enable centralized security management</li>
+                    <li>BYOD requires balancing security with user privacy</li>
+                    <li>Continuous monitoring and policy updates are essential</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Unit Summary -->
+        <div class="unit-summary">
+            <h3>Unit II Summary</h3>
+            <ul>
+                <li><strong>Mobile devices</strong> are portable computing devices with connectivity, sensors, and personal data, creating unique security challenges.</li>
+                <li><strong>Network evolution</strong> from 1G to 5G has increased capabilities but also expanded attack surfaces.</li>
+                <li><strong>Security challenges</strong> include limited resources, device diversity, multiple interfaces, and BYOD complexity.</li>
+                <li><strong>Credit card fraud</strong> in mobile contexts includes skimming, application-based attacks, and NFC vulnerabilities.</li>
+                <li><strong>Mobile attacks</strong> encompass malware, network attacks (rogue AP, MITM), and physical threats (theft, juice jacking).</li>
+                <li><strong>Bluetooth attacks</strong> include bluejacking, bluesnarfing, and bluebugging targeting short-range communications.</li>
+                <li><strong>Authentication methods</strong> range from PINs and patterns to biometrics, with MFA providing strongest protection.</li>
+                <li><strong>Organizational measures</strong> include MDM, MAM, containerization, encryption, and comprehensive security policies.</li>
+            </ul>
+        </div>
+
+        <div class="unit-nav">
+            <a href="unit1.html">Previous: Unit I - Introduction to Cyber Crime</a>
+            <a href="unit3.html">Next: Unit III - Tools and Methods</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>Cyber Security Study Guide | BCC301/BCC401 | AKTU</p>
+        <p>Academic Reference Material for Examination Preparation</p>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
