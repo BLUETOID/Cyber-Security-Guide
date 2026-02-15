@@ -81,9 +81,17 @@
             <div class="content-block">
                 <h4>The CIA Triad</h4>
                 <ul>
-                    <li><strong>Confidentiality:</strong> Ensuring that information is accessible only to authorized individuals</li>
-                    <li><strong>Integrity:</strong> Maintaining the accuracy and completeness of data throughout its lifecycle</li>
-                    <li><strong>Availability:</strong> Ensuring that authorized users have reliable access to information when needed</li>
+                    <li><strong>Confidentiality:</strong> Ensuring that information is accessible only to authorized individuals. This is typically achieved through encryption, access controls, and authentication mechanisms. For example, using passwords, biometric authentication, or encrypting sensitive files to prevent unauthorized access.</li>
+                    <li><strong>Integrity:</strong> Maintaining the accuracy and completeness of data throughout its lifecycle. This involves preventing unauthorized modification or deletion of information. Techniques include checksums, digital signatures, and version control systems to detect and prevent tampering.</li>
+                    <li><strong>Availability:</strong> Ensuring that authorized users have reliable access to information when needed. This requires protection against system failures, network outages, and denial-of-service attacks. Methods include redundancy, backup systems, disaster recovery plans, and load balancing.</li>
+                </ul>
+                
+                <h4>Additional Security Concepts</h4>
+                <ul>
+                    <li><strong>Authentication:</strong> The process of verifying the identity of a user, device, or system. Common methods include passwords, biometrics (fingerprint, facial recognition), smart cards, and multi-factor authentication (MFA) which combines two or more authentication methods.</li>
+                    <li><strong>Authorization:</strong> Determines what actions or resources an authenticated user is permitted to access. This is implemented through access control lists (ACLs), role-based access control (RBAC), or attribute-based access control (ABAC).</li>
+                    <li><strong>Encryption:</strong> The process of converting plain text into cipher text using mathematical algorithms to protect data confidentiality. Encryption can be symmetric (same key for encryption and decryption, e.g., AES) or asymmetric (public-private key pairs, e.g., RSA).</li>
+                    <li><strong>Vulnerability:</strong> A weakness or flaw in a system, application, or network that can be exploited by attackers. Vulnerabilities can exist due to software bugs, misconfigurations, weak passwords, or outdated systems. Organizations use vulnerability scanners and penetration testing to identify and remediate vulnerabilities.</li>
                 </ul>
             </div>
 
@@ -119,33 +127,33 @@
                 <tbody>
                     <tr>
                         <td><strong>Script Kiddies</strong></td>
-                        <td>Inexperienced individuals who use existing tools and scripts without deep technical understanding</td>
-                        <td>Curiosity, recognition</td>
+                        <td>Inexperienced individuals who use existing tools and scripts without deep technical understanding. They typically download pre-written exploits or use automated hacking tools without understanding the underlying mechanisms. While less sophisticated, they can still cause significant damage using readily available attack tools.</td>
+                        <td>Curiosity, recognition, desire to impress peers</td>
                     </tr>
                     <tr>
                         <td><strong>Hackers</strong></td>
-                        <td>Skilled individuals who exploit system vulnerabilities; can be ethical (white hat) or malicious (black hat)</td>
-                        <td>Challenge, financial gain, ideology</td>
+                        <td>Skilled individuals who exploit system vulnerabilities. Categories include: White Hat (ethical hackers who test security with permission), Black Hat (malicious hackers who break laws for personal gain), and Grey Hat (operate in between, sometimes breaking laws but without malicious intent). They possess deep technical knowledge of systems, networks, and programming.</td>
+                        <td>Challenge, financial gain, ideology, intellectual curiosity</td>
                     </tr>
                     <tr>
                         <td><strong>Hacktivists</strong></td>
-                        <td>Individuals who hack for political or social causes</td>
-                        <td>Political or social activism</td>
+                        <td>Individuals or groups who hack for political or social causes, using cyber attacks as a form of protest or to promote their agenda. Famous groups include Anonymous and LulzSec. Common tactics include DDoS attacks, website defacements, and data leaks to expose perceived wrongdoing.</td>
+                        <td>Political or social activism, ideological beliefs, whistleblowing</td>
                     </tr>
                     <tr>
                         <td><strong>Organized Cybercrime Groups</strong></td>
-                        <td>Structured criminal organizations operating sophisticated cyber operations</td>
-                        <td>Financial profit</td>
+                        <td>Structured criminal organizations operating sophisticated cyber operations with clear hierarchies, specialized roles, and business-like operations. They engage in activities like ransomware operations, banking trojans, credit card fraud, and selling stolen data on dark web markets. Often operate as "Cybercrime-as-a-Service" providers.</td>
+                        <td>Financial profit, organized crime revenue</td>
                     </tr>
                     <tr>
                         <td><strong>State-Sponsored Actors</strong></td>
-                        <td>Hackers employed or supported by nation-states</td>
-                        <td>Espionage, sabotage, warfare</td>
+                        <td>Hackers employed or supported by nation-states to conduct cyber espionage, sabotage critical infrastructure, steal intellectual property, or conduct information warfare. Also known as Advanced Persistent Threats (APTs), these actors have significant resources, sophisticated tools, and long-term operational objectives.</td>
+                        <td>Espionage, sabotage, cyber warfare, political objectives</td>
                     </tr>
                     <tr>
                         <td><strong>Insider Threats</strong></td>
-                        <td>Employees or contractors with authorized access who misuse their privileges</td>
-                        <td>Revenge, financial gain</td>
+                        <td>Employees, contractors, or business partners with authorized access who misuse their privileges intentionally or unintentionally. They pose unique risks as they have legitimate access, understand security measures, and can bypass many technical controls. Can be malicious (intentional harm) or negligent (accidental exposure).</td>
+                        <td>Revenge, financial gain, coercion, negligence</td>
                     </tr>
                 </tbody>
             </table>
@@ -419,33 +427,33 @@
                 <tbody>
                     <tr>
                         <td><strong>Phishing</strong></td>
-                        <td>Fraudulent communications that appear legitimate to steal sensitive data</td>
-                        <td>Fake bank emails requesting login credentials</td>
+                        <td>Fraudulent communications (usually emails) that appear to be from legitimate sources to steal sensitive data such as login credentials, credit card numbers, or personal information. Attackers create convincing replicas of trusted websites and communications. Includes spear phishing (targeted attacks) and whaling (targeting high-profile individuals like executives).</td>
+                        <td>Fake bank emails requesting login credentials, fake package delivery notifications with malicious links, fake password reset requests</td>
                     </tr>
                     <tr>
                         <td><strong>Pretexting</strong></td>
-                        <td>Creating a fabricated scenario to extract information</td>
-                        <td>Impersonating IT support to obtain passwords</td>
+                        <td>Creating a fabricated scenario (pretext) to extract information from targets. The attacker invents a plausible situation and assumes a false identity to gain trust. Requires research and planning to make the scenario believable. Often involves multiple interactions to build credibility before requesting sensitive information.</td>
+                        <td>Impersonating IT support to obtain passwords, posing as a researcher conducting a survey to gather personal information, pretending to be a new employee needing system access</td>
                     </tr>
                     <tr>
                         <td><strong>Baiting</strong></td>
-                        <td>Offering something enticing to lure victims</td>
-                        <td>Infected USB drives left in public areas</td>
+                        <td>Offering something enticing to lure victims into a trap. Exploits human curiosity and greed. Can be physical (infected USB drives, DVDs) or digital (fake downloads, pirated software). The bait appears legitimate but contains malware or leads to malicious websites that compromise the victim's system.</td>
+                        <td>Infected USB drives labeled "Confidential Salaries" left in parking lots, fake movie downloads containing malware, free music or software that installs keyloggers</td>
                     </tr>
                     <tr>
                         <td><strong>Quid Pro Quo</strong></td>
-                        <td>Offering a service in exchange for information</td>
-                        <td>Free technical support in exchange for login credentials</td>
+                        <td>Offering a service or benefit in exchange for information or access. Latin for "something for something." Attackers promise to solve a problem or provide assistance in return for sensitive data. Common variant: attacker calls random extensions claiming to be tech support, eventually finding someone with an issue.</td>
+                        <td>Fake technical support offering to fix computer problems in exchange for login credentials, offering free antivirus software that is actually malware, promising prizes in exchange for personal information</td>
                     </tr>
                     <tr>
-                        <td><strong>Tailgating</strong></td>
-                        <td>Physically following authorized personnel into restricted areas</td>
-                        <td>Following an employee through a secure door</td>
+                        <td><strong>Tailgating (Piggybacking)</strong></td>
+                        <td>Physically following authorized personnel into restricted areas without proper authentication. Exploits social norms of politeness (holding doors open). Also called "piggybacking." Attackers may dress as delivery persons, maintenance workers, or blend in with employees. Once inside, they can access sensitive areas, install malware, or steal equipment.</td>
+                        <td>Following an employee through a secure door by pretending to have forgotten their access card, posing as a delivery person to gain building access, entering alongside a large group of employees</td>
                     </tr>
                     <tr>
-                        <td><strong>Vishing</strong></td>
-                        <td>Voice-based phishing using phone calls</td>
-                        <td>Fraudulent calls claiming to be from banks</td>
+                        <td><strong>Vishing (Voice Phishing)</strong></td>
+                        <td>Voice-based phishing using phone calls or VoIP technology. Attackers impersonate trusted organizations (banks, government agencies, tech support) to extract information or convince victims to perform actions. Often combined with caller ID spoofing to appear legitimate. May use urgency tactics to prevent verification.</td>
+                        <td>Fraudulent calls claiming to be from banks about suspicious activity, fake IRS calls threatening legal action, fake tech support calls about virus infections</td>
                     </tr>
                 </tbody>
             </table>
@@ -581,10 +589,42 @@
 
             <h3>Botnet Architecture</h3>
             <ul>
-                <li><strong>Bot:</strong> An infected computer that executes commands from the botmaster</li>
-                <li><strong>Botmaster:</strong> The attacker who controls the botnet</li>
-                <li><strong>Command and Control (C&C) Server:</strong> The infrastructure used to send commands to bots</li>
+                <li><strong>Bot (Zombie):</strong> An infected computer that executes commands from the botmaster. The user is typically unaware their device is compromised and part of a botnet. The bot software runs in the background, awaiting instructions.</li>
+                <li><strong>Botmaster (Bot Herder):</strong> The attacker who controls the botnet and issues commands to the bots. The botmaster can rent out the botnet to other criminals or use it for their own malicious purposes.</li>
+                <li><strong>Command and Control (C&C) Server:</strong> The infrastructure used to send commands to bots and receive data from them. C&C can use various protocols including IRC (Internet Relay Chat), HTTP/HTTPS, P2P (Peer-to-Peer), or domain generation algorithms (DGAs) to evade detection. Modern botnets use encrypted communication channels to avoid interception.</li>
             </ul>
+
+            <h3>Types of Botnet Architectures</h3>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Architecture Type</th>
+                        <th>Description</th>
+                        <th>Advantages</th>
+                        <th>Disadvantages</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Centralized (Client-Server)</strong></td>
+                        <td>All bots connect to a central C&C server for instructions</td>
+                        <td>Easy to manage, fast command distribution</td>
+                        <td>Single point of failure; if C&C is taken down, botnet becomes useless</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Decentralized (P2P)</strong></td>
+                        <td>Bots communicate with each other in a peer-to-peer network</td>
+                        <td>No single point of failure, difficult to dismantle</td>
+                        <td>More complex to implement, slower command propagation</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Hybrid</strong></td>
+                        <td>Combines centralized and P2P elements</td>
+                        <td>Balance between control and resilience</td>
+                        <td>Complex architecture, requires more resources</td>
+                    </tr>
+                </tbody>
+            </table>
 
             <h3>Uses of Botnets</h3>
             <table class="academic-table">

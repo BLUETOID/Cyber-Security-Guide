@@ -291,38 +291,90 @@
                 <tbody>
                     <tr>
                         <td><strong>Brute Force</strong></td>
-                        <td>Trying all possible combinations systematically</td>
-                        <td>Very long for complex passwords</td>
+                        <td>Systematically trying all possible combinations of characters until the correct password is found. For example, trying "a", "b", "c"... "aa", "ab", etc. Effectiveness depends on password length and complexity. A 6-character password with only lowercase letters has 308 million combinations, but an 8-character password with mixed case, numbers, and symbols has over 6 quadrillion combinations.</td>
+                        <td>Very long for complex passwords (days to centuries depending on complexity)</td>
                     </tr>
                     <tr>
                         <td><strong>Dictionary Attack</strong></td>
-                        <td>Using a list of common words and phrases</td>
-                        <td>Fast for common passwords</td>
+                        <td>Using a pre-compiled list (dictionary) of common words, phrases, and previously leaked passwords. Much faster than brute force because it focuses on likely passwords. Dictionaries include common passwords like "password123", "qwerty", popular names, and words from various languages. Can be enhanced with leetspeak (p@ssw0rd) and common substitutions.</td>
+                        <td>Fast for common passwords (seconds to minutes)</td>
                     </tr>
                     <tr>
                         <td><strong>Rainbow Table</strong></td>
-                        <td>Using pre-computed hash chains</td>
-                        <td>Fast once tables are generated</td>
+                        <td>Using pre-computed tables of hash values and their corresponding plaintext passwords. A rainbow table stores hash chains (sequences of hash-plaintext pairs) that trade massive storage space (gigabytes to terabytes) for fast lookups. Instead of computing hashes during the attack, the attacker looks up the hash in the table to find the password. Only works against unsalted hashes.</td>
+                        <td>Very fast once tables are generated (seconds), but table generation is extremely time-consuming</td>
                     </tr>
                     <tr>
                         <td><strong>Hybrid Attack</strong></td>
-                        <td>Combining dictionary words with variations</td>
-                        <td>Moderate</td>
+                        <td>Combining dictionary words with common variations, such as adding numbers or special characters (e.g., "password" becomes "password123", "password!", "Password1"). Uses rules to modify dictionary words: capitalize first letter, append years, replace letters with numbers. More thorough than pure dictionary attacks but faster than brute force.</td>
+                        <td>Moderate (minutes to hours)</td>
                     </tr>
                     <tr>
                         <td><strong>Rule-Based Attack</strong></td>
-                        <td>Applying transformation rules to wordlists</td>
-                        <td>Moderate</td>
+                        <td>Applying predefined transformation rules to wordlists, such as reversing words, capitalizing certain letters, or substituting characters. Rules can include: append numbers (add "123"), prepend symbols (add "!" at start), reverse strings ("password" to "drowssap"), leet speak transformations. Tools like John the Ripper and Hashcat support complex rule sets.</td>
+                        <td>Moderate (varies based on ruleset complexity)</td>
                     </tr>
                 </tbody>
             </table>
 
+            <h3>Understanding Hashing vs. Encryption</h3>
+            <div class="content-block">
+                <h4>Hash Functions</h4>
+                <p>A hash function is a one-way mathematical function that converts input data of any size into a fixed-size string of characters (the hash or digest). Key properties:</p>
+                <ul>
+                    <li><strong>One-Way:</strong> Cannot be reversed to get the original data (unlike encryption)</li>
+                    <li><strong>Deterministic:</strong> Same input always produces the same hash</li>
+                    <li><strong>Fast Computation:</strong> Quick to calculate the hash</li>
+                    <li><strong>Avalanche Effect:</strong> Small change in input produces drastically different hash</li>
+                    <li><strong>Collision Resistant:</strong> Difficult to find two inputs that produce the same hash</li>
+                </ul>
+                <p><strong>Example:</strong> MD5 hash of "password" is always "5f4dcc3b5aa765d61d8327deb882cf99". Even "Password" (capital P) produces a completely different hash.</p>
+
+                <h4>Encryption vs. Hashing</h4>
+                <table class="academic-table">
+                    <thead>
+                        <tr>
+                            <th>Aspect</th>
+                            <th>Hashing</th>
+                            <th>Encryption</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Reversibility</strong></td>
+                            <td>One-way, cannot be reversed</td>
+                            <td>Two-way, can be decrypted with the key</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Purpose</strong></td>
+                            <td>Verify data integrity, store passwords</td>
+                            <td>Protect data confidentiality</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Output Size</strong></td>
+                            <td>Fixed size (e.g., 256 bits for SHA-256)</td>
+                            <td>Variable, depends on input size</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Key Required</strong></td>
+                            <td>No key needed</td>
+                            <td>Requires encryption/decryption key</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Use Cases</strong></td>
+                            <td>Password storage, checksums, digital signatures</td>
+                            <td>Secure communication, data storage, VPNs</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
             <h3>Password Storage Methods</h3>
             <ul>
-                <li><strong>Plain Text:</strong> Highly insecure, passwords stored as-is</li>
-                <li><strong>Hashing:</strong> One-way mathematical function (MD5, SHA-1, SHA-256)</li>
-                <li><strong>Salted Hashing:</strong> Random data added before hashing</li>
-                <li><strong>Key Stretching:</strong> Computationally intensive hashing (bcrypt, PBKDF2)</li>
+                <li><strong>Plain Text:</strong> Highly insecure, passwords stored as-is without any protection. If database is compromised, all passwords are immediately readable. Never use this method. Example: storing "mypassword" directly in database.</li>
+                <li><strong>Hashing:</strong> One-way mathematical function that converts passwords into fixed-length strings. Common algorithms: MD5 (128-bit, now considered weak), SHA-1 (160-bit, deprecated), SHA-256 (256-bit, better but not ideal for passwords alone). Example: SHA-256 of "password" = "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8".</li>
+                <li><strong>Salted Hashing:</strong> Adding random data (salt) to each password before hashing. The salt is unique per user and stored alongside the hash. This prevents rainbow table attacks and ensures identical passwords have different hashes. Example: hash("password" + "random_salt_xyz") results in a unique hash even if two users have the same password.</li>
+                <li><strong>Key Stretching (Key Derivation Functions):</strong> Computationally intensive hashing algorithms that deliberately slow down hash calculation to make brute-force attacks impractical. Common algorithms: bcrypt (adjustable cost factor), PBKDF2 (Password-Based Key Derivation Function 2), Argon2 (modern, memory-hard). These functions iterate the hashing process thousands of times, making each guess take longer.</li>
             </ul>
 
             <h3>Defense Against Password Cracking</h3>
