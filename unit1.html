@@ -33,6 +33,7 @@
                     </li>
                     <li><a href="exam-prep.html">Exam Preparation</a></li>
                     <li><a href="revision.html">Quick Revision</a></li>
+                    <li><a href="glossary.html">Glossary</a></li>
                 </ul>
             </div>
         </nav>
@@ -70,6 +71,21 @@
             <div class="definition">
                 <strong>Definition of Cybercrime</strong>
                 <p>Cybercrime refers to criminal activities carried out using computers, networks, or the internet as the primary tool or target. It encompasses any illegal activity that involves a computer system or network, including unauthorized access, data theft, fraud, and disruption of services.</p>
+                
+                <p><strong>Detailed Explanation:</strong> Cybercrime can be categorized into two main types:</p>
+                <ul>
+                    <li><strong>Type I - Crimes where computers are the target:</strong> These include attacks on computer systems, networks, or data. Examples: hacking, malware attacks, DDoS attacks, and data breaches. The computer itself is the victim of the crime.</li>
+                    <li><strong>Type II - Crimes where computers are the tool:</strong> Here, computers facilitate traditional crimes. Examples: fraud, identity theft, cyberstalking, and intellectual property theft. The computer is used as an instrument to commit crimes against individuals or organizations.</li>
+                </ul>
+                
+                <p><strong>Characteristics of Cybercrime:</strong></p>
+                <ul>
+                    <li><strong>Anonymity:</strong> Attackers can hide their identity using various techniques like VPNs, proxies, and the Tor network</li>
+                    <li><strong>Borderless Nature:</strong> Cybercrimes transcend geographical boundaries, making jurisdiction and law enforcement complex</li>
+                    <li><strong>Rapid Execution:</strong> Attacks can be executed in seconds or minutes, affecting thousands of victims simultaneously</li>
+                    <li><strong>Low Cost, High Impact:</strong> Minimal resources required to cause significant damage</li>
+                    <li><strong>Difficulty in Detection:</strong> Sophisticated techniques make detection and attribution challenging</li>
+                </ul>
             </div>
 
             <h3>Origin of the Term</h3>
@@ -79,11 +95,40 @@
             <p>Information Security (InfoSec) is the practice of protecting information by mitigating information risks. It involves preventing or reducing the probability of unauthorized access, use, disclosure, disruption, modification, or destruction of information.</p>
 
             <div class="content-block">
-                <h4>The CIA Triad</h4>
+                <h4>The CIA Triad - Core Principles of Information Security</h4>
                 <ul>
-                    <li><strong>Confidentiality:</strong> Ensuring that information is accessible only to authorized individuals</li>
-                    <li><strong>Integrity:</strong> Maintaining the accuracy and completeness of data throughout its lifecycle</li>
-                    <li><strong>Availability:</strong> Ensuring that authorized users have reliable access to information when needed</li>
+                    <li><strong>Confidentiality:</strong> Ensuring that information is accessible only to authorized individuals
+                        <ul>
+                            <li><strong>Definition:</strong> Preventing disclosure of information to unauthorized parties</li>
+                            <li><strong>Methods:</strong> Encryption, access controls, authentication, authorization</li>
+                            <li><strong>Example:</strong> Encrypting sensitive files, using passwords, implementing role-based access control (RBAC)</li>
+                            <li><strong>Violations:</strong> Data breaches, eavesdropping, unauthorized access, social engineering</li>
+                        </ul>
+                    </li>
+                    <li><strong>Integrity:</strong> Maintaining the accuracy and completeness of data throughout its lifecycle
+                        <ul>
+                            <li><strong>Definition:</strong> Ensuring data has not been altered or tampered with by unauthorized parties</li>
+                            <li><strong>Methods:</strong> Hashing (MD5, SHA-256), digital signatures, checksums, version control</li>
+                            <li><strong>Example:</strong> Using digital signatures for documents, maintaining audit logs, implementing data validation</li>
+                            <li><strong>Violations:</strong> Data manipulation, unauthorized modifications, malware infections, SQL injection</li>
+                        </ul>
+                    </li>
+                    <li><strong>Availability:</strong> Ensuring that authorized users have reliable access to information when needed
+                        <ul>
+                            <li><strong>Definition:</strong> Guaranteeing timely and reliable access to information systems and data</li>
+                            <li><strong>Methods:</strong> Redundancy, backups, disaster recovery, load balancing, DDoS protection</li>
+                            <li><strong>Example:</strong> Regular backups, redundant servers, uninterruptible power supply (UPS), failover systems</li>
+                            <li><strong>Violations:</strong> Denial of Service (DoS) attacks, hardware failures, natural disasters, ransomware</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <h4>Extended Security Principles</h4>
+                <ul>
+                    <li><strong>Authentication:</strong> Verifying the identity of users or systems (e.g., passwords, biometrics, multi-factor authentication)</li>
+                    <li><strong>Authorization:</strong> Determining what resources an authenticated user can access (e.g., access control lists, permissions)</li>
+                    <li><strong>Non-repudiation:</strong> Ensuring that parties cannot deny their actions (e.g., digital signatures, audit logs)</li>
+                    <li><strong>Accountability:</strong> Tracking user actions for audit and compliance purposes (e.g., logging, monitoring)</li>
                 </ul>
             </div>
 
@@ -403,7 +448,18 @@
 
             <div class="definition">
                 <strong>Definition:</strong>
-                Social engineering is the psychological manipulation of individuals to divulge confidential information or perform actions that compromise security. It exploits human psychology rather than technical vulnerabilities.
+                <p>Social engineering is the psychological manipulation of individuals to divulge confidential information or perform actions that compromise security. It exploits human psychology rather than technical vulnerabilities.</p>
+                
+                <p><strong>Detailed Explanation:</strong> Social engineering is based on the principle that humans are often the weakest link in security. Rather than attempting to break through technical defenses like firewalls or encryption, attackers manipulate people into voluntarily providing access or information. This form of attack is particularly dangerous because:</p>
+                <ul>
+                    <li>It bypasses technical security controls entirely</li>
+                    <li>It's difficult to defend against with technology alone</li>
+                    <li>Employees may not recognize they're being attacked</li>
+                    <li>It requires minimal technical skills from the attacker</li>
+                    <li>Success rates are often higher than technical attacks</li>
+                </ul>
+                
+                <p><strong>Common Targets:</strong> Receptionists, help desk personnel, system administrators, employees with access to sensitive data, executives, and new employees who may be less security-aware.</p>
             </div>
 
             <h3>Types of Social Engineering Attacks</h3>
@@ -475,7 +531,25 @@
 
             <div class="definition">
                 <strong>Definition:</strong>
-                Cyber stalking is the use of electronic communications to harass, intimidate, or threaten an individual repeatedly. It involves persistent unwanted contact that causes the victim to fear for their safety.
+                <p>Cyber stalking is the use of electronic communications to harass, intimidate, or threaten an individual repeatedly. It involves persistent unwanted contact that causes the victim to fear for their safety.</p>
+                
+                <p><strong>Detailed Explanation:</strong> Cyber stalking is a serious crime that leverages digital technologies to repeatedly target and harass victims. Unlike traditional stalking, cyber stalking can occur 24/7 from any location, making it particularly invasive and difficult to escape. Key aspects include:</p>
+                <ul>
+                    <li><strong>Pattern of Behavior:</strong> Not a single incident, but repeated actions over time</li>
+                    <li><strong>Emotional Impact:</strong> Causes significant distress, fear, anxiety, or emotional trauma to victims</li>
+                    <li><strong>Multiple Channels:</strong> Can occur across various platforms (email, social media, messaging apps, forums)</li>
+                    <li><strong>Escalation Risk:</strong> Often escalates from online harassment to offline stalking or physical threats</li>
+                    <li><strong>Anonymous Nature:</strong> Perpetrators can hide their identity using fake profiles and anonymous communication tools</li>
+                </ul>
+                
+                <p><strong>Impact on Victims:</strong></p>
+                <ul>
+                    <li>Psychological trauma, anxiety, depression, and PTSD</li>
+                    <li>Disruption of daily life and work</li>
+                    <li>Loss of privacy and sense of safety</li>
+                    <li>Damage to reputation through defamation</li>
+                    <li>Social isolation and relationship problems</li>
+                </ul>
             </div>
 
             <h3>Characteristics of Cyber Stalking</h3>

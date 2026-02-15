@@ -33,6 +33,7 @@
                     </li>
                     <li><a href="exam-prep.html">Exam Preparation</a></li>
                     <li><a href="revision.html">Quick Revision</a></li>
+                    <li><a href="glossary.html">Glossary</a></li>
                 </ul>
             </div>
         </nav>
@@ -87,42 +88,58 @@
             </ul>
 
             <h3>Evolution of Mobile Computing</h3>
+            <p>Mobile networks have evolved through five generations, each bringing enhanced capabilities and new security challenges:</p>
             <table class="academic-table">
                 <thead>
                     <tr>
                         <th>Generation</th>
                         <th>Technology</th>
                         <th>Characteristics</th>
+                        <th>Security Features</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>1G</td>
-                        <td>Analog Cellular</td>
-                        <td>Voice-only communication</td>
+                        <td><strong>1G</strong></td>
+                        <td>Analog Cellular (AMPS)</td>
+                        <td>Voice-only communication, introduced in 1980s</td>
+                        <td>No encryption, easily intercepted with scanners</td>
                     </tr>
                     <tr>
-                        <td>2G</td>
+                        <td><strong>2G</strong></td>
                         <td>Digital (GSM, CDMA)</td>
-                        <td>Voice and SMS, limited data</td>
+                        <td>Voice and SMS, limited data (up to 64 Kbps), introduced encryption</td>
+                        <td>A5/1, A5/2 algorithms (later found vulnerable), SIM card authentication</td>
                     </tr>
                     <tr>
-                        <td>3G</td>
-                        <td>UMTS, HSPA</td>
-                        <td>Mobile internet, multimedia</td>
+                        <td><strong>3G</strong></td>
+                        <td>UMTS, HSPA, CDMA2000</td>
+                        <td>Mobile internet, multimedia (up to 2 Mbps), video calling</td>
+                        <td>Improved encryption (KASUMI), mutual authentication, stronger key management</td>
                     </tr>
                     <tr>
-                        <td>4G</td>
+                        <td><strong>4G</strong></td>
                         <td>LTE, LTE-Advanced</td>
-                        <td>High-speed broadband</td>
+                        <td>High-speed broadband (100 Mbps-1 Gbps), all-IP network, HD streaming</td>
+                        <td>AES encryption, EPS-AKA authentication, stronger ciphers (SNOW 3G, ZUC)</td>
                     </tr>
                     <tr>
-                        <td>5G</td>
+                        <td><strong>5G</strong></td>
                         <td>NR (New Radio)</td>
-                        <td>Ultra-high speed, IoT support</td>
+                        <td>Ultra-high speed (up to 20 Gbps), IoT support, ultra-low latency (1ms)</td>
+                        <td>Enhanced authentication, network slicing security, improved privacy, 256-bit encryption</td>
                     </tr>
                 </tbody>
             </table>
+            
+            <h3>Security Evolution Across Generations</h3>
+            <ul>
+                <li><strong>1G:</strong> No security - communications could be intercepted with simple radio scanners</li>
+                <li><strong>2G:</strong> Basic encryption introduced but with known vulnerabilities (A5/1 cracked in minutes)</li>
+                <li><strong>3G:</strong> Mutual authentication added, stronger encryption algorithms, but implementation flaws existed</li>
+                <li><strong>4G:</strong> All-IP architecture with AES-based encryption, but increased attack surface with internet integration</li>
+                <li><strong>5G:</strong> Enhanced security features including improved authentication, privacy protections, but new challenges with massive IoT connectivity</li>
+            </ul>
         </section>
 
         <section class="content-section">

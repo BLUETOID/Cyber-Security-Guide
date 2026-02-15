@@ -33,6 +33,7 @@
                     </li>
                     <li><a href="exam-prep.html">Exam Preparation</a></li>
                     <li><a href="revision.html">Quick Revision</a></li>
+                    <li><a href="glossary.html">Glossary</a></li>
                 </ul>
             </div>
         </nav>
@@ -351,12 +352,39 @@
 
             <div class="definition">
                 <strong>Keylogger:</strong>
-                A keylogger is a surveillance tool that records keystrokes made on a computer or mobile device. It captures all typed information including passwords, messages, and other sensitive data.
+                <p>A keylogger is a surveillance tool that records keystrokes made on a computer or mobile device. It captures all typed information including passwords, messages, and other sensitive data.</p>
+                
+                <p><strong>Detailed Explanation:</strong> Keyloggers are one of the most effective tools for stealing credentials and sensitive information. They work silently in the background, capturing every key pressed by the user. The recorded data is either stored locally or transmitted to the attacker remotely.</p>
+                
+                <p><strong>How Keyloggers Work:</strong></p>
+                <ul>
+                    <li><strong>API Hooking:</strong> Intercepts system API calls for keyboard input</li>
+                    <li><strong>Kernel-level Hooking:</strong> Operates at the operating system kernel level for deeper access</li>
+                    <li><strong>Form Grabbing:</strong> Captures data from web forms before encryption</li>
+                    <li><strong>JavaScript Injection:</strong> Web-based keyloggers embedded in malicious websites</li>
+                </ul>
+                
+                <p><strong>Legitimate Uses:</strong> Employee monitoring, parental controls, forensic investigations, troubleshooting</p>
+                <p><strong>Malicious Uses:</strong> Stealing passwords, credit card numbers, personal information, corporate espionage</p>
             </div>
 
             <div class="definition">
                 <strong>Spyware:</strong>
-                Spyware is software that secretly monitors and collects information about user activities without consent. It may track browsing habits, capture screenshots, record audio/video, and steal personal data.
+                <p>Spyware is software that secretly monitors and collects information about user activities without consent. It may track browsing habits, capture screenshots, record audio/video, and steal personal data.</p>
+                
+                <p><strong>Detailed Explanation:</strong> Spyware is broader than keyloggers, encompassing various surveillance capabilities. It operates covertly, consuming system resources while gathering comprehensive information about user behavior, communications, and data.</p>
+                
+                <p><strong>Spyware Categories:</strong></p>
+                <ul>
+                    <li><strong>System Monitors:</strong> Track all computer activities including emails, chat, websites</li>
+                    <li><strong>Tracking Cookies:</strong> Monitor web browsing and collect marketing data</li>
+                    <li><strong>Adware:</strong> Displays unwanted ads based on collected browsing data</li>
+                    <li><strong>Trojans:</strong> Disguised as legitimate software to gain access</li>
+                    <li><strong>Commercial Spyware:</strong> Marketed as monitoring tools (employee/child monitoring)</li>
+                    <li><strong>Mobile Spyware:</strong> Specialized for smartphones, tracks location, calls, messages</li>
+                </ul>
+                
+                <p><strong>Impact:</strong> Privacy invasion, identity theft, financial loss, system performance degradation, bandwidth consumption</p>
             </div>
 
             <h3>Types of Keyloggers</h3>
@@ -444,12 +472,55 @@
 
             <div class="definition">
                 <strong>Computer Virus:</strong>
-                A virus is a malicious program that attaches itself to a legitimate program or file and requires human action to spread. When the infected program is executed, the virus activates and can replicate, corrupt data, or perform other malicious actions.
+                <p>A virus is a malicious program that attaches itself to a legitimate program or file and requires human action to spread. When the infected program is executed, the virus activates and can replicate, corrupt data, or perform other malicious actions.</p>
+                
+                <p><strong>Detailed Explanation:</strong> Computer viruses are among the oldest forms of malware, named for their biological analogy. Like biological viruses, they require a host (program or file) and replicate by inserting copies of themselves into other files or programs. The key distinction is that viruses cannot spread without human intervention - someone must run the infected file.</p>
+                
+                <p><strong>Virus Lifecycle:</strong></p>
+                <ul>
+                    <li><strong>Infection:</strong> Virus attaches to host file or program</li>
+                    <li><strong>Activation:</strong> User executes infected file, activating virus</li>
+                    <li><strong>Replication:</strong> Virus copies itself to other files</li>
+                    <li><strong>Payload Delivery:</strong> Executes malicious actions (damage, data theft)</li>
+                    <li><strong>Propagation:</strong> Spreads through file sharing, email, removable media</li>
+                </ul>
+                
+                <p><strong>Common Infection Vectors:</strong> Email attachments, infected downloads, removable media (USB drives), file sharing networks, macro-enabled documents</p>
             </div>
 
             <div class="definition">
                 <strong>Computer Worm:</strong>
-                A worm is a self-replicating malware that spreads automatically across networks without requiring human intervention or attachment to host programs. Worms exploit vulnerabilities to propagate.
+                <p>A worm is a self-replicating malware that spreads automatically across networks without requiring human intervention or attachment to host programs. Worms exploit vulnerabilities to propagate.</p>
+                
+                <p><strong>Detailed Explanation:</strong> Worms are standalone malicious programs that represent a more dangerous evolution from viruses. They can scan networks for vulnerable systems, automatically exploit those vulnerabilities, copy themselves to new systems, and repeat the process - all without human interaction. This autonomous behavior enables worms to spread rapidly across networks, potentially affecting thousands of systems in hours.</p>
+                
+                <p><strong>Worm Characteristics:</strong></p>
+                <ul>
+                    <li><strong>Self-contained:</strong> Complete executable programs, don't need host files</li>
+                    <li><strong>Autonomous propagation:</strong> Spread without human action</li>
+                    <li><strong>Network-aware:</strong> Actively scan and target network systems</li>
+                    <li><strong>Exploit-driven:</strong> Leverage specific vulnerabilities for propagation</li>
+                    <li><strong>Resource-intensive:</strong> Can severely degrade network performance</li>
+                </ul>
+                
+                <p><strong>Propagation Methods:</strong></p>
+                <ul>
+                    <li><strong>Network Exploitation:</strong> Exploiting vulnerabilities in network services (SMB, RDP, etc.)</li>
+                    <li><strong>Email:</strong> Sending copies to email contacts with enticing subject lines</li>
+                    <li><strong>File Sharing:</strong> Copying to shared network drives and folders</li>
+                    <li><strong>Removable Media:</strong> Auto-executing from USB drives</li>
+                    <li><strong>Instant Messaging:</strong> Spreading through chat applications</li>
+                </ul>
+                
+                <p><strong>Famous Worm Examples and Their Impact:</strong></p>
+                <ul>
+                    <li><strong>Morris Worm (1988):</strong> First major internet worm, affected 10% of internet (6,000 computers)</li>
+                    <li><strong>ILOVEYOU (2000):</strong> Spread via email, caused $10 billion in damages</li>
+                    <li><strong>Code Red (2001):</strong> Exploited IIS vulnerability, infected 359,000 servers in 14 hours</li>
+                    <li><strong>SQL Slammer (2003):</strong> Fastest-spreading worm, doubled infected systems every 8.5 seconds</li>
+                    <li><strong>Conficker (2008):</strong> Created massive botnet of 10-15 million computers</li>
+                    <li><strong>WannaCry (2017):</strong> Ransomware worm affecting 200,000+ computers in 150 countries</li>
+                </ul>
             </div>
 
             <h3>Comparison: Virus vs. Worm</h3>

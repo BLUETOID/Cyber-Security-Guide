@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Glossary - Cyber Security Terms & Tools | AKTU Study Guide</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .glossary-search {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 10px;
+        }
+        .glossary-search input {
+            width: 100%;
+            padding: 12px 20px;
+            font-size: 16px;
+            border: 2px solid var(--primary-color);
+            border-radius: 5px;
+        }
+        .alphabet-nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+            padding: 15px;
+            background: var(--secondary-bg);
+            border-radius: 8px;
+        }
+        .alphabet-nav a {
+            padding: 8px 12px;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        .alphabet-nav a:hover {
+            background: var(--accent-color);
+            transform: translateY(-2px);
+        }
+        .glossary-term {
+            margin: 20px 0;
+            padding: 15px;
+            background: var(--secondary-bg);
+            border-left: 4px solid var(--primary-color);
+            border-radius: 4px;
+        }
+        .glossary-term h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+        .glossary-term .term-category {
+            display: inline-block;
+            padding: 4px 10px;
+            background: var(--accent-color);
+            color: white;
+            border-radius: 3px;
+            font-size: 0.85em;
+            margin-bottom: 10px;
+        }
+        .glossary-section {
+            margin: 40px 0;
+        }
+        .glossary-section h2 {
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top"></button>
+    
+    <header>
+        <nav>
+            <div class="nav-container">
+                <a href="index.html" class="nav-brand">Cyber Security Guide</a>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="syllabus.html">Syllabus</a></li>
+                    <li class="dropdown">
+                        <a href="#">Units</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="unit1.html">Unit I</a></li>
+                            <li><a href="unit2.html">Unit II</a></li>
+                            <li><a href="unit3.html">Unit III</a></li>
+                            <li><a href="unit4.html">Unit IV</a></li>
+                            <li><a href="unit5.html">Unit V</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="exam-prep.html">Exam Preparation</a></li>
+                    <li><a href="revision.html">Quick Revision</a></li>
+                    <li><a href="glossary.html" class="active">Glossary</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="hero">
+            <h1>Comprehensive Glossary</h1>
+            <p class="course-codes">Cyber Security Terms, Tools, and Concepts</p>
+        </section>
+
+        <!-- Search Box -->
+        <div class="glossary-search">
+            <input type="text" id="searchBox" placeholder="Search for a term..." onkeyup="searchGlossary()">
+        </div>
+
+        <!-- Alphabet Navigation -->
+        <div class="alphabet-nav">
+            <a href="#A">A</a>
+            <a href="#B">B</a>
+            <a href="#C">C</a>
+            <a href="#D">D</a>
+            <a href="#E">E</a>
+            <a href="#F">F</a>
+            <a href="#G">G</a>
+            <a href="#H">H</a>
+            <a href="#I">I</a>
+            <a href="#J">J</a>
+            <a href="#K">K</a>
+            <a href="#L">L</a>
+            <a href="#M">M</a>
+            <a href="#N">N</a>
+            <a href="#O">O</a>
+            <a href="#P">P</a>
+            <a href="#Q">Q</a>
+            <a href="#R">R</a>
+            <a href="#S">S</a>
+            <a href="#T">T</a>
+            <a href="#U">U</a>
+            <a href="#V">V</a>
+            <a href="#W">W</a>
+            <a href="#X">X</a>
+            <a href="#Y">Y</a>
+            <a href="#Z">Z</a>
+        </div>
+
+        <!-- Introduction -->
+        <section class="content-section">
+            <h2>About This Glossary</h2>
+            <p>This comprehensive glossary provides detailed definitions and explanations of over 150 terms related to cyber security, internet technologies, hacking techniques, security tools, attack methods, defense mechanisms, legal terminology, and forensic concepts. Each term includes:</p>
+            <ul>
+                <li><strong>Clear Definition:</strong> Precise explanation of the term</li>
+                <li><strong>Detailed Description:</strong> In-depth information about the concept</li>
+                <li><strong>Practical Examples:</strong> Real-world applications and scenarios</li>
+                <li><strong>Related Terms:</strong> Cross-references to related concepts</li>
+                <li><strong>Category Tags:</strong> Classification for easy identification</li>
+            </ul>
+        </section>
+
+        <!-- A Section -->
+        <div id="A" class="glossary-section">
+            <h2>A</h2>
+            
+            <div class="glossary-term">
+                <span class="term-category">Security Concept</span>
+                <h3>Access Control</h3>
+                <p><strong>Definition:</strong> A security mechanism that restricts access to resources based on the identity of users or systems.</p>
+                <p><strong>Detailed Explanation:</strong> Access control is fundamental to information security, determining who can view, use, or modify resources. It operates on the principle of least privilege, granting users only the minimum access necessary to perform their duties.</p>
+                <p><strong>Types:</strong></p>
+                <ul>
+                    <li><strong>Discretionary Access Control (DAC):</strong> Resource owner controls access permissions</li>
+                    <li><strong>Mandatory Access Control (MAC):</strong> System enforces access based on security labels</li>
+                    <li><strong>Role-Based Access Control (RBAC):</strong> Access based on user roles</li>
+                    <li><strong>Attribute-Based Access Control (ABAC):</strong> Access based on attributes of users, resources, and environment</li>
+                </ul>
+                <p><strong>Examples:</strong> File permissions in operating systems, database user privileges, network firewall rules</p>
+                <p><strong>Related Terms:</strong> Authentication, Authorization, AAA (Authentication, Authorization, Accounting)</p>
+            </div>
+
+            <div class="glossary-term">
+                <span class="term-category">Attack Type</span>
+                <h3>Advanced Persistent Threat (APT)</h3>
+                <p><strong>Definition:</strong> A prolonged and targeted cyber attack in which an unauthorized user gains access to a network and remains undetected for an extended period.</p>
+                <p><strong>Detailed Explanation:</strong> APTs are sophisticated, multi-stage attacks typically carried out by well-funded groups, often nation-states. The goal is usually espionage, data theft, or strategic positioning rather than immediate financial gain.</p>
+                <p><strong>Characteristics:</strong></p>
+                <ul>
+                    <li><strong>Advanced:</strong> Uses sophisticated techniques and custom malware</li>
+                    <li><strong>Persistent:</strong> Maintains long-term presence in target networks</li>
+                    <li><strong>Threat:</strong> Poses significant risk to national security and critical infrastructure</li>
+                    <li><strong>Multi-stage:</strong> Reconnaissance, initial compromise, establishing foothold, escalating privileges, lateral movement, data exfiltration</li>
+                </ul>
+                <p><strong>Examples:</strong> Stuxnet (targeting Iranian nuclear facilities), APT29/Cozy Bear (attributed to Russian intelligence)</p>
+                <p><strong>Related Terms:</strong> Zero-day Exploit, Lateral Movement, Command and Control (C2), Exfiltration</p>
+            </div>
+
+            <div class="glossary-term">
+                <span class="term-category">Security Tool</span>
+                <h3>Antivirus (AV) Software</h3>
+                <p><strong>Definition:</strong> A program designed to detect, prevent, and remove malicious software from computer systems.</p>
+                <p><strong>Detailed Explanation:</strong> Antivirus software uses multiple detection methods including signature-based detection (comparing files against known malware signatures), heuristic analysis (identifying suspicious behavior patterns), and sandboxing (executing files in isolated environments).</p>
+                <p><strong>Components:</strong></p>
+                <ul>
+                    <li><strong>Scanner:</strong> Examines files and system memory</li>
+                    <li><strong>Virus Definitions:</strong> Database of known malware signatures</li>
+                    <li><strong>Quarantine:</strong> Isolated area for suspicious files</li>
+                    <li><strong>Real-time Protection:</strong> Continuous monitoring of system activities</li>
+                </ul>
+                <p><strong>Examples:</strong> Windows Defender, Norton, Kaspersky, McAfee, Bitdefender</p>
+                <p><strong>Related Terms:</strong> Malware, Endpoint Security, Signature-based Detection, Heuristic Analysis</p>
+            </div>
+
+            <div class="glossary-term">
+                <span class="term-category">Security Concept</span>
+                <h3>Authentication</h3>
+                <p><strong>Definition:</strong> The process of verifying the identity of a user, device, or system before granting access to resources.</p>
+                <p><strong>Detailed Explanation:</strong> Authentication ensures that users are who they claim to be. It's the first line of defense in access control and can be implemented using various factors.</p>
+                <p><strong>Authentication Factors:</strong></p>
+                <ul>
+                    <li><strong>Something You Know:</strong> Passwords, PINs, security questions</li>
+                    <li><strong>Something You Have:</strong> Smart cards, tokens, mobile devices</li>
+                    <li><strong>Something You Are:</strong> Biometrics (fingerprint, facial recognition, iris scan)</li>
+                    <li><strong>Somewhere You Are:</strong> Location-based authentication (GPS, IP address)</li>
+                    <li><strong>Something You Do:</strong> Behavioral biometrics (typing patterns, gait)</li>
+                </ul>
+                <p><strong>Multi-Factor Authentication (MFA):</strong> Uses two or more authentication factors for enhanced security</p>
+                <p><strong>Related Terms:</strong> Authorization, Single Sign-On (SSO), Two-Factor Authentication (2FA), Biometrics</p>
+            </div>
+
+            <div class="glossary-term">
+                <span class="term-category">Security Concept</span>
+                <h3>Authorization</h3>
+                <p><strong>Definition:</strong> The process of determining what resources and operations an authenticated user is permitted to access and perform.</p>
+                <p><strong>Detailed Explanation:</strong> Authorization occurs after authentication and defines the scope of access granted to a user. It implements the principle of least privilege, ensuring users can only access resources necessary for their role.</p>
+                <p><strong>Authorization Models:</strong></p>
+                <ul>
+                    <li><strong>Access Control Lists (ACLs):</strong> Lists specifying which users can access specific resources</li>
+                    <li><strong>Capability-based:</strong> Tokens granting specific access rights</li>
+                    <li><strong>Policy-based:</strong> Rules engine evaluating access requests</li>
+                </ul>
+                <p><strong>Examples:</strong> File permissions (read, write, execute), database access privileges, API access tokens</p>
+                <p><strong>Related Terms:</strong> Authentication, Access Control, Least Privilege, Permissions</p>
+            </div>
+        </div>
+
+        <!-- B Section -->
+        <div id="B" class="glossary-section">
+            <h2>B</h2>
+            
+            <div class="glossary-term">
+                <span class="term-category">Security Mechanism</span>
+                <h3>Backdoor</h3>
+                <p><strong>Definition:</strong> A hidden method of bypassing normal authentication or security controls to gain unauthorized access to a system.</p>
+                <p><strong>Detailed Explanation:</strong> Backdoors can be intentionally created by developers for maintenance purposes or maliciously installed by attackers after initial compromise. They provide persistent access to compromised systems.</p>
+                <p><strong>Types:</strong></p>
+                <ul>
+                    <li><strong>Application Backdoors:</strong> Hidden features in software</li>
+                    <li><strong>System Backdoors:</strong> Modified system files or rootkits</li>
+                    <li><strong>Cryptographic Backdoors:</strong> Weaknesses in encryption algorithms</li>
+                    <li><strong>Hardware Backdoors:</strong> Hidden functionality in chips or devices</li>
+                </ul>
+                <p><strong>Detection Methods:</strong> Code review, network traffic analysis, file integrity monitoring, behavioral analysis</p>
+                <p><strong>Related Terms:</strong> Trojan Horse, Rootkit, Remote Access Trojan (RAT), Persistence Mechanisms</p>
+            </div>
+
+            <div class="glossary-term">
+                <span class="term-category">Security Tool</span>
+                <h3>Backup</h3>
+                <p><strong>Definition:</strong> The process of creating copies of data to enable recovery in case of data loss, corruption, or disaster.</p>
+                <p><strong>Detailed Explanation:</strong> Backups are critical for business continuity and disaster recovery. The 3-2-1 rule is a best practice: keep 3 copies of data, on 2 different media, with 1 copy off-site.</p>
+                <p><strong>Backup Types:</strong></p>
+                <ul>
+                    <li><strong>Full Backup:</strong> Complete copy of all data (time-consuming, requires most storage)</li>
+                    <li><strong>Incremental Backup:</strong> Only changes since last backup (faster, less storage)</li>
+                    <li><strong>Differential Backup:</strong> Changes since last full backup</li>
+                    <li><strong>Mirror Backup:</strong> Exact copy of source data</li>
+                </ul>
+                <p><strong>Backup Strategies:</strong> Scheduled backups, continuous data protection, cloud backups, tape backups</p>
+                <p><strong>Related Terms:</strong> Disaster Recovery, Business Continuity, Data Redundancy, Archive</p>
+            </div>
+
+            <div class="glossary-term">
+                <span class="term-category">Malware</span>
+                <h3>Botnet</h3>
+                <p><strong>Definition:</strong> A network of compromised computers (bots or zombies) controlled by a central command and control (C2) server to perform coordinated malicious activities.</p>
+                <p><strong>Detailed Explanation:</strong> Botnets are powerful tools for cybercriminals, enabling large-scale attacks using the combined resources of thousands or millions of infected devices. Owners are often unaware their devices are part of a botnet.</p>
+                <p><strong>Common Uses:</strong></p>
+                <ul>
+                    <li><strong>DDoS Attacks:</strong> Overwhelming targets with traffic</li>
+                    <li><strong>Spam Distribution:</strong> Sending mass unsolicited emails</li>
+                    <li><strong>Credential Stuffing:</strong> Testing stolen credentials across websites</li>
+                    <li><strong>Cryptocurrency Mining:</strong> Using victim resources for mining</li>
+                    <li><strong>Click Fraud:</strong> Generating fake advertising clicks</li>
+                </ul>
+                <p><strong>Famous Examples:</strong> Mirai (IoT botnet), Emotet, Zeus, Conficker</p>
+                <p><strong>Related Terms:</strong> Command and Control (C2), Zombie Computer, DDoS Attack, Malware</p>
+            </div>
+
+            <div class="glossary-term">
+                <span class="term-category">Attack Type</span>
+                <h3>Brute Force Attack</h3>
+                <p><strong>Definition:</strong> A trial-and-error method of attempting to discover passwords, encryption keys, or other credentials by systematically trying all possible combinations.</p>
+                <p><strong>Detailed Explanation:</strong> Brute force attacks rely on computational power rather than clever techniques. Success depends on password complexity, computing power available, and time constraints.</p>
+                <p><strong>Variations:</strong></p>
+                <ul>
+                    <li><strong>Simple Brute Force:</strong> Trying all possible combinations</li>
+                    <li><strong>Dictionary Attack:</strong> Using wordlists of common passwords</li>
+                    <li><strong>Hybrid Attack:</strong> Combining dictionary words with character substitutions</li>
+                    <li><strong>Reverse Brute Force:</strong> Using common passwords against multiple accounts</li>
+                    <li><strong>Credential Stuffing:</strong> Using known username/password pairs from breaches</li>
+                </ul>
+                <p><strong>Defense Mechanisms:</strong> Account lockout policies, CAPTCHA, rate limiting, strong password requirements, multi-factor authentication</p>
+                <p><strong>Related Terms:</strong> Password Cracking, Rainbow Table, Dictionary Attack, Password Policy</p>
+            </div>
+        </div>
+
+        <!-- C Section -->
+        <div id="C" class="glossary-section">
+            <h2>C</h2>
+            
+            <div class="glossary-term">
+                <span class="term-category">Security Concept</span>
+                <h3>CIA Triad</h3>
+                <p><strong>Definition:</strong> The three fundamental principles of information security: Confidentiality, Integrity, and Availability.</p>
+                <p><strong>Detailed Explanation:</strong> The CIA Triad forms the foundation of information security policies and practices. Every security control should support one or more of these principles.</p>
+                <p><strong>Components:</strong></p>
+                <ul>
+                    <li><strong>Confidentiality:</strong> Preventing unauthorized disclosure of information (encryption, access controls)</li>
+                    <li><strong>Integrity:</strong> Ensuring data accuracy and preventing unauthorized modifications (hashing, checksums, digital signatures)</li>
+                    <li><strong>Availability:</strong> Ensuring authorized access to resources when needed (redundancy, backups, DDoS protection)</li>
+                </ul>
+                <p><strong>Extensions:</strong> Some models extend to CIAAN (adding Authentication and Non-repudiation) or Parkerian Hexad (adding Possession, Authenticity)</p>
+                <p><strong>Related Terms:</strong> Information Security, Data Protection, Security Controls</p>
+            </div>
+
+            <div class="glossary-term">
+                <span class="term-category">Attack Vector</span>
+                <h3>Command and Control (C2)</h3>
+                <p><strong>Definition:</strong> Infrastructure used by attackers to maintain communication with compromised systems and issue commands to malware or botnets.</p>
+                <p><strong>Detailed Explanation:</strong> C2 servers act as the central nervous system of cyber attacks, enabling attackers to control infected machines, exfiltrate data, and coordinate large-scale operations. Modern C2 systems use sophisticated techniques to evade detection.</p>
+                <p><strong>C2 Communication Methods:</strong></p>
+                <ul>
+                    <li><strong>HTTP/HTTPS:</strong> Blending with normal web traffic</li>
+                    <li><strong>DNS Tunneling:</strong> Encoding commands in DNS queries</li>
+                    <li><strong>Social Media:</strong> Using public platforms for covert communication</li>
+                    <li><strong>P2P Networks:</strong> Decentralized peer-to-peer control</li>
+                    <li><strong>Dead Drop Resolvers:</strong> Indirect communication through third parties</li>
+                </ul>
+                <p><strong>Detection Techniques:</strong> Network traffic analysis, anomaly detection, threat intelligence feeds, behavioral analysis</p>
+                <p><strong>Related Terms:</strong> Botnet, Malware, Exfiltration, Remote Access Trojan (RAT)</p>
+            </div>
+
+            <div class="glossary-term">
+                <span class="term-category">Cryptography</span>
+                <h3>Cryptography</h3>
+                <p><strong>Definition:</strong> The science of securing information by transforming it into an unreadable format (encryption) that can only be reversed by authorized parties with the correct key (decryption).</p>
+                <p><strong>Detailed Explanation:</strong> Cryptography is essential for protecting data confidentiality, integrity, and authenticity in transit and at rest. It uses mathematical algorithms and keys to transform plaintext into ciphertext.</p>
+                <p><strong>Types of Cryptography:</strong></p>
+                <ul>
+                    <li><strong>Symmetric Encryption:</strong> Same key for encryption and decryption (AES, DES, 3DES) - Fast but requires secure key exchange</li>
+                    <li><strong>Asymmetric Encryption:</strong> Different keys (public/private) for encryption and decryption (RSA, ECC) - Slower but enables secure key exchange</li>
+                    <li><strong>Hash Functions:</strong> One-way transformation for integrity verification (SHA-256, MD5, BLAKE2)</li>
+                    <li><strong>Digital Signatures:</strong> Combining hashing and asymmetric encryption for authentication and non-repudiation</li>
+                </ul>
+                <p><strong>Applications:</strong> HTTPS/TLS, VPN, secure email (S/MIME, PGP), file encryption, password hashing, blockchain</p>
+                <p><strong>Related Terms:</strong> Encryption, Decryption, Public Key Infrastructure (PKI), Digital Certificate, SSL/TLS</p>
+            </div>
+
+            <div class="glossary-term">
+                <span class="term-category">Attack Type</span>
+                <h3>Cross-Site Scripting (XSS)</h3>
+                <p><strong>Definition:</strong> A web security vulnerability that allows attackers to inject malicious scripts into web pages viewed by other users.</p>
+                <p><strong>Detailed Explanation:</strong> XSS attacks exploit inadequate input validation and output encoding in web applications. The malicious script executes in the victim's browser with the same privileges as legitimate website scripts.</p>
+                <p><strong>Types of XSS:</strong></p>
+                <ul>
+                    <li><strong>Reflected XSS:</strong> Script included in request and immediately reflected in response (non-persistent)</li>
+                    <li><strong>Stored XSS:</strong> Script permanently stored on target server (in database, comments, forums) - More dangerous</li>
+                    <li><strong>DOM-based XSS:</strong> Vulnerability in client-side code (JavaScript) rather than server-side</li>
+                </ul>
+                <p><strong>Potential Impact:</strong> Session hijacking, credential theft, website defacement, malware distribution, phishing</p>
+                <p><strong>Prevention:</strong> Input validation, output encoding, Content Security Policy (CSP), HTTPOnly cookies</p>
+                <p><strong>Related Terms:</strong> Web Application Security, SQL Injection, CSRF, Input Validation</p>
+            </div>
+
+            <div class="glossary-term">
+                <span class="term-category">Crime Type</span>
+                <h3>Cybercrime</h3>
+                <p><strong>Definition:</strong> Criminal activities carried out using computers, networks, or the internet, either as the target or as the tool for committing traditional crimes.</p>
+                <p><strong>Detailed Explanation:</strong> Cybercrime encompasses a wide range of illegal activities in the digital realm. It can be categorized by target (individuals, organizations, governments) or by nature (financial, data, access, content crimes).</p>
+                <p><strong>Major Categories:</strong></p>
+                <ul>
+                    <li><strong>Financial Crimes:</strong> Online fraud, credit card theft, phishing, ransomware, cryptocurrency theft</li>
+                    <li><strong>Data Crimes:</strong> Data breaches, identity theft, corporate espionage</li>
+                    <li><strong>Content Crimes:</strong> Distribution of illegal content, copyright infringement</li>
+                    <li><strong>Access Crimes:</strong> Unauthorized system access, hacking, password cracking</li>
+                    <li><strong>Disruption Crimes:</strong> DDoS attacks, website defacement, sabotage</li>
+                </ul>
+                <p><strong>Global Impact:</strong> Estimated cost exceeds $6 trillion annually worldwide (2021 figures)</p>
+                <p><strong>Related Terms:</strong> Hacking, Phishing, Malware, Identity Theft, Cyber Terrorism</p>
+            </div>
+
+            <div class="glossary-term">
+                <span class="term-category">Forensics</span>
+                <h3>Cyber Forensics</h3>
+                <p><strong>Definition:</strong> The application of investigation and analysis techniques to gather and preserve evidence from digital devices for use in legal proceedings.</p>
+                <p><strong>Detailed Explanation:</strong> Cyber forensics (also called digital forensics or computer forensics) involves the scientific collection, preservation, analysis, and presentation of digital evidence. It follows strict procedures to ensure evidence admissibility in court.</p>
+                <p><strong>Forensic Process:</strong></p>
+                <ul>
+                    <li><strong>Identification:</strong> Recognizing potential sources of evidence</li>
+                    <li><strong>Preservation:</strong> Securing evidence and preventing tampering</li>
+                    <li><strong>Collection:</strong> Acquiring data using forensically sound methods</li>
+                    <li><strong>Analysis:</strong> Examining evidence to reconstruct events</li>
+                    <li><strong>Documentation:</strong> Recording all findings and procedures</li>
+                    <li><strong>Presentation:</strong> Reporting results in understandable format</li>
+                </ul>
+                <p><strong>Types:</strong> Computer forensics, mobile forensics, network forensics, cloud forensics, memory forensics</p>
+                <p><strong>Tools:</strong> EnCase, FTK (Forensic Toolkit), Autopsy, Volatility, Wireshark</p>
+                <p><strong>Related Terms:</strong> Chain of Custody, Evidence Collection, Write Blocker, Forensic Image</p>
+            </div>
+
+            <div class="glossary-term">
+                <span class="term-category">Crime Type</span>
+                <h3>Cyber Stalking</h3>
+                <p><strong>Definition:</strong> The use of electronic communications to repeatedly harass, threaten, or intimidate an individual, causing fear or emotional distress.</p>
+                <p><strong>Detailed Explanation:</strong> Cyber stalking is a serious crime that leverages digital platforms to target victims. Unlike traditional stalking, it can occur 24/7 from any location, making it particularly invasive and difficult to escape.</p>
+                <p><strong>Common Methods:</strong></p>
+                <ul>
+                    <li><strong>Direct Harassment:</strong> Threatening emails, messages, or social media posts</li>
+                    <li><strong>Monitoring:</strong> Tracking victim's online activities and location</li>
+                    <li><strong>Impersonation:</strong> Creating fake profiles or accounts</li>
+                    <li><strong>Doxing:</strong> Publishing private information publicly</li>
+                    <li><strong>Cyberbullying:</strong> Coordinated harassment campaigns</li>
+                    <li><strong>Spyware:</strong> Installing monitoring software on victim's devices</li>
+                </ul>
+                <p><strong>Legal Framework (India):</strong> IPC Section 354D (Stalking), IT Act Section 67 (Publishing obscene material)</p>
+                <p><strong>Related Terms:</strong> Cyberbullying, Doxing, Harassment, Identity Theft</p>
+            </div>
+
+            <div class="glossary-term">
+                <span class="term-category">Crime Type</span>
+                <h3>Cyber Terrorism</h3>
+                <p><strong>Definition:</strong> The use of cyberattacks by politically or ideologically motivated groups to intimidate, coerce, or cause fear in populations or governments.</p>
+                <p><strong>Detailed Explanation:</strong> Cyber terrorism targets critical infrastructure, government systems, or civilian populations to advance political or ideological goals. It represents the convergence of terrorism and cyber warfare.</p>
+                <p><strong>Potential Targets:</strong></p>
+                <ul>
+                    <li><strong>Critical Infrastructure:</strong> Power grids, water systems, transportation</li>
+                    <li><strong>Financial Systems:</strong> Banking, stock exchanges</li>
+                    <li><strong>Healthcare:</strong> Hospitals, medical devices</li>
+                    <li><strong>Government:</strong> Military, intelligence, emergency services</li>
+                    <li><strong>Communications:</strong> Internet, telephone networks</li>
+                </ul>
+                <p><strong>Objectives:</strong> Disruption, destruction, propaganda, fundraising, recruitment, coordination</p>
+                <p><strong>Related Terms:</strong> Critical Infrastructure, Cyber Warfare, APT, Hacktivism</p>
+            </div>
+        </div>
+
+        <!-- D Section -->
+        <div id="D" class="glossary-section">
+            <h2>D</h2>
+            
+            <div class="glossary-term">
+                <span class="term-category">Attack Type</span>
+                <h3>Denial of Service (DoS) Attack</h3>
+                <p><strong>Definition:</strong> An attack that makes a computer resource unavailable to its intended users by overwhelming it with a flood of requests or exploiting vulnerabilities.</p>
+                <p><strong>Detailed Explanation:</strong> DoS attacks aim to disrupt services rather than gain unauthorized access or steal data. They can cause significant financial losses and damage to reputation.</p>
+                <p><strong>Types of DoS Attacks:</strong></p>
+                <ul>
+                    <li><strong>Volume-based:</strong> Overwhelming bandwidth (UDP flood, ICMP flood)</li>
+                    <li><strong>Protocol-based:</strong> Exploiting protocol weaknesses (SYN flood, Ping of Death)</li>
+                    <li><strong>Application-layer:</strong> Targeting web applications (HTTP flood, Slowloris)</li>
+                    <li><strong>DDoS (Distributed DoS):</strong> Coordinated attack from multiple sources (botnets)</li>
+                </ul>
+                <p><strong>Defense Mechanisms:</strong> Traffic filtering, rate limiting, DDoS mitigation services (Cloudflare, Akamai), load balancing, over-provisioning bandwidth</p>
+                <p><strong>Related Terms:</strong> DDoS, Botnet, Amplification Attack, SYN Flood</p>
+            </div>
+
+            <div class="glossary-term">
+                <span class="term-category">Attack Type</span>
+                <h3>Dictionary Attack</h3>
+                <p><strong>Definition:</strong> A password cracking technique that uses a pre-compiled list of words (dictionary) to guess passwords.</p>
+                <p><strong>Detailed Explanation:</strong> Dictionary attacks are more efficient than brute force because they focus on likely passwords rather than trying all possible combinations. They exploit the tendency of users to choose simple, memorable passwords.</p>
+                <p><strong>Attack Process:</strong></p>
+                <ul>
+                    <li>Compile list of common words, phrases, and previously leaked passwords</li>
+                    <li>Include variations (capitalization, number substitutions, common suffixes)</li>
+                    <li>Hash each word using the target hashing algorithm</li>
+                    <li>Compare hashed dictionary entries with target password hashes</li>
+                </ul>
+                <p><strong>Defense:</strong> Strong password policies, account lockout, password complexity requirements, avoiding dictionary words</p>
+                <p><strong>Related Terms:</strong> Brute Force Attack, Password Cracking, Rainbow Table, Hybrid Attack</p>
+            </div>
+
+            <div class="glossary-term">
+                <span class="term-category">Security Tool</span>
+                <h3>Digital Certificate</h3>
+                <p><strong>Definition:</strong> An electronic document that uses a digital signature to bind a public key with an identity (person, organization, server).</p>
+                <p><strong>Detailed Explanation:</strong> Digital certificates are issued by Certificate Authorities (CAs) and are essential for establishing trust in online communications. They enable secure connections (HTTPS), email encryption, and code signing.</p>
+                <p><strong>Certificate Components:</strong></p>
+                <ul>
+                    <li><strong>Subject:</strong> Entity to whom certificate is issued</li>
+                    <li><strong>Public Key:</strong> Public key of the certificate holder</li>
+                    <li><strong>Issuer:</strong> Certificate Authority that issued the certificate</li>
+                    <li><strong>Validity Period:</strong> Start and expiration dates</li>
+                    <li><strong>Digital Signature:</strong> CA's signature validating certificate authenticity</li>
+                    <li><strong>Extensions:</strong> Additional information (key usage, alternative names)</li>
+                </ul>
+                <p><strong>Types:</strong> SSL/TLS certificates, code signing certificates, email certificates, client certificates</p>
+                <p><strong>Related Terms:</strong> Public Key Infrastructure (PKI), Certificate Authority (CA), SSL/TLS, Digital Signature</p>
+            </div>
+
+            <div class="glossary-term">
+                <span class="term-category">Cryptography</span>
+                <h3>Digital Signature</h3>
+                <p><strong>Definition:</strong> A mathematical scheme for verifying the authenticity and integrity of digital messages or documents.</p>
+                <p><strong>Detailed Explanation:</strong> Digital signatures provide authentication (verifying sender identity), non-repudiation (sender cannot deny signing), and integrity (detecting message tampering). They use asymmetric cryptography.</p>
+                <p><strong>How It Works:</strong></p>
+                <ul>
+                    <li><strong>Signing:</strong> Hash the document, encrypt hash with sender's private key</li>
+                    <li><strong>Verification:</strong> Decrypt signature with sender's public key, compare with document hash</li>
+                    <li>If hashes match, signature is valid and document is unmodified</li>
+                </ul>
+                <p><strong>Applications:</strong> Software distribution, email security (S/MIME), PDF documents, financial transactions, legal contracts</p>
+                <p><strong>Standards:</strong> RSA, DSA (Digital Signature Algorithm), ECDSA (Elliptic Curve DSA)</p>
+                <p><strong>Related Terms:</strong> Public Key Cryptography, Hash Function, Digital Certificate, Non-repudiation</p>
+            </div>
+
+            <div class="glossary-term">
+                <span class="term-category">Security Technique</span>
+                <h3>Disaster Recovery (DR)</h3>
+                <p><strong>Definition:</strong> A set of policies, tools, and procedures to enable the recovery or continuation of vital technology infrastructure and systems following a disaster.</p>
+                <p><strong>Detailed Explanation:</strong> Disaster recovery focuses on restoring IT systems, data, and infrastructure after events like cyberattacks, hardware failures, natural disasters, or human errors.</p>
+                <p><strong>Key Components:</strong></p>
+                <ul>
+                    <li><strong>DR Plan:</strong> Documented procedures for recovery</li>
+                    <li><strong>Backup Strategy:</strong> Regular, tested backups of critical data</li>
+                    <li><strong>Recovery Time Objective (RTO):</strong> Maximum acceptable downtime</li>
+                    <li><strong>Recovery Point Objective (RPO):</strong> Maximum acceptable data loss</li>
+                    <li><strong>Hot Site:</strong> Fully equipped backup facility ready for immediate use</li>
+                    <li><strong>Cold Site:</strong> Basic facility requiring equipment setup</li>
+                </ul>
+                <p><strong>Testing:</strong> Regular DR drills, tabletop exercises, failover testing</p>
+                <p><strong>Related Terms:</strong> Business Continuity, Backup, High Availability, Failover</p>
+            </div>
+
+            <div class="glossary-term">
+                <span class="term-category">Privacy</span>
+                <h3>Doxing</h3>
+                <p><strong>Definition:</strong> The malicious practice of researching and publicly broadcasting private or identifying information about an individual without their consent.</p>
+                <p><strong>Detailed Explanation:</strong> Doxing (from "dropping documents" or "docs") involves collecting personal information from various sources and publishing it online, often with malicious intent to harass, intimidate, or endanger the target.</p>
+                <p><strong>Information Typically Exposed:</strong></p>
+                <ul>
+                    <li>Real name, address, phone number</li>
+                    <li>Email addresses, social media profiles</li>
+                    <li>Employment information, financial details</li>
+                    <li>Family member information</li>
+                    <li>Photos, videos, private communications</li>
+                </ul>
+                <p><strong>Purposes:</strong> Harassment, intimidation, revenge, silencing critics, enabling physical threats</p>
+                <p><strong>Legal Status:</strong> May violate privacy laws, harassment statutes, or cyberstalking legislation</p>
+                <p><strong>Related Terms:</strong> Cyber Stalking, Swatting, Online Harassment, Privacy Violation</p>
+            </div>
+        </div>
+
+        <!-- E Section -->
+        <div id="E" class="glossary-section">
+            <h2>E</h2>
+            
+            <div class="glossary-term">
+                <span class="term-category">Cryptography</span>
+                <h3>Encryption</h3>
+                <p><strong>Definition:</strong> The process of converting plaintext (readable data) into ciphertext (unreadable format) using an algorithm and encryption key.</p>
+                <p><strong>Detailed Explanation:</strong> Encryption is fundamental to data confidentiality, protecting information from unauthorized access during transmission or storage. Only those with the correct decryption key can reverse the process.</p>
+                <p><strong>Encryption Types:</strong></p>
+                <ul>
+                    <li><strong>Symmetric Encryption:</strong> Same key for encryption/decryption
+                        <ul>
+                            <li>Fast and efficient for large data</li>
+                            <li>Examples: AES-256, ChaCha20, Twofish</li>
+                            <li>Challenge: Secure key distribution</li>
+                        </ul>
+                    </li>
+                    <li><strong>Asymmetric Encryption:</strong> Different keys (public/private)
+                        <ul>
+                            <li>Solves key distribution problem</li>
+                            <li>Slower, used for key exchange or small data</li>
+                            <li>Examples: RSA, ECC, ElGamal</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p><strong>Applications:</strong> HTTPS, VPN, encrypted email, full disk encryption, file/folder encryption, database encryption</p>
+                <p><strong>Related Terms:</strong> Decryption, Cryptography, Cipher, Key Management</p>
+            </div>
+
+            <div class="glossary-term">
+                <span class="term-category">Security Mechanism</span>
+                <h3>Endpoint Security</h3>
+                <p><strong>Definition:</strong> The practice of securing end-user devices (laptops, desktops, mobile devices, servers) against cyber threats.</p>
+                <p><strong>Detailed Explanation:</strong> Endpoints are common attack vectors as they're directly accessible to users and often outside the protected corporate network. Endpoint security provides multiple layers of protection.</p>
+                <p><strong>Components:</strong></p>
+                <ul>
+                    <li><strong>Antivirus/Anti-malware:</strong> Detecting and removing malicious software</li>
+                    <li><strong>Endpoint Detection and Response (EDR):</strong> Advanced threat detection and investigation</li>
+                    <li><strong>Device Control:</strong> Managing USB and external device usage</li>
+                    <li><strong>Firewall:</strong> Controlling network traffic</li>
+                    <li><strong>Encryption:</strong> Protecting data at rest</li>
+                    <li><strong>Application Control:</strong> Whitelisting approved applications</li>
+                </ul>
+                <p><strong>Modern Approaches:</strong> Cloud-based management, AI/ML threat detection, zero trust architecture</p>
+                <p><strong>Related Terms:</strong> Antivirus, EDR, Mobile Device Management (MDM), Data Loss Prevention (DLP)</p>
+            </div>
+
+            <div class="glossary-term">
+                <span class="term-category">Attack Technique</span>
+                <h3>Exploit</h3>
+                <p><strong>Definition:</strong> A piece of software, code, or sequence of commands that takes advantage of a vulnerability to cause unintended behavior in software or hardware.</p>
+                <p><strong>Detailed Explanation:</strong> Exploits leverage security flaws to gain unauthorized access, escalate privileges, execute code, or cause denial of service. They're key tools in attackers' arsenals.</p>
+                <p><strong>Exploit Types:</strong></p>
+                <ul>
+                    <li><strong>Zero-day Exploit:</strong> Targets unknown vulnerabilities (no patch available)</li>
+                    <li><strong>Remote Exploit:</strong> Works over a network without prior system access</li>
+                    <li><strong>Local Exploit:</strong> Requires local access to the target system</li>
+                    <li><strong>Client-side Exploit:</strong> Targets client applications (browsers, email clients)</li>
+                    <li><strong>Server-side Exploit:</strong> Targets server software and services</li>
+                </ul>
+                <p><strong>Exploit Frameworks:</strong> Metasploit, Canvas, Core Impact (used by penetration testers and attackers)</p>
+                <p><strong>Related Terms:</strong> Vulnerability, Patch, Zero-day, Proof of Concept (PoC)</p>
+            </div>
+        </div>
+
+        <!-- F Section -->
+        <div id="F" class="glossary-section">
+            <h2>F</h2>
+            
+            <div class="glossary-term">
+                <span class="term-category">Security Tool</span>
+                <h3>Firewall</h3>
+                <p><strong>Definition:</strong> A network security device that monitors and controls incoming and outgoing network traffic based on predetermined security rules.</p>
+                <p><strong>Detailed Explanation:</strong> Firewalls act as barriers between trusted internal networks and untrusted external networks (like the internet). They're the first line of defense in network security architecture.</p>
+                <p><strong>Firewall Types:</strong></p>
+                <ul>
+                    <li><strong>Packet Filtering:</strong> Examines packet headers (source/destination IP, port, protocol)</li>
+                    <li><strong>Stateful Inspection:</strong> Tracks connection states and context</li>
+                    <li><strong>Proxy Firewall:</strong> Intermediary between clients and servers</li>
+                    <li><strong>Next-Generation Firewall (NGFW):</strong> Deep packet inspection, application awareness, IPS integration</li>
+                    <li><strong>Web Application Firewall (WAF):</strong> Protects web applications from attacks</li>
+                </ul>
+                <p><strong>Deployment:</strong> Hardware appliances, software applications, cloud-based services</p>
+                <p><strong>Rule Configuration:</strong> Default deny (whitelist) vs. default allow (blacklist) policies</p>
+                <p><strong>Related Terms:</strong> Network Security, Access Control List (ACL), Intrusion Prevention System (IPS)</p>
+            </div>
+
+            <div class="glossary-term">
+                <span class="term-category">Forensics</span>
+                <h3>Forensic Analysis</h3>
+                <p><strong>Definition:</strong> The systematic examination of digital evidence to identify, preserve, analyze, and present facts related to cybercrime or security incidents.</p>
+                <p><strong>Detailed Explanation:</strong> Forensic analysis follows scientific methodology to ensure evidence admissibility in court. Analysts must maintain chain of custody and use validated tools and techniques.</p>
+                <p><strong>Analysis Techniques:</strong></p>
+                <ul>
+                    <li><strong>File System Analysis:</strong> Examining file structures, metadata, deleted files</li>
+                    <li><strong>Memory Analysis:</strong> Analyzing RAM for running processes, network connections</li>
+                    <li><strong>Network Analysis:</strong> Examining captured network traffic</li>
+                    <li><strong>Log Analysis:</strong> Reviewing system, application, and security logs</li>
+                    <li><strong>Timeline Analysis:</strong> Reconstructing event sequences</li>
+                    <li><strong>Malware Analysis:</strong> Reverse engineering suspicious software</li>
+                </ul>
+                <p><strong>Forensic Tools:</strong> EnCase, FTK, Autopsy, Volatility, Wireshark, IDA Pro</p>
+                <p><strong>Related Terms:</strong> Cyber Forensics, Chain of Custody, Evidence Collection, Write Blocker</p>
+            </div>
+        </div>
+
+        <!-- G Section -->
+        <div id="G" class="glossary-section">
+            <h2>G</h2>
+            
+            <div class="glossary-term">
+                <span class="term-category">Security Role</span>
+                <h3>Grey Hat Hacker</h3>
+                <p><strong>Definition:</strong> A computer security expert who falls between white hat (ethical) and black hat (malicious) hackers, often violating laws or ethical standards but without malicious intent.</p>
+                <p><strong>Detailed Explanation:</strong> Grey hat hackers may discover and exploit vulnerabilities without authorization but typically inform the affected party. While intentions may be good, their methods are questionable and potentially illegal.</p>
+                <p><strong>Characteristics:</strong></p>
+                <ul>
+                    <li>Hack without malicious intent</li>
+                    <li>May violate laws or ethics in research</li>
+                    <li>Often disclose vulnerabilities publicly</li>
+                    <li>May seek recognition or financial reward</li>
+                    <li>Operate in ethical grey area</li>
+                </ul>
+                <p><strong>Controversy:</strong> Unauthorized testing is illegal regardless of intent; responsible disclosure requires permission</p>
+                <p><strong>Related Terms:</strong> White Hat Hacker, Black Hat Hacker, Ethical Hacking, Responsible Disclosure</p>
+            </div>
+        </div>
+
+        <!-- H Section -->
+        <div id="H" class="glossary-section">
+            <h2>H</h2>
+            
+            <div class="glossary-term">
+                <span class="term-category">Cybercriminal Type</span>
+                <h3>Hacker</h3>
+                <p><strong>Definition:</strong> An individual with advanced computer skills who explores computer systems, networks, and software, potentially to identify vulnerabilities or gain unauthorized access.</p>
+                <p><strong>Detailed Explanation:</strong> The term "hacker" originally referred to skilled programmers but now commonly describes those who break into systems. Hackers are categorized by motivation and ethics.</p>
+                <p><strong>Hacker Categories:</strong></p>
+                <ul>
+                    <li><strong>White Hat (Ethical Hackers):</strong> Authorized security professionals testing systems with permission</li>
+                    <li><strong>Black Hat (Malicious Hackers):</strong> Criminals who break into systems for personal gain or to cause harm</li>
+                    <li><strong>Grey Hat:</strong> Operate between ethical and malicious, may hack without permission but without malicious intent</li>
+                    <li><strong>Script Kiddies:</strong> Inexperienced individuals using others' tools</li>
+                    <li><strong>Hacktivists:</strong> Hack for political or social causes</li>
+                    <li><strong>State-Sponsored:</strong> Government-backed hackers conducting cyber espionage</li>
+                </ul>
+                <p><strong>Related Terms:</strong> Ethical Hacking, Penetration Testing, Black Hat, White Hat</p>
+            </div>
+
+            <div class="glossary-term">
+                <span class="term-category">Cryptography</span>
+                <h3>Hash Function</h3>
+                <p><strong>Definition:</strong> A mathematical function that converts input data of any size into a fixed-size string of characters (hash value or digest), designed to be a one-way function.</p>
+                <p><strong>Detailed Explanation:</strong> Hash functions are fundamental to data integrity verification, password storage, digital signatures, and blockchain technology. Good hash functions have specific properties.</p>
+                <p><strong>Properties of Cryptographic Hash Functions:</strong></p>
+                <ul>
+                    <li><strong>Deterministic:</strong> Same input always produces same output</li>
+                    <li><strong>Fast Computation:</strong> Quick to calculate hash value</li>
+                    <li><strong>One-way:</strong> Computationally infeasible to reverse</li>
+                    <li><strong>Collision Resistant:</strong> Hard to find two inputs with same hash</li>
+                    <li><strong>Avalanche Effect:</strong> Small input change drastically changes output</li>
+                </ul>
+                <p><strong>Common Hash Functions:</strong></p>
+                <ul>
+                    <li><strong>MD5:</strong> 128-bit, now considered weak (collisions found)</li>
+                    <li><strong>SHA-1:</strong> 160-bit, deprecated for cryptographic use</li>
+                    <li><strong>SHA-256:</strong> 256-bit, widely used and secure</li>
+                    <li><strong>SHA-3:</strong> Latest standard, different algorithm design</li>
+                    <li><strong>BLAKE2:</strong> Fast and secure alternative</li>
+                </ul>
+                <p><strong>Applications:</strong> Password storage (with salting), file integrity verification, digital signatures, blockchain, HMAC</p>
+                <p><strong>Related Terms:</strong> Digital Signature, Salting, Rainbow Table, Checksum</p>
+            </div>
+
+            <div class="glossary-term">
+                <span class="term-category">Network Protocol</span>
+                <h3>HTTPS (Hypertext Transfer Protocol Secure)</h3>
+                <p><strong>Definition:</strong> An extension of HTTP that uses encryption (TLS/SSL) to secure communication between web browsers and servers.</p>
+                <p><strong>Detailed Explanation:</strong> HTTPS encrypts all communication, protecting against eavesdropping and man-in-the-middle attacks. It's now the standard for all websites, especially those handling sensitive data.</p>
+                <p><strong>How It Works:</strong></p>
+                <ul>
+                    <li><strong>TLS Handshake:</strong> Client and server negotiate encryption</li>
+                    <li><strong>Certificate Verification:</strong> Server proves identity with digital certificate</li>
+                    <li><strong>Key Exchange:</strong> Establish shared encryption keys</li>
+                    <li><strong>Encrypted Communication:</strong> All data encrypted using agreed-upon cipher</li>
+                </ul>
+                <p><strong>Benefits:</strong> Data confidentiality, integrity, authentication, SEO ranking boost, user trust</p>
+                <p><strong>Indicators:</strong> Padlock icon in browser, "https://" in URL, green address bar (EV certificates)</p>
+                <p><strong>Related Terms:</strong> SSL/TLS, Digital Certificate, Encryption, Man-in-the-Middle Attack</p>
+            </div>
+        </div>
+
+        <!-- I Section -->
+        <div id="I" class="glossary-section">
+            <h2>I</h2>
+            
+            <div class="glossary-term">
+                <span class="term-category">Crime Type</span>
+                <h3>Identity Theft</h3>
+                <p><strong>Definition:</strong> The fraudulent acquisition and use of a person's private identifying information, usually for financial gain.</p>
+                <p><strong>Detailed Explanation:</strong> Identity theft involves stealing personal information (name, SSN, credit card details, credentials) to impersonate victims for unauthorized purposes. It can cause significant financial and reputational damage.</p>
+                <p><strong>Common Methods:</strong></p>
+                <ul>
+                    <li><strong>Phishing:</strong> Tricking victims into providing information</li>
+                    <li><strong>Data Breaches:</strong> Stealing information from compromised databases</li>
+                    <li><strong>Social Engineering:</strong> Manipulating people into divulging information</li>
+                    <li><strong>Dumpster Diving:</strong> Searching trash for discarded documents</li>
+                    <li><strong>Skimming:</strong> Capturing credit card data at ATMs or payment terminals</li>
+                    <li><strong>Malware:</strong> Keyloggers and infostealers capturing credentials</li>
+                </ul>
+                <p><strong>Types:</strong> Financial identity theft, medical identity theft, criminal identity theft, synthetic identity theft</p>
+                <p><strong>Prevention:</strong> Strong passwords, credit monitoring, shredding documents, careful social media sharing, two-factor authentication</p>
+                <p><strong>Related Terms:</strong> Phishing, Data Breach, Credit Card Fraud, Social Engineering</p>
+            </div>
+
+            <div class="glossary-term">
+                <span class="term-category">Security Tool</span>
+                <h3>Intrusion Detection System (IDS)</h3>
+                <p><strong>Definition:</strong> A security tool that monitors network traffic or system activities for malicious activities or policy violations and generates alerts.</p>
+                <p><strong>Detailed Explanation:</strong> IDS acts as a surveillance system, detecting potential security incidents but not actively blocking them (unlike IPS). It's crucial for identifying threats that bypass perimeter defenses.</p>
+                <p><strong>IDS Types:</strong></p>
+                <ul>
+                    <li><strong>Network-based IDS (NIDS):</strong> Monitors network traffic
+                        <ul>
+                            <li>Placed at strategic network points</li>
+                            <li>Analyzes packet contents and headers</li>
+                            <li>Examples: Snort, Suricata, Zeek (Bro)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Host-based IDS (HIDS):</strong> Monitors single host/device
+                        <ul>
+                            <li>Examines system logs, file integrity</li>
+                            <li>Detects local attacks</li>
+                            <li>Examples: OSSEC, Tripwire</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p><strong>Detection Methods:</strong></p>
+                <ul>
+                    <li><strong>Signature-based:</strong> Matches known attack patterns</li>
+                    <li><strong>Anomaly-based:</strong> Detects deviations from normal behavior</li>
+                    <li><strong>Hybrid:</strong> Combines both approaches</li>
+                </ul>
+                <p><strong>Related Terms:</strong> Intrusion Prevention System (IPS), SIEM, Network Security Monitoring</p>
+            </div>
+
+            <div class="glossary-term">
+                <span class="term-category">Security Tool</span>
+                <h3>Intrusion Prevention System (IPS)</h3>
+                <p><strong>Definition:</strong> An active security tool that monitors network traffic for malicious activity and can automatically take action to block or prevent threats.</p>
+                <p><strong>Detailed Explanation:</strong> Unlike IDS which only detects and alerts, IPS can actively block attacks in real-time. It sits inline in the network path, examining traffic and taking preventive action.</p>
+                <p><strong>Capabilities:</strong></p>
+                <ul>
+                    <li><strong>Block malicious traffic:</strong> Drop packets from attacks</li>
+                    <li><strong>Reset connections:</strong> Terminate suspicious sessions</li>
+                    <li><strong>Rate limiting:</strong> Throttle suspicious traffic</li>
+                    <li><strong>Modify packets:</strong> Remove malicious content</li>
+                    <li><strong>Alert security team:</strong> Generate notifications</li>
+                </ul>
+                <p><strong>Deployment:</strong> Inline (directly in traffic path) vs. passive (mirror port)</p>
+                <p><strong>Challenges:</strong> False positives can block legitimate traffic, performance impact, evasion techniques</p>
+                <p><strong>Related Terms:</strong> Intrusion Detection System (IDS), Firewall, Next-Generation Firewall (NGFW)</p>
+            </div>
+        </div>
+
+        <!-- J Section -->
+        <div id="J" class="glossary-section">
+            <h2>J</h2>
+            
+            <div class="glossary-term">
+                <span class="term-category">Malware</span>
+                <h3>JavaScript Malware</h3>
+                <p><strong>Definition:</strong> Malicious code written in JavaScript that executes in web browsers or other JavaScript-enabled environments to compromise systems.</p>
+                <p><strong>Detailed Explanation:</strong> JavaScript malware exploits the ubiquity of JavaScript in web applications. It can execute without user awareness, steal data, redirect users, or download additional payloads.</p>
+                <p><strong>Common Types:</strong></p>
+                <ul>
+                    <li><strong>Drive-by Downloads:</strong> Automatically downloading malware when visiting compromised websites</li>
+                    <li><strong>Browser-based Cryptominers:</strong> Mining cryptocurrency using visitor CPU resources</li>
+                    <li><strong>Formjacking:</strong> Stealing credit card data from e-commerce checkout forms</li>
+                    <li><strong>Malvertising:</strong> Malicious advertisements executing harmful scripts</li>
+                </ul>
+                <p><strong>Prevention:</strong> Keep browsers updated, use script blockers (NoScript), disable JavaScript for untrusted sites, web application firewalls</p>
+                <p><strong>Related Terms:</strong> XSS, Drive-by Download, Malvertising, Web Application Security</p>
+            </div>
+        </div>
+
+        <!-- K Section -->
+        <div id="K" class="glossary-section">
+            <h2>K</h2>
+            
+            <div class="glossary-term">
+                <span class="term-category">Malware</span>
+                <h3>Keylogger</h3>
+                <p><strong>Definition:</strong> A type of surveillance software or hardware that records every keystroke made on a computer or mobile device, capturing sensitive information like passwords and credit card numbers.</p>
+                <p><strong>Detailed Explanation:</strong> Keyloggers operate covertly, capturing keystrokes without user knowledge. They can be software-based (malware) or hardware-based (physical devices attached to keyboards or USB ports).</p>
+                <p><strong>Types:</strong></p>
+                <ul>
+                    <li><strong>Software Keyloggers:</strong>
+                        <ul>
+                            <li>Kernel-based: Operates at OS kernel level</li>
+                            <li>API-based: Hooks into system APIs</li>
+                            <li>JavaScript-based: Captures web form inputs</li>
+                        </ul>
+                    </li>
+                    <li><strong>Hardware Keyloggers:</strong>
+                        <ul>
+                            <li>USB keyloggers: Devices between keyboard and computer</li>
+                            <li>Wireless sniffers: Capture wireless keyboard transmissions</li>
+                            <li>Acoustic keyloggers: Analyze keyboard typing sounds</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p><strong>Legitimate Uses:</strong> Employee monitoring, parental control, law enforcement investigations</p>
+                <p><strong>Detection:</strong> Anti-malware software, process monitoring, physical inspection, network traffic analysis</p>
+                <p><strong>Related Terms:</strong> Spyware, Monitoring Software, Screen Capture, Password Theft</p>
+            </div>
+        </div>
+
+        <!-- L Section -->
+        <div id="L" class="glossary-section">
+            <h2>L</h2>
+            
+            <div class="glossary-term">
+                <span class="term-category">Attack Technique</span>
+                <h3>Lateral Movement</h3>
+                <p><strong>Definition:</strong> Techniques used by attackers to progressively move through a network, searching for key assets and data after gaining initial access.</p>
+                <p><strong>Detailed Explanation:</strong> After compromising an initial system, attackers use lateral movement to expand their access, escalate privileges, and reach high-value targets. This is a key phase in APT attacks.</p>
+                <p><strong>Common Techniques:</strong></p>
+                <ul>
+                    <li><strong>Pass-the-Hash:</strong> Using captured password hashes for authentication</li>
+                    <li><strong>Pass-the-Ticket:</strong> Exploiting Kerberos tickets</li>
+                    <li><strong>Remote Services:</strong> RDP, SSH, WMI, PowerShell remoting</li>
+                    <li><strong>Credential Dumping:</strong> Extracting credentials from memory or files</li>
+                    <li><strong>Exploiting Trust Relationships:</strong> Leveraging existing network trust</li>
+                </ul>
+                <p><strong>Detection:</strong> Network segmentation, monitoring lateral traffic, behavioral analysis, privileged access management</p>
+                <p><strong>Related Terms:</strong> APT, Privilege Escalation, Network Segmentation, Zero Trust</p>
+            </div>
+        </div>
+
+        <!-- M Section -->
+        <div id="M" class="glossary-section">
+            <h2>M</h2>
+            
+            <div class="glossary-term">
+                <span class="term-category">Malware</span>
+                <h3>Malware</h3>
+                <p><strong>Definition:</strong> Malicious software designed to damage, disrupt, or gain unauthorized access to computer systems.</p>
+                <p><strong>Detailed Explanation:</strong> Malware is an umbrella term encompassing various types of malicious programs. It can steal data, encrypt files for ransom, spy on users, or use system resources without authorization.</p>
+                <p><strong>Major Types:</strong></p>
+                <ul>
+                    <li><strong>Virus:</strong> Self-replicating code that attaches to files</li>
+                    <li><strong>Worm:</strong> Self-propagating malware spreading across networks</li>
+                    <li><strong>Trojan:</strong> Disguised as legitimate software</li>
+                    <li><strong>Ransomware:</strong> Encrypts files and demands payment</li>
+                    <li><strong>Spyware:</strong> Secretly monitors and collects information</li>
+                    <li><strong>Adware:</strong> Displays unwanted advertisements</li>
+                    <li><strong>Rootkit:</strong> Provides privileged access while hiding presence</li>
+                    <li><strong>Keylogger:</strong> Records keystrokes</li>
+                    <li><strong>RAT (Remote Access Trojan):</strong> Enables remote control</li>
+                </ul>
+                <p><strong>Infection Vectors:</strong> Email attachments, malicious downloads, infected USB drives, exploit kits, compromised websites</p>
+                <p><strong>Related Terms:</strong> Virus, Trojan, Ransomware, Antivirus, Endpoint Security</p>
+            </div>
+
+            <div class="glossary-term">
+                <span class="term-category">Attack Type</span>
+                <h3>Man-in-the-Middle (MitM) Attack</h3>
+                <p><strong>Definition:</strong> An attack where an attacker intercepts and potentially alters communication between two parties who believe they are directly communicating with each other.</p>
+                <p><strong>Detailed Explanation:</strong> MitM attacks position the attacker as a relay between victim and destination, allowing interception, eavesdropping, or modification of communications. Victims are unaware of the attacker's presence.</p>
+                <p><strong>Attack Variants:</strong></p>
+                <ul>
+                    <li><strong>ARP Spoofing:</strong> Manipulating ARP cache to intercept LAN traffic</li>
+                    <li><strong>DNS Spoofing:</strong> Redirecting DNS queries to malicious servers</li>
+                    <li><strong>Session Hijacking:</strong> Taking over active sessions</li>
+                    <li><strong>SSL Stripping:</strong> Downgrading HTTPS to HTTP</li>
+                    <li><strong>Email Hijacking:</strong> Intercepting email communications</li>
+                    <li><strong>Wi-Fi Eavesdropping:</strong> Monitoring unencrypted wireless traffic</li>
+                </ul>
+                <p><strong>Prevention:</strong> Strong encryption (HTTPS, VPN), certificate pinning, secure network protocols, avoiding public Wi-Fi for sensitive transactions</p>
+                <p><strong>Related Terms:</strong> Session Hijacking, SSL/TLS, ARP Spoofing, Encryption</p>
+            </div>
+
+            <div class="glossary-term">
+                <span class="term-category">Security Concept</span>
+                <h3>Multi-Factor Authentication (MFA)</h3>
+                <p><strong>Definition:</strong> A security mechanism requiring users to provide two or more verification factors to gain access to a resource.</p>
+                <p><strong>Detailed Explanation:</strong> MFA significantly enhances security by requiring multiple independent credentials. Even if one factor is compromised, unauthorized access is prevented by remaining factors.</p>
+                <p><strong>Authentication Factors:</strong></p>
+                <ul>
+                    <li><strong>Knowledge Factors:</strong> Something you know (password, PIN)</li>
+                    <li><strong>Possession Factors:</strong> Something you have (token, smart card, mobile device)</li>
+                    <li><strong>Inherence Factors:</strong> Something you are (biometrics)</li>
+                    <li><strong>Location Factors:</strong> Somewhere you are (GPS, IP address)</li>
+                    <li><strong>Behavioral Factors:</strong> Something you do (typing patterns)</li>
+                </ul>
+                <p><strong>Common MFA Methods:</strong> SMS codes, authenticator apps (Google Authenticator, Authy), hardware tokens (YubiKey), biometric authentication</p>
+                <p><strong>Benefits:</strong> Reduced risk of credential theft, compliance requirements, protection against phishing</p>
+                <p><strong>Related Terms:</strong> Two-Factor Authentication (2FA), Authentication, Biometrics, One-Time Password (OTP)</p>
+            </div>
+        </div>
+
+        <!-- N Section -->
+        <div id="N" class="glossary-section">
+            <h2>N</h2>
+            
+            <div class="glossary-term">
+                <span class="term-category">Security Concept</span>
+                <h3>Network Segmentation</h3>
+                <p><strong>Definition:</strong> The practice of dividing a computer network into smaller subnetworks to improve security, performance, and management.</p>
+                <p><strong>Detailed Explanation:</strong> Network segmentation limits the blast radius of security breaches by isolating critical assets and restricting lateral movement. It implements defense-in-depth principles.</p>
+                <p><strong>Segmentation Methods:</strong></p>
+                <ul>
+                    <li><strong>Physical Segmentation:</strong> Separate physical devices and cables</li>
+                    <li><strong>Logical Segmentation:</strong> VLANs, subnets, software-defined networking</li>
+                    <li><strong>Microsegmentation:</strong> Fine-grained isolation at workload level</li>
+                </ul>
+                <p><strong>Benefits:</strong> Contained breaches, improved performance, easier compliance, better network visibility</p>
+                <p><strong>Related Terms:</strong> VLAN, Firewall, Zero Trust, Microsegmentation, Defense in Depth</p>
+            </div>
+        </div>
+
+        <!-- O Section -->
+        <div id="O" class="glossary-section">
+            <h2>O</h2>
+            
+            <div class="glossary-term">
+                <span class="term-category">Security Concept</span>
+                <h3>One-Time Password (OTP)</h3>
+                <p><strong>Definition:</strong> A password that is valid for only one login session or transaction, providing enhanced security over static passwords.</p>
+                <p><strong>Detailed Explanation:</strong> OTPs are generated dynamically and expire quickly, making them resistant to replay attacks and credential theft. They're commonly used in multi-factor authentication.</p>
+                <p><strong>OTP Types:</strong></p>
+                <ul>
+                    <li><strong>Time-based OTP (TOTP):</strong> Changes every 30-60 seconds (Google Authenticator)</li>
+                    <li><strong>Counter-based OTP (HOTP):</strong> Changes with each use</li>
+                    <li><strong>SMS OTP:</strong> Sent via text message</li>
+                    <li><strong>Email OTP:</strong> Sent via email</li>
+                </ul>
+                <p><strong>Generation Methods:</strong> Hardware tokens, mobile apps, SMS, email</p>
+                <p><strong>Related Terms:</strong> Multi-Factor Authentication, Two-Factor Authentication, TOTP, Authenticator App</p>
+            </div>
+        </div>
+
+        <!-- P Section -->
+        <div id="P" class="glossary-section">
+            <h2>P</h2>
+            
+            <div class="glossary-term">
+                <span class="term-category">Attack Type</span>
+                <h3>Phishing</h3>
+                <p><strong>Definition:</strong> A social engineering attack using fraudulent communications (typically email) to trick recipients into divulging sensitive information or installing malware.</p>
+                <p><strong>Detailed Explanation:</strong> Phishing exploits human psychology rather than technical vulnerabilities. Attackers impersonate trusted entities to create urgency, fear, or curiosity, prompting victims to act without careful consideration.</p>
+                <p><strong>Phishing Types:</strong></p>
+                <ul>
+                    <li><strong>Email Phishing:</strong> Mass emails to broad audience</li>
+                    <li><strong>Spear Phishing:</strong> Targeted attacks using personalized information</li>
+                    <li><strong>Whaling:</strong> Targeting high-level executives</li>
+                    <li><strong>Clone Phishing:</strong> Replicating legitimate emails with malicious modifications</li>
+                    <li><strong>Vishing:</strong> Voice phishing using phone calls</li>
+                    <li><strong>Smishing:</strong> SMS-based phishing</li>
+                    <li><strong>Business Email Compromise (BEC):</strong> Impersonating business executives</li>
+                </ul>
+                <p><strong>Red Flags:</strong> Urgent language, suspicious sender addresses, generic greetings, unexpected attachments, requests for sensitive information</p>
+                <p><strong>Prevention:</strong> Security awareness training, email filtering, domain authentication (SPF, DKIM, DMARC), multi-factor authentication</p>
+                <p><strong>Related Terms:</strong> Social Engineering, Spear Phishing, Vishing, Smishing, Email Security</p>
+            </div>
+
+            <div class="glossary-term">
+                <span class="term-category">Cryptography</span>
+                <h3>Public Key Infrastructure (PKI)</h3>
+                <p><strong>Definition:</strong> A framework of policies, procedures, hardware, software, and people to create, manage, distribute, use, store, and revoke digital certificates.</p>
+                <p><strong>Detailed Explanation:</strong> PKI enables secure electronic transfer of information by binding public keys to entities. It's the foundation of trust in online communications, e-commerce, and secure access.</p>
+                <p><strong>PKI Components:</strong></p>
+                <ul>
+                    <li><strong>Certificate Authority (CA):</strong> Issues and manages digital certificates</li>
+                    <li><strong>Registration Authority (RA):</strong> Verifies certificate requests</li>
+                    <li><strong>Digital Certificates:</strong> Bind public keys to identities</li>
+                    <li><strong>Certificate Repository:</strong> Stores and distributes certificates</li>
+                    <li><strong>Certificate Revocation List (CRL):</strong> Lists revoked certificates</li>
+                </ul>
+                <p><strong>Applications:</strong> HTTPS/SSL/TLS, email encryption (S/MIME), code signing, VPN, document signing</p>
+                <p><strong>Related Terms:</strong> Digital Certificate, Certificate Authority, SSL/TLS, Asymmetric Encryption</p>
+            </div>
+        </div>
+
+        <!-- Q Section -->
+        <div id="Q" class="glossary-section">
+            <h2>Q</h2>
+            
+            <div class="glossary-term">
+                <span class="term-category">Security Concept</span>
+                <h3>Quarantine</h3>
+                <p><strong>Definition:</strong> The isolation of suspected malicious files or infected systems to prevent spread of malware while allowing for further analysis.</p>
+                <p><strong>Detailed Explanation:</strong> Quarantine is a containment strategy used by antivirus software and security systems to safely handle potentially harmful files without deleting them immediately, allowing for investigation and potential recovery of false positives.</p>
+                <p><strong>Quarantine Process:</strong></p>
+                <ul>
+                    <li>Detection of suspicious file or activity</li>
+                    <li>Isolation from system and network</li>
+                    <li>Analysis of threat level</li>
+                    <li>Decision: Delete, restore, or continue monitoring</li>
+                </ul>
+                <p><strong>Applications:</strong> Antivirus quarantine, email filtering, network isolation</p>
+                <p><strong>Related Terms:</strong> Antivirus, Malware, Sandbox, Network Isolation</p>
+            </div>
+        </div>
+
+        <!-- R Section -->
+        <div id="R" class="glossary-section">
+            <h2>R</h2>
+            
+            <div class="glossary-term">
+                <span class="term-category">Malware</span>
+                <h3>Ransomware</h3>
+                <p><strong>Definition:</strong> Malicious software that encrypts victim's files or locks their system, demanding payment (ransom) for restoration of access.</p>
+                <p><strong>Detailed Explanation:</strong> Ransomware is one of the most damaging forms of malware, causing billions in losses annually. It combines encryption technology with extortion, often threatening to publish stolen data if ransom isn't paid.</p>
+                <p><strong>Ransomware Types:</strong></p>
+                <ul>
+                    <li><strong>Crypto Ransomware:</strong> Encrypts files (most common)</li>
+                    <li><strong>Locker Ransomware:</strong> Locks entire device</li>
+                    <li><strong>Scareware:</strong> Fake warnings demanding payment</li>
+                    <li><strong>Doxware/Leakware:</strong> Threatens to publish stolen data</li>
+                    <li><strong>RaaS (Ransomware as a Service):</strong> Ransomware sold to affiliates</li>
+                </ul>
+                <p><strong>Attack Vectors:</strong> Phishing emails, exploit kits, RDP vulnerabilities, malicious downloads</p>
+                <p><strong>Famous Examples:</strong> WannaCry, NotPetya, Ryuk, CryptoLocker</p>
+                <p><strong>Prevention:</strong> Regular backups, email filtering, software updates, network segmentation, user training, disable RDP if not needed</p>
+                <p><strong>Related Terms:</strong> Malware, Encryption, Backup, Phishing, Exploit Kit</p>
+            </div>
+
+            <div class="glossary-term">
+                <span class="term-category">Malware</span>
+                <h3>Rootkit</h3>
+                <p><strong>Definition:</strong> Malicious software designed to gain privileged access to a computer while hiding its presence from users and security tools.</p>
+                <p><strong>Detailed Explanation:</strong> Rootkits operate at low system levels, modifying operating system functions to conceal malicious activity. They're particularly dangerous because they're difficult to detect and remove.</p>
+                <p><strong>Rootkit Types:</strong></p>
+                <ul>
+                    <li><strong>User-mode Rootkits:</strong> Operate at application level</li>
+                    <li><strong>Kernel-mode Rootkits:</strong> Operate at OS kernel level</li>
+                    <li><strong>Bootkit:</strong> Loads before OS, extremely hard to detect</li>
+                    <li><strong>Firmware Rootkit:</strong> Infects device firmware (BIOS, UEFI)</li>
+                    <li><strong>Hypervisor Rootkit:</strong> Operates below OS using virtualization</li>
+                </ul>
+                <p><strong>Detection:</strong> Behavior analysis, memory dump analysis, integrity checking, specialized rootkit detection tools</p>
+                <p><strong>Related Terms:</strong> Malware, Backdoor, Privilege Escalation, Firmware</p>
+            </div>
+        </div>
+
+        <!-- S Section -->
+        <div id="S" class="glossary-section">
+            <h2>S</h2>
+            
+            <div class="glossary-term">
+                <span class="term-category">Attack Technique</span>
+                <h3>Social Engineering</h3>
+                <p><strong>Definition:</strong> Psychological manipulation of people into performing actions or divulging confidential information, exploiting human trust rather than technical vulnerabilities.</p>
+                <p><strong>Detailed Explanation:</strong> Social engineering is often the weakest link in security. Attackers exploit human psychology - trust, authority, urgency, fear - to bypass technical defenses entirely.</p>
+                <p><strong>Common Techniques:</strong></p>
+                <ul>
+                    <li><strong>Phishing:</strong> Fraudulent communications</li>
+                    <li><strong>Pretexting:</strong> Creating fabricated scenarios</li>
+                    <li><strong>Baiting:</strong> Offering something enticing (infected USB drives)</li>
+                    <li><strong>Quid Pro Quo:</strong> Offering service in exchange for information</li>
+                    <li><strong>Tailgating:</strong> Following authorized person into restricted area</li>
+                    <li><strong>Impersonation:</strong> Posing as trusted authority</li>
+                </ul>
+                <p><strong>Psychological Principles Exploited:</strong> Authority, urgency, scarcity, trust, fear, reciprocity</p>
+                <p><strong>Defense:</strong> Security awareness training, verification procedures, clear security policies, healthy skepticism</p>
+                <p><strong>Related Terms:</strong> Phishing, Pretexting, Human Hacking, Security Awareness</p>
+            </div>
+
+            <div class="glossary-term">
+                <span class="term-category">Malware</span>
+                <h3>Spyware</h3>
+                <p><strong>Definition:</strong> Malicious software that secretly monitors and collects information about users' activities without their knowledge or consent.</p>
+                <p><strong>Detailed Explanation:</strong> Spyware operates covertly to gather sensitive information including browsing habits, keystrokes, login credentials, financial data, and personal communications. It can severely impact system performance and user privacy.</p>
+                <p><strong>Types of Spyware:</strong></p>
+                <ul>
+                    <li><strong>Keyloggers:</strong> Record keystrokes</li>
+                    <li><strong>Screen Scrapers:</strong> Capture screenshot</li>
+                    <li><strong>Adware:</strong> Tracks browsing for advertising</li>
+                    <li><strong>Tracking Cookies:</strong> Monitor web activity</li>
+                    <li><strong>System Monitors:</strong> Log system activities</li>
+                    <li><strong>Infostealers:</strong> Collect and exfiltrate sensitive data</li>
+                </ul>
+                <p><strong>Detection:</strong> Unusual system performance, unexpected pop-ups, changed settings, anti-spyware software</p>
+                <p><strong>Related Terms:</strong> Keylogger, Malware, Privacy, Surveillance, Trojan</p>
+            </div>
+
+            <div class="glossary-term">
+                <span class="term-category">Attack Type</span>
+                <h3>SQL Injection</h3>
+                <p><strong>Definition:</strong> A code injection attack that exploits vulnerabilities in database-driven applications by inserting malicious SQL statements into input fields.</p>
+                <p><strong>Detailed Explanation:</strong> SQL injection allows attackers to interfere with database queries, potentially reading sensitive data, modifying database content, or executing administrative operations. It's one of the most common web application vulnerabilities.</p>
+                <p><strong>Attack Types:</strong></p>
+                <ul>
+                    <li><strong>In-band SQL Injection:</strong> Same channel for attack and results</li>
+                    <li><strong>Blind SQL Injection:</strong> No direct output, infer results from behavior</li>
+                    <li><strong>Out-of-band SQL Injection:</strong> Uses different channels</li>
+                </ul>
+                <p><strong>Impact:</strong> Data theft, authentication bypass, data modification, database server compromise</p>
+                <p><strong>Prevention:</strong> Parameterized queries (prepared statements), input validation, least privilege database accounts, WAF, stored procedures</p>
+                <p><strong>Related Terms:</strong> Web Application Security, Input Validation, Database Security, Code Injection</p>
+            </div>
+
+            <div class="glossary-term">
+                <span class="term-category">Protocol</span>
+                <h3>SSL/TLS (Secure Sockets Layer / Transport Layer Security)</h3>
+                <p><strong>Definition:</strong> Cryptographic protocols providing secure communications over computer networks, primarily used for HTTPS web traffic.</p>
+                <p><strong>Detailed Explanation:</strong> SSL is the predecessor to TLS. Both provide encryption, authentication, and data integrity for internet communications. TLS 1.2 and 1.3 are current standards; SSL is deprecated due to vulnerabilities.</p>
+                <p><strong>Functions:</strong></p>
+                <ul>
+                    <li><strong>Encryption:</strong> Protects data confidentiality</li>
+                    <li><strong>Authentication:</strong> Verifies server (and optionally client) identity</li>
+                    <li><strong>Integrity:</strong> Detects message tampering</li>
+                </ul>
+                <p><strong>TLS Handshake Process:</strong> Client hello, server hello, certificate exchange, key exchange, session established</p>
+                <p><strong>Applications:</strong> HTTPS websites, email (SMTPS, IMAPS), VPN, file transfer (FTPS)</p>
+                <p><strong>Related Terms:</strong> HTTPS, Digital Certificate, Encryption, Public Key Infrastructure</p>
+            </div>
+        </div>
+
+        <!-- T Section -->
+        <div id="T" class="glossary-section">
+            <h2>T</h2>
+            
+            <div class="glossary-term">
+                <span class="term-category">Network Tool</span>
+                <h3>Tor (The Onion Router)</h3>
+                <p><strong>Definition:</strong> An anonymity network that encrypts and routes internet traffic through multiple relay servers to conceal user location and usage from surveillance or traffic analysis.</p>
+                <p><strong>Detailed Explanation:</strong> Tor provides privacy and anonymity by routing traffic through at least three randomly selected nodes, with each layer encrypted (like an onion). No single node knows both the source and destination.</p>
+                <p><strong>How It Works:</strong></p>
+                <ul>
+                    <li>User connects to entry node (guard)</li>
+                    <li>Traffic passes through middle relay(s)</li>
+                    <li>Exit node connects to final destination</li>
+                    <li>Each layer of encryption is removed at each hop</li>
+                </ul>
+                <p><strong>Legitimate Uses:</strong> Privacy protection, censorship circumvention, whistleblowing, journalism, activism</li>
+                <p><strong>Concerns:</strong> Can be used for illegal activities, exit nodes can monitor unencrypted traffic</p>
+                <p><strong>Related Terms:</strong> Anonymity, VPN, Dark Web, Privacy, Encryption</p>
+            </div>
+
+            <div class="glossary-term">
+                <span class="term-category">Malware</span>
+                <h3>Trojan Horse</h3>
+                <p><strong>Definition:</strong> Malicious software disguised as legitimate or benign programs that performs harmful actions once installed.</p>
+                <p><strong>Detailed Explanation:</strong> Named after the Greek mythological wooden horse, Trojans deceive users into installing them by appearing useful or harmless. Unlike viruses, they don't self-replicate.</p>
+                <p><strong>Common Types:</strong></p>
+                <ul>
+                    <li><strong>Backdoor Trojans:</strong> Provide remote access</li>
+                    <li><strong>Banking Trojans:</strong> Steal financial credentials</li>
+                    <li><strong>Downloader Trojans:</strong> Download additional malware</li>
+                    <li><strong>Ransomware Trojans:</strong> Encrypt files for ransom</li>
+                    <li><strong>RAT (Remote Access Trojan):</strong> Enable full remote control</li>
+                    <li><strong>Infostealer Trojans:</strong> Harvest sensitive information</li>
+                </ul>
+                <p><strong>Distribution:</strong> Software downloads, email attachments, fake updates, infected USB drives</p>
+                <p><strong>Related Terms:</strong> Malware, RAT, Backdoor, Social Engineering</p>
+            </div>
+
+            <div class="glossary-term">
+                <span class="term-category">Security Concept</span>
+                <h3>Two-Factor Authentication (2FA)</h3>
+                <p><strong>Definition:</strong> A security mechanism requiring users to provide two different authentication factors to verify their identity.</p>
+                <p><strong>Detailed Explanation:</strong> 2FA is a subset of Multi-Factor Authentication (MFA), specifically requiring exactly two factors. It significantly reduces risk of unauthorized access even if one factor (typically password) is compromised.</p>
+                <p><strong>Common 2FA Methods:</strong></p>
+                <ul>
+                    <li><strong>SMS OTP:</strong> Code sent via text message (less secure)</li>
+                    <li><strong>Authenticator Apps:</strong> TOTP codes (Google Authenticator, Authy)</li>
+                    <li><strong>Hardware Tokens:</strong> Physical devices generating codes (YubiKey)</li>
+                    <li><strong>Push Notifications:</strong> Approve/deny requests on mobile app</li>
+                    <li><strong>Biometrics + Password:</strong> Fingerprint or face recognition</li>
+                </ul>
+                <p><strong>Benefits:</strong> Stronger security than passwords alone, protects against phishing and credential stuffing</p>
+                <p><strong>Related Terms:</strong> Multi-Factor Authentication (MFA), One-Time Password (OTP), Authentication, TOTP</p>
+            </div>
+        </div>
+
+        <!-- U Section -->
+        <div id="U" class="glossary-section">
+            <h2>U</h2>
+            
+            <div class="glossary-term">
+                <span class="term-category">Security Concept</span>
+                <h3>User Access Control (UAC)</h3>
+                <p><strong>Definition:</strong> A Windows security feature that helps prevent unauthorized changes to the operating system by prompting for permission or administrator credentials.</p>
+                <p><strong>Detailed Explanation:</strong> UAC creates a barrier between standard user operations and administrative tasks, requiring explicit consent for privileged actions. This limits malware damage by preventing unauthorized system changes.</p>
+                <p><strong>Protection Mechanisms:</strong></p>
+                <ul>
+                    <li>Prompts for elevation when administrative access needed</li>
+                    <li>Runs applications with standard user privileges by default</li>
+                    <li>Secure desktop for credential input</li>
+                    <li>File and registry virtualization</li>
+                </ul>
+                <p><strong>Related Terms:</strong> Privilege Escalation, Least Privilege, Access Control, Windows Security</p>
+            </div>
+        </div>
+
+        <!-- V Section -->
+        <div id="V" class="glossary-section">
+            <h2>V</h2>
+            
+            <div class="glossary-term">
+                <span class="term-category">Malware</span>
+                <h3>Virus</h3>
+                <p><strong>Definition:</strong> A type of malicious software that replicates by inserting copies of itself into other programs, files, or boot sectors, typically requiring user action to spread.</p>
+                <p><strong>Detailed Explanation:</strong> Viruses attach themselves to host files and execute when the host is run. They can corrupt or delete data, consume system resources, or provide backdoor access to attackers.</p>
+                <p><strong>Virus Types:</strong></p>
+                <ul>
+                    <li><strong>File Infector:</strong> Attaches to executable files</li>
+                    <li><strong>Boot Sector:</strong> Infects master boot record</li>
+                    <li><strong>Macro Virus:</strong> Embedded in documents (Word, Excel)</li>
+                    <li><strong>Polymorphic:</strong> Changes code to evade detection</li>
+                    <li><strong>Metamorphic:</strong> Rewrites itself completely</li>
+                    <li><strong>Multipartite:</strong> Infects multiple targets</li>
+                </ul>
+                <p><strong>Distinction from Worms:</strong> Viruses require host file and user action to spread; worms self-propagate</p>
+                <p><strong>Related Terms:</strong> Malware, Worm, Antivirus, Infection Vector</p>
+            </div>
+
+            <div class="glossary-term">
+                <span class="term-category">Network Tool</span>
+                <h3>VPN (Virtual Private Network)</h3>
+                <p><strong>Definition:</strong> A technology that creates a secure, encrypted connection over a less secure network (like the internet), extending a private network across a public network.</p>
+                <p><strong>Detailed Explanation:</strong> VPNs encrypt all traffic between user device and VPN server, hiding IP address and protecting data from eavesdropping. They're essential for remote work and privacy protection.</p>
+                <p><strong>VPN Types:</strong></p>
+                <ul>
+                    <li><strong>Remote Access VPN:</strong> Connects individual users to private network</li>
+                    <li><strong>Site-to-Site VPN:</strong> Connects entire networks together</li>
+                    <li><strong>SSL VPN:</strong> Browser-based, no client software needed</li>
+                    <li><strong>IPsec VPN:</strong> Network-layer encryption</li>
+                </ul>
+                <p><strong>Uses:</strong> Remote work, privacy protection, bypassing geo-restrictions, securing public Wi-Fi</p>
+                <p><strong>Protocols:</strong> OpenVPN, WireGuard, IKEv2/IPsec, L2TP/IPsec, PPTP (deprecated)</p>
+                <p><strong>Related Terms:</strong> Encryption, Tunneling, Remote Access, Network Security</p>
+            </div>
+
+            <div class="glossary-term">
+                <span class="term-category">Security Concept</span>
+                <h3>Vulnerability</h3>
+                <p><strong>Definition:</strong> A weakness or flaw in a system, application, or network that can be exploited by threats to gain unauthorized access or cause harm.</p>
+                <p><strong>Detailed Explanation:</strong> Vulnerabilities can exist in software code, system configurations, security controls, or procedures. They represent potential entry points for attackers.</p>
+                <p><strong>Vulnerability Types:</strong></p>
+                <ul>
+                    <li><strong>Software Bugs:</strong> Coding errors, buffer overflows, race conditions</li>
+                    <li><strong>Misconfigurations:</strong> Weak settings, default credentials</li>
+                    <li><strong>Design Flaws:</strong> Architectural weaknesses</li>
+                    <li><strong>Missing Updates:</strong> Unpatched known vulnerabilities</li>
+                    <li><strong>Social Engineering:</strong> Human factors</li>
+                </ul>
+                <p><strong>Severity Ratings:</strong> CVSS (Common Vulnerability Scoring System) rates from 0-10</p>
+                <p><strong>Management:</strong> Vulnerability scanning, patch management, security testing, risk assessment</p>
+                <p><strong>Related Terms:</strong> Exploit, Patch, Zero-day, CVE (Common Vulnerabilities and Exposures)</p>
+            </div>
+        </div>
+
+        <!-- W Section -->
+        <div id="W" class="glossary-section">
+            <h2>W</h2>
+            
+            <div class="glossary-term">
+                <span class="term-category">Malware</span>
+                <h3>Worm</h3>
+                <p><strong>Definition:</strong> A self-replicating malware that spreads across networks automatically without requiring user action or host files.</p>
+                <p><strong>Detailed Explanation:</strong> Unlike viruses, worms are standalone programs that propagate independently, often exploiting network vulnerabilities. They can spread rapidly across networks, consuming bandwidth and system resources.</p>
+                <p><strong>Characteristics:</strong></p>
+                <ul>
+                    <li>Self-contained executable programs</li>
+                    <li>Automatic propagation without human intervention</li>
+                    <li>Can spread across networks rapidly</li>
+                    <li>Often exploit specific vulnerabilities</li>
+                    <li>Can carry additional payloads (ransomware, backdoors)</li>
+                </ul>
+                <p><strong>Famous Examples:</strong> Morris Worm (1988), ILOVEYOU, Conficker, WannaCry (crypto-worm)</p>
+                <p><strong>Prevention:</strong> Network segmentation, patch management, firewalls, IDS/IPS, disabling unnecessary services</p>
+                <p><strong>Related Terms:</strong> Malware, Virus, Network Security, Exploit, Patch Management</p>
+            </div>
+        </div>
+
+        <!-- X Section -->
+        <div id="X" class="glossary-section">
+            <h2>X</h2>
+            
+            <div class="glossary-term">
+                <span class="term-category">Attack Type</span>
+                <h3>XSS (Cross-Site Scripting)</h3>
+                <p><strong>Definition:</strong> See Cross-Site Scripting in section C for detailed explanation.</p>
+                <p><strong>Quick Reference:</strong> Web vulnerability allowing attackers to inject malicious scripts into trusted websites, executing in victims' browsers.</p>
+                <p><strong>Related Terms:</strong> Web Application Security, SQL Injection, Input Validation, CSRF</p>
+            </div>
+        </div>
+
+        <!-- Y Section -->
+        <div id="Y" class="glossary-section">
+            <h2>Y</h2>
+            
+            <div class="glossary-term">
+                <span class="term-category">Security Concept</span>
+                <h3>Yellow Team</h3>
+                <p><strong>Definition:</strong> In cybersecurity exercises, the team responsible for building and managing the infrastructure, scenarios, and technical environment for Red Team (attackers) and Blue Team (defenders) exercises.</p>
+                <p><strong>Detailed Explanation:</strong> Yellow Teams ensure exercises run smoothly, manage the test environment, track activities, and help evaluate both Red and Blue team performance without interfering with the simulation.</p>
+                <p><strong>Responsibilities:</strong> Environment setup, scenario development, monitoring, scoring, technical support, post-exercise analysis</p>
+                <p><strong>Related Terms:</strong> Red Team, Blue Team, Purple Team, Penetration Testing</p>
+            </div>
+        </div>
+
+        <!-- Z Section -->
+        <div id="Z" class="glossary-section">
+            <h2>Z</h2>
+            
+            <div class="glossary-term">
+                <span class="term-category">Attack Concept</span>
+                <h3>Zero-Day Exploit</h3>
+                <p><strong>Definition:</strong> An attack that exploits a previously unknown vulnerability in software or hardware, occurring on the same day the vulnerability becomes known to the vendor ("zero days" to fix).</p>
+                <p><strong>Detailed Explanation:</strong> Zero-day exploits are extremely dangerous because no patch exists yet. They're highly valued in underground markets and used in APT attacks and cyber warfare.</p>
+                <p><strong>Lifecycle:</strong></p>
+                <ul>
+                    <li><strong>Day Zero:</strong> Vulnerability discovered (possibly used without vendor knowledge)</li>
+                    <li><strong>Discovery:</strong> Vendor or security researchers become aware</li>
+                    <li><strong>Disclosure:</strong> Vulnerability publicly disclosed (responsible or not)</li>
+                    <li><strong>Patch Development:</strong> Vendor creates fix</li>
+                    <li><strong>Patch Release:</strong> Fix becomes available</li>
+                    <li><strong>Deployment:</strong> Users apply patches</li>
+                </ul>
+                <p><strong>Impact:</strong> High value to attackers, difficult to defend against, can affect millions of users</p>
+                <p><strong>Defense:</strong> Defense-in-depth, anomaly detection, sandboxing, limiting privileges, rapid patch deployment</p>
+                <p><strong>Related Terms:</strong> Vulnerability, Exploit, Patch, APT, Responsible Disclosure</p>
+            </div>
+
+            <div class="glossary-term">
+                <span class="term-category">Security Concept</span>
+                <h3>Zero Trust Architecture</h3>
+                <p><strong>Definition:</strong> A security model that requires strict verification for every person and device trying to access resources, regardless of whether they're inside or outside the network perimeter.</p>
+                <p><strong>Detailed Explanation:</strong> Zero Trust assumes no implicit trust based on network location. It applies the principle "never trust, always verify" to all access requests, continuously validating security posture.</p>
+                <p><strong>Core Principles:</strong></p>
+                <ul>
+                    <li><strong>Verify Explicitly:</strong> Always authenticate and authorize</li>
+                    <li><strong>Least Privilege Access:</strong> Limit access to minimum necessary</li>
+                    <li><strong>Assume Breach:</strong> Design with assumption of compromise</li>
+                    <li><strong>Microsegmentation:</strong> Segment access by workload</li>
+                    <li><strong>Continuous Monitoring:</strong> Constantly assess security posture</li>
+                </ul>
+                <p><strong>Implementation:</strong> Identity and access management (IAM), microsegmentation, encryption, analytics, automation</p>
+                <p><strong>Benefits:</strong> Reduces breach impact, supports remote work, improves visibility, adaptive security</p>
+                <p><strong>Related Terms:</strong> Network Segmentation, IAM, Least Privilege, Microsegmentation, Perimeter Security</p>
+            </div>
+
+            <div class="glossary-term">
+                <span class="term-category">Malware</span>
+                <h3>Zombie Computer</h3>
+                <p><strong>Definition:</strong> A computer that has been infected with malware and is controlled remotely by an attacker, often as part of a botnet, without the owner's knowledge.</p>
+                <p><strong>Detailed Explanation:</strong> Zombie computers (or "bots") are compromised systems used collectively in botnets for malicious activities. Owners typically don't know their devices are infected and being used for attacks.</p>
+                <p><strong>Common Uses:</strong></p>
+                <ul>
+                    <li>DDoS attacks</li>
+                    <li>Spam distribution</li>
+                    <li>Cryptocurrency mining</li>
+                    <li>Credential stuffing</li>
+                    <li>Click fraud</li>
+                </ul>
+                <p><strong>Signs of Infection:</strong> Slow performance, high network activity, unexpected CPU usage, frequent crashes</p>
+                <p><strong>Prevention:</strong> Antivirus software, firewalls, regular updates, safe browsing practices</p>
+                <p><strong>Related Terms:</strong> Botnet, Command and Control (C2), DDoS, Malware</p>
+            </div>
+        </div>
+
+        <script>
+            function searchGlossary() {
+                const input = document.getElementById('searchBox');
+                const filter = input.value.toUpperCase();
+                const terms = document.getElementsByClassName('glossary-term');
+                
+                for (let i = 0; i < terms.length; i++) {
+                    const term = terms[i];
+                    const h3 = term.getElementsByTagName('h3')[0];
+                    const textContent = term.textContent || term.innerText;
+                    
+                    if (textContent.toUpperCase().indexOf(filter) > -1) {
+                        term.style.display = '';
+                    } else {
+                        term.style.display = 'none';
+                    }
+                }
+            }
+        </script>
+    </main>
+
+    <footer>
+        <p>Cyber Security Study Guide | BCC301/BCC401 | AKTU</p>
+        <p>Comprehensive Glossary of Cyber Security Terms, Tools, and Concepts</p>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
