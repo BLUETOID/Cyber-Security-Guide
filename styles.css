@@ -1987,3 +1987,197 @@ body.dark-mode .term-category {
         transform: translateX(-50%) translateY(0);
     }
 }
+
+/* Unit In-Page TOC Navigation */
+.unit-toc {
+    background: var(--card-bg, #f8f9fa);
+    border: 1px solid var(--border-color, #dee2e6);
+    border-left: 4px solid var(--primary-color, #2196F3);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.unit-toc h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--primary-color, #2196F3);
+}
+
+.unit-toc ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 0.4rem;
+}
+
+.unit-toc li a {
+    display: block;
+    padding: 0.3rem 0.5rem;
+    border-radius: 4px;
+    color: var(--text-color, #333);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background 0.2s, color 0.2s;
+}
+
+.unit-toc li a:hover {
+    background: var(--primary-color, #2196F3);
+    color: #fff;
+}
+
+/* ========================================
+   SIDEBAR NAVIGATION
+   ======================================== */
+.sidebar-nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    padding-top: 64px;
+    overflow-y: auto;
+    background: var(--bg-secondary);
+    border-right: 1px solid var(--border-light);
+    z-index: 900;
+    transition: transform 0.3s ease;
+}
+
+.sidebar-nav .sidebar-header {
+    padding: 16px 16px 8px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-nav li a {
+    display: block;
+    padding: 7px 16px 7px 19px;
+    font-size: 13px;
+    color: var(--text-muted);
+    text-decoration: none;
+    border-left: 3px solid transparent;
+    transition: all 0.15s ease;
+    line-height: 1.45;
+}
+
+.sidebar-nav li a:hover {
+    color: var(--text-primary);
+    background: var(--bg-tertiary);
+}
+
+.sidebar-nav li a.active {
+    color: var(--brand-accent);
+    border-left-color: var(--brand-accent);
+    background: var(--bg-accent);
+    font-weight: 600;
+}
+
+.sidebar-nav::-webkit-scrollbar {
+    width: 4px;
+}
+
+.sidebar-nav::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.sidebar-nav::-webkit-scrollbar-thumb {
+    background: var(--border-medium);
+    border-radius: 4px;
+}
+
+/* Adjust main when sidebar is present */
+body.has-sidebar main {
+    margin-left: 250px;
+    max-width: 880px;
+}
+
+/* Mobile sidebar toggle button */
+.sidebar-toggle {
+    display: none;
+    position: fixed;
+    left: 12px;
+    bottom: 80px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--brand-primary);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    box-shadow: var(--shadow-md);
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar-toggle svg {
+    width: 20px;
+    height: 20px;
+    stroke: currentColor;
+    fill: none;
+    stroke-linecap: round;
+}
+
+body.dark-mode .sidebar-toggle {
+    background: var(--brand-accent);
+}
+
+/* Responsive: hide sidebar on smaller screens, show toggle */
+@media (max-width: 1200px) {
+    .sidebar-nav {
+        transform: translateX(-100%);
+        box-shadow: none;
+    }
+
+    .sidebar-nav.mobile-open {
+        transform: translateX(0);
+        box-shadow: var(--shadow-lg);
+    }
+
+    body.has-sidebar main {
+        margin-left: 0;
+        max-width: 880px;
+    }
+
+    .sidebar-toggle {
+        display: flex;
+    }
+}
+
+/* Print: hide sidebar */
+@media print {
+    .sidebar-nav,
+    .sidebar-toggle {
+        display: none !important;
+    }
+
+    body.has-sidebar main {
+        margin-left: 0;
+    }
+}
+
+/* Sidebar overlay for mobile */
+.sidebar-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 899;
+}
+
+.sidebar-overlay.visible {
+    display: block;
+}

@@ -1,6 +1,6 @@
 /**
  * Cyber Security Study Guide - Interactive Features
- * Includes: Dark Mode, Bookmarks, Highlights, Back to Top, Loading
+ * Includes: Dark Mode, Bookmarks, Highlights, Back to Top, Sidebar Nav, Offline Support
  */
 
 // ========================================
@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initBookmarkSystem();
     initHighlightSystem();
     initSmoothScroll();
+    initSidebar();
+    registerServiceWorker();
 });
 
 // ========================================
@@ -452,4 +454,118 @@ function showToast(message) {
         toast.classList.remove('show');
         setTimeout(() => toast.remove(), 300);
     }, 2000);
+}
+
+// ========================================
+// SIDEBAR NAVIGATION
+// ========================================
+function initSidebar() {
+    // Only activate on pages that have section headings with IDs
+    var sectionHeadings = document.querySelectorAll('.content-section h2[id^="section-"]');
+    if (sectionHeadings.length === 0) return;
+
+    // Create sidebar
+    var sidebar = document.createElement('aside');
+    sidebar.className = 'sidebar-nav';
+    sidebar.setAttribute('aria-label', 'Section navigation');
+
+    var header = document.createElement('div');
+    header.className = 'sidebar-header';
+    header.textContent = 'Sections';
+    sidebar.appendChild(header);
+
+    var ul = document.createElement('ul');
+
+    sectionHeadings.forEach(function(h2) {
+        var li = document.createElement('li');
+        var a = document.createElement('a');
+        a.href = '#' + h2.id;
+
+        // Get text content without bookmark button text
+        var text = '';
+        h2.childNodes.forEach(function(node) {
+            if (node.nodeType === 3) {
+                text += node.textContent;
+            } else if (!node.classList || !node.classList.contains('bookmark-btn')) {
+                text += node.textContent;
+            }
+        });
+        a.textContent = text.trim();
+
+        a.addEventListener('click', function(e) {
+            e.preventDefault();
+            h2.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            // Close mobile sidebar
+            sidebar.classList.remove('mobile-open');
+            overlay.classList.remove('visible');
+        });
+
+        li.appendChild(a);
+        ul.appendChild(li);
+    });
+
+    sidebar.appendChild(ul);
+    document.body.appendChild(sidebar);
+    document.body.classList.add('has-sidebar');
+
+    // Mobile overlay
+    var overlay = document.createElement('div');
+    overlay.className = 'sidebar-overlay';
+    document.body.appendChild(overlay);
+
+    // Mobile toggle button
+    var toggle = document.createElement('button');
+    toggle.className = 'sidebar-toggle';
+    toggle.setAttribute('aria-label', 'Toggle section navigation');
+    toggle.innerHTML = '<svg viewBox="0 0 24 24" width="20" height="20"><line x1="3" y1="6" x2="21" y2="6" stroke-width="2"></line><line x1="3" y1="12" x2="21" y2="12" stroke-width="2"></line><line x1="3" y1="18" x2="21" y2="18" stroke-width="2"></line></svg>';
+    toggle.addEventListener('click', function() {
+        var isOpen = sidebar.classList.toggle('mobile-open');
+        overlay.classList.toggle('visible', isOpen);
+    });
+    document.body.appendChild(toggle);
+
+    // Close sidebar on overlay click
+    overlay.addEventListener('click', function() {
+        sidebar.classList.remove('mobile-open');
+        overlay.classList.remove('visible');
+    });
+
+    // Active section highlighting with IntersectionObserver
+    var allLinks = ul.querySelectorAll('a');
+    var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                var id = entry.target.id;
+                allLinks.forEach(function(link) {
+                    link.classList.remove('active');
+                });
+                var activeLink = ul.querySelector('a[href="#' + id + '"]');
+                if (activeLink) {
+                    activeLink.classList.add('active');
+                    // Scroll sidebar to keep active link visible
+                    activeLink.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+                }
+            }
+        });
+    }, {
+        rootMargin: '-70px 0px -60% 0px',
+        threshold: 0
+    });
+
+    sectionHeadings.forEach(function(h2) {
+        observer.observe(h2);
+    });
+}
+
+// ========================================
+// SERVICE WORKER REGISTRATION
+// ========================================
+function registerServiceWorker() {
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('./sw.js').then(function(registration) {
+            console.log('Service Worker registered with scope:', registration.scope);
+        }).catch(function(error) {
+            console.log('Service Worker registration failed:', error);
+        });
+    }
 }
