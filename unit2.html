@@ -427,6 +427,60 @@
                 <li><strong>Automatic Updates:</strong> Keep system and apps current</li>
             </ul>
 
+            <h3>Android vs iOS: Configuration Storage Architecture</h3>
+            <div class="definition">
+                <strong>Architectural Differences:</strong>
+                <p>Unlike Windows desktop operating systems, mobile platforms do NOT use a Windows-style registry. Understanding how Android and iOS store configurations is important for both security management and forensic investigation.</p>
+            </div>
+
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Aspect</th>
+                        <th>Android</th>
+                        <th>iOS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Configuration Storage</strong></td>
+                        <td>XML files, SQLite databases, SharedPreferences API</td>
+                        <td>Property list (plist) files, NSUserDefaults system</td>
+                    </tr>
+                    <tr>
+                        <td><strong>App Data Location</strong></td>
+                        <td>/data/data/[package_name]/ (per-app sandbox)</td>
+                        <td>/var/mobile/Containers/Data/Application/[GUID]/</td>
+                    </tr>
+                    <tr>
+                        <td><strong>System Configuration</strong></td>
+                        <td>system/build.prop, settings.db, accounts.db</td>
+                        <td>SystemConfiguration.plist, preferences directories</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Security Model</strong></td>
+                        <td>Linux-based sandboxing, SELinux policies, app permissions</td>
+                        <td>App sandboxing, entitlements, code signing</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Access Control</strong></td>
+                        <td>Unix file permissions, SELinux contexts</td>
+                        <td>Sandboxing, entitlements, Keychain for credentials</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Forensic Value</strong></td>
+                        <td>SQLite databases, XML files contain user data, app history, credentials</td>
+                        <td>Plist files, SQLite databases contain call logs, messages, browsing history</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p><strong>Key Forensic Artifacts:</strong></p>
+            <ul>
+                <li><strong>Android:</strong> contacts2.db (contacts), mmssms.db (messages), accounts.db (user accounts), browser history, Wi-Fi connection history</li>
+                <li><strong>iOS:</strong> AddressBook.sqlitedb (contacts), sms.db (messages), CallHistory.storedata (call logs), Safari browsing data, location history</li>
+            </ul>
+
             <h3>Enterprise Configuration Management</h3>
             <p>Organizations use Mobile Device Management (MDM) solutions to enforce security configurations:</p>
             <ul>
@@ -580,6 +634,63 @@
                 <li><strong>Evil Maid Attacks:</strong> Physical access to unattended devices</li>
             </ul>
 
+            <div class="definition">
+                <strong>Juice Jacking:</strong>
+                <p>Juice Jacking is a cyber attack where attackers use compromised or malicious public USB charging stations to steal data from mobile devices or install malware.</p>
+
+                <p><strong>How It Works:</strong></p>
+                <ul>
+                    <li>USB cables carry both power AND data through the same connection</li>
+                    <li>Malicious charging stations can read data from connected devices</li>
+                    <li>Attackers may install malware, keyloggers, or spyware during charging</li>
+                    <li>Users often don't realize their device is being compromised while charging</li>
+                </ul>
+
+                <p><strong>Common Locations:</strong> Airports, hotels, shopping malls, conference centers, public transportation hubs</p>
+
+                <p><strong>Prevention Measures:</strong></p>
+                <ul>
+                    <li>Use AC power outlets instead of USB charging stations</li>
+                    <li>Carry portable power banks for emergency charging</li>
+                    <li>Use <strong>USB data blockers</strong> (also called "USB condoms") that allow power but block data</li>
+                    <li>Use charge-only cables that don't have data wires</li>
+                    <li>Decline "Trust this computer?" prompts when charging</li>
+                    <li>Keep devices updated with latest security patches</li>
+                </ul>
+            </div>
+
+            <div class="definition">
+                <strong>SIM Swapping Attack (SIM Hijacking):</strong>
+                <p>SIM Swapping is a social engineering attack where attackers convince a mobile carrier to transfer a victim's phone number to a SIM card controlled by the attacker.</p>
+
+                <p><strong>How It Works:</strong></p>
+                <ol>
+                    <li>Attacker gathers personal information about the victim (through phishing, data breaches, or social media)</li>
+                    <li>Attacker contacts victim's mobile carrier, impersonating the victim</li>
+                    <li>Using gathered information, attacker convinces carrier to transfer the phone number to a new SIM</li>
+                    <li>Victim's phone loses service; all calls and SMS go to attacker's device</li>
+                    <li>Attacker receives SMS-based 2FA codes and can access victim's accounts</li>
+                </ol>
+
+                <p><strong>Impact:</strong></p>
+                <ul>
+                    <li>Bypasses SMS-based two-factor authentication</li>
+                    <li>Enables access to banking apps and cryptocurrency accounts</li>
+                    <li>Allows password resets via SMS verification</li>
+                    <li>Can lead to identity theft and significant financial loss</li>
+                </ul>
+
+                <p><strong>Prevention Measures:</strong></p>
+                <ul>
+                    <li>Use authenticator apps (Google Authenticator, Microsoft Authenticator) instead of SMS for 2FA</li>
+                    <li>Set up a PIN or password with your mobile carrier for account changes</li>
+                    <li>Enable additional carrier security features (port freeze, account lock)</li>
+                    <li>Use hardware security keys (YubiKey) for critical accounts</li>
+                    <li>Be cautious about information shared on social media</li>
+                    <li>Monitor for signs of SIM swapping: sudden loss of service, unexpected carrier notifications</li>
+                </ul>
+            </div>
+
             <h3>Bluetooth-Specific Attacks</h3>
             <table class="academic-table">
                 <thead>
@@ -631,6 +742,23 @@
                 <li><strong>Reputation Damage:</strong> Security breaches affecting organizational image</li>
             </ul>
 
+            <div class="definition">
+                <strong>BYOD (Bring Your Own Device):</strong>
+                <p>BYOD is an organizational policy that allows employees to use their personal mobile devices (smartphones, tablets, laptops) for work-related activities, including accessing corporate email, data, and applications.</p>
+
+                <p><strong>Detailed Explanation:</strong> BYOD policies have become increasingly common as employees prefer using their personal devices for work. While this offers benefits such as increased productivity and employee satisfaction, it introduces significant security challenges that organizations must address.</p>
+
+                <p><strong>Key Characteristics:</strong></p>
+                <ul>
+                    <li><strong>Flexibility:</strong> Employees can work from anywhere using familiar devices</li>
+                    <li><strong>Cost Savings:</strong> Reduced device procurement costs for organizations</li>
+                    <li><strong>Security Concerns:</strong> Personal devices may not meet corporate security standards</li>
+                    <li><strong>Data Protection:</strong> Requires clear policies for handling corporate data on personal devices</li>
+                    <li><strong>MDM Requirements:</strong> Often requires Mobile Device Management solutions</li>
+                    <li><strong>Data Leakage Risk:</strong> Personal apps may access or share corporate data</li>
+                </ul>
+            </div>
+
             <h3>BYOD (Bring Your Own Device) Challenges</h3>
             <table class="academic-table">
                 <thead>
@@ -666,6 +794,24 @@
 
         <section class="content-section">
             <h2 id="section-2-10">2.10 Organizational Measures for Handling Mobile Devices</h2>
+
+            <div class="definition">
+                <strong>MDM (Mobile Device Management):</strong>
+                <p>Mobile Device Management (MDM) is a software solution that allows organizations to monitor, manage, and secure employees' mobile devices deployed across multiple mobile service providers and operating systems.</p>
+
+                <p><strong>Key Features of MDM:</strong></p>
+                <ul>
+                    <li><strong>Device Enrollment:</strong> Automated onboarding of new devices with security policies and configurations</li>
+                    <li><strong>Policy Enforcement:</strong> Centrally deploy and enforce security policies (password requirements, encryption, restrictions)</li>
+                    <li><strong>Remote Wipe:</strong> Ability to erase all data or only corporate data from lost or stolen devices</li>
+                    <li><strong>App Management:</strong> Control which apps can be installed, deploy enterprise apps, and block unauthorized applications</li>
+                    <li><strong>Compliance Monitoring:</strong> Detect non-compliant devices (jailbroken, outdated OS) and take remediation actions</li>
+                    <li><strong>Location Tracking:</strong> Track device location for lost device recovery (with user consent)</li>
+                    <li><strong>Content Management:</strong> Securely distribute and manage corporate documents</li>
+                </ul>
+
+                <p><strong>Popular MDM Solutions:</strong> Microsoft Intune, VMware Workspace ONE, IBM MaaS360, Jamf (for Apple devices), MobileIron</p>
+            </div>
 
             <h3>Technical Measures</h3>
             <ul>
@@ -1056,6 +1202,283 @@
                     <li>Legitimate organizations NEVER ask for OTP/password via SMS or phone call</li>
                     <li>QR code phishing (quishing) is a growing threat in physical and digital environments</li>
                     <li>Report mobile phishing to cybercrime.gov.in (India)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 id="section-2-15">2.15 IoT Security Challenges</h2>
+
+            <div class="definition">
+                <strong>Definition:</strong>
+                <p>The Internet of Things (IoT) refers to the network of physical devices, vehicles, appliances, and other objects embedded with sensors, software, and connectivity that enable them to collect and exchange data. When connected to mobile phones, these devices create new security challenges.</p>
+            </div>
+
+            <h3>Device-Level Vulnerabilities</h3>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Vulnerability</th>
+                        <th>Description</th>
+                        <th>Impact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Limited Processing Power</strong></td>
+                        <td>Many IoT devices have insufficient resources for robust security implementations</td>
+                        <td>Cannot run complex encryption or security software</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Default Credentials</strong></td>
+                        <td>Factory-set usernames and passwords often remain unchanged</td>
+                        <td>Easy unauthorized access (e.g., admin/admin, admin/password)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Lack of Update Mechanism</strong></td>
+                        <td>Many IoT devices have no way to receive security updates</td>
+                        <td>Vulnerabilities remain unpatched indefinitely</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Insufficient Encryption</strong></td>
+                        <td>Data transmitted or stored without adequate encryption</td>
+                        <td>Data interception and theft</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Insecure Boot</strong></td>
+                        <td>Lack of secure boot mechanisms to verify firmware integrity</td>
+                        <td>Malicious firmware installation</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Communication Vulnerabilities</h3>
+            <ul>
+                <li><strong>Insecure Protocols:</strong> Use of HTTP instead of HTTPS, unencrypted Bluetooth, or weak Wi-Fi security</li>
+                <li><strong>Vulnerable Pairing Mechanisms:</strong> Weak authentication during initial device pairing with smartphones</li>
+                <li><strong>Man-in-the-Middle Susceptibility:</strong> Lack of certificate validation allows traffic interception</li>
+                <li><strong>Weak Authentication:</strong> Simple or no authentication between IoT device and mobile app</li>
+                <li><strong>API Security Issues:</strong> Insecure APIs between mobile apps and IoT devices/cloud</li>
+            </ul>
+
+            <h3>Data Privacy Concerns</h3>
+            <ul>
+                <li><strong>Sensitive Data Collection:</strong> Health data (fitness trackers), location data, home activity patterns</li>
+                <li><strong>Cloud Storage Security:</strong> IoT data stored in cloud servers with varying security practices</li>
+                <li><strong>Third-Party Data Sharing:</strong> IoT vendors may share data with partners or advertisers</li>
+                <li><strong>Data Retention:</strong> Unclear policies on how long data is retained</li>
+            </ul>
+
+            <h3>Application Security Issues</h3>
+            <ul>
+                <li><strong>Insecure Companion Apps:</strong> Mobile apps controlling IoT devices may have vulnerabilities</li>
+                <li><strong>Excessive Permissions:</strong> Apps requesting unnecessary access to phone features</li>
+                <li><strong>Poor API Security:</strong> Weak or missing authentication for IoT APIs</li>
+                <li><strong>Hardcoded Credentials:</strong> API keys or passwords embedded in app code</li>
+            </ul>
+
+            <h3>Notable IoT Security Incidents</h3>
+            <ul>
+                <li><strong>Mirai Botnet (2016):</strong> Compromised IoT devices (cameras, routers) launched massive DDoS attacks</li>
+                <li><strong>Smart Home Hacks:</strong> Ring camera compromises allowing attackers to spy on families</li>
+                <li><strong>Medical Device Vulnerabilities:</strong> Insulin pumps and pacemakers with exploitable flaws</li>
+            </ul>
+
+            <h3>Mitigation Strategies</h3>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Strategy</th>
+                        <th>Implementation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Change Default Credentials</strong></td>
+                        <td>Immediately change factory passwords on all IoT devices</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Regular Firmware Updates</strong></td>
+                        <td>Enable automatic updates; check for updates regularly</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Network Segmentation</strong></td>
+                        <td>Place IoT devices on separate network (VLAN) from main devices</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Strong Encryption</strong></td>
+                        <td>Ensure TLS/SSL for data transmission; WPA3 for Wi-Fi</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Disable Unnecessary Features</strong></td>
+                        <td>Turn off features like remote access if not needed</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Monitor Network Traffic</strong></td>
+                        <td>Use network monitoring tools to detect anomalous IoT behavior</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="key-points">
+                <h4>Key Points for Examination:</h4>
+                <ul>
+                    <li>IoT devices often lack sufficient security due to resource constraints</li>
+                    <li>Default credentials are a major vulnerability - always change them</li>
+                    <li>Many IoT devices cannot be updated, creating permanent security risks</li>
+                    <li>Network segmentation helps isolate IoT vulnerabilities</li>
+                    <li>Mirai botnet demonstrated the massive scale of IoT security risks</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 id="section-2-16">2.16 Tools and Technologies for Cybercrime Protection</h2>
+
+            <div class="definition">
+                <strong>Overview:</strong>
+                <p>Protecting against cybercrime requires a layered approach using multiple security tools and technologies. Each tool addresses specific aspects of security, and together they provide comprehensive protection.</p>
+            </div>
+
+            <h3>Network Security Tools</h3>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Tool/Technology</th>
+                        <th>Function</th>
+                        <th>Examples</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Firewall</strong></td>
+                        <td>Monitors and filters incoming/outgoing network traffic based on security rules</td>
+                        <td>pfSense, Cisco ASA, Windows Defender Firewall</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Next-Generation Firewall (NGFW)</strong></td>
+                        <td>Advanced firewall with deep packet inspection, application awareness, and integrated IPS</td>
+                        <td>Palo Alto, Fortinet FortiGate, Check Point</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Intrusion Detection System (IDS)</strong></td>
+                        <td>Monitors network for suspicious activity and alerts administrators</td>
+                        <td>Snort, Suricata, OSSEC</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Intrusion Prevention System (IPS)</strong></td>
+                        <td>Detects and automatically blocks malicious traffic</td>
+                        <td>Suricata, Cisco IPS</td>
+                    </tr>
+                    <tr>
+                        <td><strong>VPN (Virtual Private Network)</strong></td>
+                        <td>Creates encrypted tunnel for secure communication over public networks</td>
+                        <td>OpenVPN, WireGuard, Cisco AnyConnect</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Web Application Firewall (WAF)</strong></td>
+                        <td>Protects web applications from attacks like SQL injection, XSS</td>
+                        <td>ModSecurity, Cloudflare WAF, AWS WAF</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Endpoint Security Tools</h3>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Tool/Technology</th>
+                        <th>Function</th>
+                        <th>Examples</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Antivirus/Anti-Malware</strong></td>
+                        <td>Detects and removes malicious software using signatures and behavior analysis</td>
+                        <td>Windows Defender, Kaspersky, Bitdefender, Malwarebytes</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Endpoint Detection and Response (EDR)</strong></td>
+                        <td>Advanced endpoint monitoring, threat detection, and incident response</td>
+                        <td>CrowdStrike Falcon, Carbon Black, Microsoft Defender for Endpoint</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Data Loss Prevention (DLP)</strong></td>
+                        <td>Prevents unauthorized data transmission outside the organization</td>
+                        <td>Symantec DLP, Microsoft Purview, Digital Guardian</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mobile Security Software</strong></td>
+                        <td>Protects mobile devices from malware, phishing, and network attacks</td>
+                        <td>Lookout, Mobile Defender, Norton Mobile Security</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Encryption Technologies</h3>
+            <ul>
+                <li><strong>TLS/SSL:</strong> Encrypts data in transit between clients and servers (HTTPS)</li>
+                <li><strong>AES (Advanced Encryption Standard):</strong> Industry-standard symmetric encryption for data at rest</li>
+                <li><strong>RSA:</strong> Asymmetric encryption for secure key exchange and digital signatures</li>
+                <li><strong>End-to-End Encryption (E2EE):</strong> Only sender and recipient can decrypt messages (WhatsApp, Signal)</li>
+                <li><strong>Full Disk Encryption:</strong> Encrypts entire storage device (BitLocker, FileVault)</li>
+            </ul>
+
+            <h3>Authentication Technologies</h3>
+            <ul>
+                <li><strong>Multi-Factor Authentication (MFA):</strong> Requires multiple verification factors (password + OTP + biometric)</li>
+                <li><strong>Biometric Authentication:</strong> Fingerprint, face recognition, iris scan</li>
+                <li><strong>Hardware Security Keys:</strong> Physical devices for authentication (YubiKey, Titan Security Key)</li>
+                <li><strong>Single Sign-On (SSO):</strong> One login for multiple applications (Okta, Azure AD)</li>
+                <li><strong>Passwordless Authentication:</strong> FIDO2/WebAuthn standards for password-free login</li>
+            </ul>
+
+            <h3>Security Monitoring and Analysis</h3>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Tool/Technology</th>
+                        <th>Function</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>SIEM (Security Information and Event Management)</strong></td>
+                        <td>Collects, correlates, and analyzes security events from multiple sources for threat detection</td>
+                    </tr>
+                    <tr>
+                        <td><strong>SOAR (Security Orchestration, Automation, and Response)</strong></td>
+                        <td>Automates incident response and security operations workflows</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Threat Intelligence Platforms</strong></td>
+                        <td>Aggregates threat data from multiple sources for proactive defense</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Vulnerability Scanners</strong></td>
+                        <td>Identifies security weaknesses in systems and applications (Nessus, Qualys, OpenVAS)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>User Awareness and Training</h3>
+            <ul>
+                <li><strong>Security Awareness Training:</strong> Regular education on recognizing threats (KnowBe4, Proofpoint)</li>
+                <li><strong>Phishing Simulations:</strong> Controlled phishing tests to assess and improve user awareness</li>
+                <li><strong>Security Policies:</strong> Clear guidelines for acceptable use, password management, incident reporting</li>
+            </ul>
+
+            <div class="key-points">
+                <h4>Key Points for Examination:</h4>
+                <ul>
+                    <li>Defense-in-depth requires multiple layers of security tools</li>
+                    <li>Firewalls filter traffic; IDS detects threats; IPS blocks threats</li>
+                    <li>Encryption protects data at rest (AES, BitLocker) and in transit (TLS/SSL)</li>
+                    <li>MFA significantly reduces account compromise risk</li>
+                    <li>EDR provides advanced endpoint threat detection beyond traditional antivirus</li>
+                    <li>SIEM centralizes security monitoring and threat correlation</li>
+                    <li>User awareness training is essential - humans are often the weakest link</li>
                 </ul>
             </div>
         </section>

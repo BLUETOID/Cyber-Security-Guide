@@ -964,6 +964,629 @@
             </div>
         </section>
 
+        <section class="content-section">
+            <h2 id="section-4-12">4.12 Forensic Image</h2>
+
+            <div class="definition">
+                <strong>Definition:</strong>
+                <p>A <strong>Forensic Image</strong> (also called a forensic copy or bitstream image) is a bit-by-bit, sector-by-sector exact copy of a storage device that captures ALL data, including deleted files, slack space, unallocated space, and file system metadata.</p>
+
+                <p><strong>Key Characteristics:</strong></p>
+                <ul>
+                    <li>Creates exact duplicate of source media at the bit level</li>
+                    <li>Preserves hidden and deleted data not visible to operating system</li>
+                    <li>Captures slack space (unused portions of allocated clusters)</li>
+                    <li>Includes unallocated space where deleted files may reside</li>
+                    <li>Verified using cryptographic hash values (MD5, SHA-256)</li>
+                </ul>
+            </div>
+
+            <h3>Forensic Image vs. Regular Backup</h3>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Forensic Image</th>
+                        <th>Regular Backup</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Bit-by-bit copy of entire storage device</td>
+                        <td>Copies only visible files and folders</td>
+                    </tr>
+                    <tr>
+                        <td>Includes deleted files and slack space</td>
+                        <td>Does not capture deleted data</td>
+                    </tr>
+                    <tr>
+                        <td>Preserves file system metadata exactly</td>
+                        <td>May alter timestamps during copy</td>
+                    </tr>
+                    <tr>
+                        <td>Verified with cryptographic hashes</td>
+                        <td>Usually not cryptographically verified</td>
+                    </tr>
+                    <tr>
+                        <td>Legally admissible as evidence</td>
+                        <td>Not suitable for legal proceedings</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Common Forensic Image Formats</h3>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Format</th>
+                        <th>Description</th>
+                        <th>Tools</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>E01 (EnCase Evidence File)</strong></td>
+                        <td>Compressed format with built-in hash verification; industry standard</td>
+                        <td>EnCase, FTK Imager</td>
+                    </tr>
+                    <tr>
+                        <td><strong>DD/Raw</strong></td>
+                        <td>Uncompressed bit-for-bit copy; universally compatible</td>
+                        <td>dd (Unix), FTK Imager, Guymager</td>
+                    </tr>
+                    <tr>
+                        <td><strong>AFF (Advanced Forensics Format)</strong></td>
+                        <td>Open-source format with compression and metadata support</td>
+                        <td>Autopsy, various open-source tools</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ex01 (EnCase 8+)</strong></td>
+                        <td>Newer EnCase format with improved encryption support</td>
+                        <td>EnCase 8+</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Forensic Imaging Process</h3>
+            <ol>
+                <li><strong>Document Original Media:</strong> Record serial numbers, model, capacity, physical condition</li>
+                <li><strong>Connect Write Blocker:</strong> Use hardware or software write blocker to prevent modification</li>
+                <li><strong>Generate Source Hash:</strong> Calculate MD5/SHA-256 of original before imaging</li>
+                <li><strong>Create Forensic Image:</strong> Use forensic imaging tool to create bit-by-bit copy</li>
+                <li><strong>Verify Image:</strong> Hash the image and compare to source hash (must match exactly)</li>
+                <li><strong>Document Chain of Custody:</strong> Record who handled evidence and when</li>
+                <li><strong>Store Securely:</strong> Preserve original and work only with forensic image copies</li>
+            </ol>
+
+            <div class="key-points">
+                <h4>Key Points for Examination:</h4>
+                <ul>
+                    <li>Forensic image is bit-by-bit exact copy including deleted data and slack space</li>
+                    <li>Different from regular backup which only copies visible files</li>
+                    <li>Common formats: E01 (EnCase), DD/Raw, AFF</li>
+                    <li>Hash verification (MD5/SHA-256) proves image integrity</li>
+                    <li>Analysis performed on image copy, never on original evidence</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 id="section-4-13">4.13 Live Forensics vs. Dead Forensics</h2>
+
+            <div class="definition">
+                <strong>Definition:</strong>
+                <p>Digital forensics investigations can be performed on systems that are either running (live) or powered off (dead). Each approach has distinct advantages and use cases.</p>
+            </div>
+
+            <h3>Live Forensics (Live Analysis)</h3>
+            <div class="definition">
+                <p><strong>Live Forensics</strong> involves collecting and analyzing data from a running system before it is powered off.</p>
+            </div>
+
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Advantages</th>
+                        <th>Disadvantages</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Captures volatile data (RAM, running processes, network connections)</td>
+                        <td>Every action potentially alters evidence</td>
+                    </tr>
+                    <tr>
+                        <td>Observes system in operational state</td>
+                        <td>Requires specialized tools and expertise</td>
+                    </tr>
+                    <tr>
+                        <td>Can access decrypted data if user is logged in</td>
+                        <td>Time pressure - volatile data disappears quickly</td>
+                    </tr>
+                    <tr>
+                        <td>Captures encryption keys that may be in memory</td>
+                        <td>May trigger malware behavior changes</td>
+                    </tr>
+                    <tr>
+                        <td>Identifies active malware and network connections</td>
+                        <td>Difficult to maintain chain of custody documentation</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Dead Forensics (Post-Mortem Analysis)</h3>
+            <div class="definition">
+                <p><strong>Dead Forensics</strong> involves analyzing a system after it has been powered off, typically by creating and examining a forensic image.</p>
+            </div>
+
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Advantages</th>
+                        <th>Disadvantages</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>No risk of altering evidence during examination</td>
+                        <td>Volatile data is lost</td>
+                    </tr>
+                    <tr>
+                        <td>Systematic, repeatable analysis</td>
+                        <td>Encrypted data may be inaccessible</td>
+                    </tr>
+                    <tr>
+                        <td>Evidence remains static and preservable</td>
+                        <td>No visibility into running processes or connections</td>
+                    </tr>
+                    <tr>
+                        <td>Easier to document and maintain chain of custody</td>
+                        <td>Cannot observe malware behavior</td>
+                    </tr>
+                    <tr>
+                        <td>Can create multiple working copies</td>
+                        <td>Full disk encryption may prevent access</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>When to Use Each Approach</h3>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Use Live Forensics When:</th>
+                        <th>Use Dead Forensics When:</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Volatile evidence is critical (RAM contents)</td>
+                        <td>System is already powered off</td>
+                    </tr>
+                    <tr>
+                        <td>Encryption keys may be in memory</td>
+                        <td>Evidence preservation is paramount</td>
+                    </tr>
+                    <tr>
+                        <td>Active threats need identification</td>
+                        <td>Detailed disk analysis is required</td>
+                    </tr>
+                    <tr>
+                        <td>Network connections need documentation</td>
+                        <td>Multiple analyses are needed</td>
+                    </tr>
+                    <tr>
+                        <td>Running malware analysis is needed</td>
+                        <td>Time is not critical</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="key-points">
+                <h4>Key Points for Examination:</h4>
+                <ul>
+                    <li>Live forensics captures volatile data from running systems</li>
+                    <li>Dead forensics analyzes powered-off systems via forensic images</li>
+                    <li>Live forensics risks altering evidence; dead forensics loses volatile data</li>
+                    <li>Order of volatility guides collection priority in live forensics</li>
+                    <li>Many investigations use both approaches for comprehensive analysis</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 id="section-4-14">4.14 Evidence Acquisition Methods</h2>
+
+            <div class="definition">
+                <strong>Definition:</strong>
+                <p>Evidence acquisition is the process of capturing data from storage media for forensic analysis. Different methods are used depending on the investigation requirements and circumstances.</p>
+            </div>
+
+            <h3>Types of Acquisition</h3>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Method</th>
+                        <th>Description</th>
+                        <th>Use Case</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Physical Acquisition</strong></td>
+                        <td>Bit-by-bit copy of entire storage device including all sectors, deleted data, and unallocated space</td>
+                        <td>Full investigations requiring complete evidence; most comprehensive</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Logical Acquisition</strong></td>
+                        <td>Copies visible files and folders as seen by the operating system; does not include deleted or hidden data</td>
+                        <td>Quick triage; when time is limited; partial investigations</td>
+                    </tr>
+                    <tr>
+                        <td><strong>File System Acquisition</strong></td>
+                        <td>Extracts data visible to file system including some deleted file references from file tables</td>
+                        <td>Balance between speed and comprehensiveness</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Targeted/Selective Acquisition</strong></td>
+                        <td>Collects only specific files or folders relevant to investigation</td>
+                        <td>When scope is clearly defined; quick collection needed</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Memory (RAM) Acquisition</strong></td>
+                        <td>Captures volatile memory contents including running processes, encryption keys</td>
+                        <td>Live forensics; malware analysis; encrypted systems</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Write Blockers</h3>
+            <div class="definition">
+                <strong>Definition:</strong>
+                <p>A <strong>Write Blocker</strong> is a hardware or software device that allows read access to a storage device while preventing any write operations, ensuring evidence integrity during acquisition.</p>
+            </div>
+
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Description</th>
+                        <th>Examples</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Hardware Write Blockers</strong></td>
+                        <td>Physical devices inserted between computer and evidence drive; intercept and block write commands</td>
+                        <td>Tableau Forensic Bridges, WiebeTech, CRU</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Software Write Blockers</strong></td>
+                        <td>Operating system level protection that prevents write operations</td>
+                        <td>Windows Registry settings, Linux mount options</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p><strong>Purpose of Write Blockers:</strong></p>
+            <ul>
+                <li>Prevents accidental modification of evidence during imaging</li>
+                <li>Maintains forensic integrity of original media</li>
+                <li>Required for evidence admissibility in court</li>
+                <li>Documents that evidence was not altered after seizure</li>
+            </ul>
+
+            <h3>Acquisition Tools</h3>
+            <ul>
+                <li><strong>FTK Imager:</strong> Free tool for creating forensic images; supports E01, DD formats</li>
+                <li><strong>dd (Unix/Linux):</strong> Command-line tool for raw imaging</li>
+                <li><strong>Guymager:</strong> Open-source Linux imaging tool with GUI</li>
+                <li><strong>EnCase Imager:</strong> Enterprise imaging solution</li>
+                <li><strong>Volatility:</strong> Memory acquisition and analysis</li>
+                <li><strong>Magnet RAM Capture:</strong> Live memory capture</li>
+            </ul>
+
+            <div class="key-points">
+                <h4>Key Points for Examination:</h4>
+                <ul>
+                    <li>Physical acquisition captures entire drive including deleted data</li>
+                    <li>Logical acquisition copies only visible files</li>
+                    <li>Write blockers prevent modification of original evidence</li>
+                    <li>Hardware write blockers are preferred for court admissibility</li>
+                    <li>Memory acquisition captures volatile data from running systems</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 id="section-4-15">4.15 Forensic Tools and Techniques</h2>
+
+            <div class="definition">
+                <strong>Overview:</strong>
+                <p>Forensic investigators use specialized tools to acquire, preserve, examine, and analyze digital evidence. These tools ensure scientific methodology and legal admissibility.</p>
+            </div>
+
+            <h3>Comprehensive Forensic Suites</h3>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Tool</th>
+                        <th>Developer</th>
+                        <th>Key Features</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>EnCase Forensic</strong></td>
+                        <td>OpenText (formerly Guidance)</td>
+                        <td>Industry standard; comprehensive disk analysis; court-accepted; supports multiple file systems; scripting capabilities; network forensics</td>
+                    </tr>
+                    <tr>
+                        <td><strong>FTK (Forensic Toolkit)</strong></td>
+                        <td>AccessData</td>
+                        <td>Distributed processing; password recovery; email analysis; explicit image detection; timeline analysis</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Autopsy</strong></td>
+                        <td>Basis Technology (Open Source)</td>
+                        <td>Free/open-source; plugin architecture; timeline analysis; keyword search; file type identification; hash matching</td>
+                    </tr>
+                    <tr>
+                        <td><strong>X-Ways Forensics</strong></td>
+                        <td>X-Ways Software</td>
+                        <td>Lightweight; fast processing; advanced file carving; disk cloning; memory forensics</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Specialized Forensic Tools</h3>
+
+            <h4>Memory Forensics</h4>
+            <ul>
+                <li><strong>Volatility:</strong> Open-source memory analysis framework; extracts processes, network connections, registry data from RAM dumps</li>
+                <li><strong>Rekall:</strong> Memory forensics framework with advanced analysis capabilities</li>
+                <li><strong>Magnet RAM Capture:</strong> Captures volatile memory from Windows systems</li>
+            </ul>
+
+            <h4>Mobile Forensics</h4>
+            <ul>
+                <li><strong>Cellebrite UFED:</strong> Industry-leading mobile extraction tool; supports thousands of devices</li>
+                <li><strong>Oxygen Forensic:</strong> Mobile device forensics and cloud data extraction</li>
+                <li><strong>AXIOM:</strong> Magnet Forensics' comprehensive digital investigation platform</li>
+            </ul>
+
+            <h4>Network Forensics</h4>
+            <ul>
+                <li><strong>Wireshark:</strong> Packet capture and protocol analysis</li>
+                <li><strong>NetworkMiner:</strong> Network forensic analyzer with file extraction</li>
+                <li><strong>Zeek (Bro):</strong> Network security monitor and traffic analyzer</li>
+            </ul>
+
+            <h3>Key Forensic Techniques</h3>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Technique</th>
+                        <th>Description</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Hash Verification</strong></td>
+                        <td>Calculate MD5/SHA-256 hashes to verify integrity</td>
+                        <td>Proves evidence has not been modified</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Timeline Analysis</strong></td>
+                        <td>Reconstruct chronological sequence of events using file timestamps (MAC times)</td>
+                        <td>Understand when actions occurred</td>
+                    </tr>
+                    <tr>
+                        <td><strong>File Carving</strong></td>
+                        <td>Recover files from raw data using file signatures without file system metadata</td>
+                        <td>Recover deleted files from unallocated space</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Keyword Search</strong></td>
+                        <td>Search evidence for specific terms, patterns, or phrases</td>
+                        <td>Locate relevant evidence quickly</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Registry Analysis</strong></td>
+                        <td>Examine Windows Registry for user activity, installed software, device history</td>
+                        <td>Determine user actions and system configuration</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Log Analysis</strong></td>
+                        <td>Examine system, application, and security logs</td>
+                        <td>Trace events and identify anomalies</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>File Carving</h3>
+            <div class="definition">
+                <p><strong>File Carving</strong> is the process of recovering files from raw data (unallocated space or damaged media) without relying on file system metadata. It works by scanning for known file signatures (headers and footers).</p>
+
+                <p><strong>How File Carving Works:</strong></p>
+                <ol>
+                    <li>Tool scans raw data for known file signatures (magic numbers)</li>
+                    <li>Identifies file headers (e.g., JPEG starts with FFD8)</li>
+                    <li>Locates file footers or calculates file size</li>
+                    <li>Extracts data between header and footer</li>
+                    <li>Reconstructs files regardless of file system state</li>
+                </ol>
+
+                <p><strong>File Carving Tools:</strong> PhotoRec, Foremost, Scalpel, Autopsy</p>
+            </div>
+
+            <div class="key-points">
+                <h4>Key Points for Examination:</h4>
+                <ul>
+                    <li>EnCase and FTK are industry-standard commercial forensic suites</li>
+                    <li>Autopsy is leading open-source forensic platform</li>
+                    <li>Volatility is primary tool for memory forensics</li>
+                    <li>File carving recovers files using signatures, not file system</li>
+                    <li>Timeline analysis reconstructs sequence of events</li>
+                    <li>Hash verification proves evidence integrity</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 id="section-4-16">4.16 Incident Response</h2>
+
+            <div class="definition">
+                <strong>Definition:</strong>
+                <p><strong>Incident Response</strong> is the organized approach to addressing and managing a security breach or cyberattack. The goal is to handle the situation in a way that limits damage, reduces recovery time and costs, and preserves evidence for forensic analysis.</p>
+            </div>
+
+            <h3>Incident Response Phases (NIST Framework)</h3>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Phase</th>
+                        <th>Description</th>
+                        <th>Key Activities</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>1. Preparation</strong></td>
+                        <td>Establishing incident response capabilities before incidents occur</td>
+                        <td>Create IR team; develop policies and procedures; deploy detection tools; conduct training; establish communication channels</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2. Identification</strong></td>
+                        <td>Detecting and determining whether an event is an actual security incident</td>
+                        <td>Monitor alerts; analyze logs; identify scope and severity; classify incident type; document initial findings</td>
+                    </tr>
+                    <tr>
+                        <td><strong>3. Containment</strong></td>
+                        <td>Limiting the damage and preventing further spread of the incident</td>
+                        <td>Short-term: Isolate affected systems, block malicious IPs; Long-term: Apply patches, change credentials; Preserve evidence during containment</td>
+                    </tr>
+                    <tr>
+                        <td><strong>4. Eradication</strong></td>
+                        <td>Removing the threat from the environment</td>
+                        <td>Remove malware; close vulnerabilities; eliminate attacker access; validate systems are clean</td>
+                    </tr>
+                    <tr>
+                        <td><strong>5. Recovery</strong></td>
+                        <td>Restoring systems to normal operation</td>
+                        <td>Restore from clean backups; rebuild systems; monitor for recurrence; gradually restore services</td>
+                    </tr>
+                    <tr>
+                        <td><strong>6. Lessons Learned</strong></td>
+                        <td>Documenting and learning from the incident</td>
+                        <td>Post-incident review; update procedures; improve defenses; document timeline and actions; share appropriate information</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Relationship Between Incident Response and Forensics</h3>
+            <ul>
+                <li><strong>Evidence Collection:</strong> Forensics is critical during containment to preserve evidence</li>
+                <li><strong>Root Cause Analysis:</strong> Forensics determines how the incident occurred</li>
+                <li><strong>Attribution:</strong> Forensic analysis may identify attackers</li>
+                <li><strong>Lessons Learned:</strong> Forensic findings inform security improvements</li>
+                <li><strong>Legal Action:</strong> Forensic evidence supports prosecution or civil action</li>
+            </ul>
+
+            <h3>Incident Response Team (IRT) Roles</h3>
+            <ul>
+                <li><strong>Incident Handler/Lead:</strong> Coordinates response activities</li>
+                <li><strong>Forensic Analyst:</strong> Collects and analyzes evidence</li>
+                <li><strong>Malware Analyst:</strong> Analyzes malicious code</li>
+                <li><strong>Network Administrator:</strong> Implements network containment</li>
+                <li><strong>System Administrator:</strong> Manages affected systems</li>
+                <li><strong>Legal/Compliance:</strong> Handles regulatory and legal aspects</li>
+                <li><strong>Communications:</strong> Manages internal and external communication</li>
+            </ul>
+
+            <div class="key-points">
+                <h4>Key Points for Examination:</h4>
+                <ul>
+                    <li>Six phases: Preparation, Identification, Containment, Eradication, Recovery, Lessons Learned</li>
+                    <li>Forensics is critical during containment for evidence preservation</li>
+                    <li>Containment limits damage; eradication removes threat</li>
+                    <li>Lessons learned phase improves future response</li>
+                    <li>IR team includes technical, legal, and communications roles</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 id="section-4-17">4.17 Forensic Report Writing</h2>
+
+            <div class="definition">
+                <strong>Definition:</strong>
+                <p>A <strong>Forensic Report</strong> is a formal document that presents the findings of a digital forensic investigation in a clear, objective, and legally defensible manner. It must be understandable to both technical and non-technical audiences, including judges and juries.</p>
+            </div>
+
+            <h3>Structure of a Forensic Report</h3>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Section</th>
+                        <th>Contents</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>1. Executive Summary</strong></td>
+                        <td>Brief overview of investigation, key findings, and conclusions; written for non-technical readers (1-2 pages)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2. Scope and Objectives</strong></td>
+                        <td>What was investigated, why, and any limitations or constraints on the investigation</td>
+                    </tr>
+                    <tr>
+                        <td><strong>3. Methodology</strong></td>
+                        <td>Tools used, procedures followed, standards complied with (e.g., ISO 27037, NIST guidelines)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>4. Evidence Summary</strong></td>
+                        <td>List of all evidence items examined; chain of custody references; hash values for verification</td>
+                    </tr>
+                    <tr>
+                        <td><strong>5. Detailed Findings</strong></td>
+                        <td>Technical analysis results; timeline of events; supporting evidence with references to exhibits</td>
+                    </tr>
+                    <tr>
+                        <td><strong>6. Conclusions</strong></td>
+                        <td>Factual findings supported by evidence; avoid speculation; address investigation objectives</td>
+                    </tr>
+                    <tr>
+                        <td><strong>7. Appendices</strong></td>
+                        <td>Hash values, tool outputs, technical details, chain of custody forms, glossary of terms</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Report Writing Best Practices</h3>
+            <ul>
+                <li><strong>Be Objective:</strong> Present facts without bias or assumptions</li>
+                <li><strong>Avoid Jargon:</strong> Use plain language; define technical terms</li>
+                <li><strong>Support Claims:</strong> Every finding must reference supporting evidence</li>
+                <li><strong>Be Precise:</strong> Use exact dates, times, file names, and hash values</li>
+                <li><strong>Visual Aids:</strong> Include timelines, diagrams, and screenshots where helpful</li>
+                <li><strong>Assume Court Presentation:</strong> Write as if the report will be challenged in court</li>
+                <li><strong>Peer Review:</strong> Have another examiner review before submission</li>
+            </ul>
+
+            <div class="key-points">
+                <h4>Key Points for Examination:</h4>
+                <ul>
+                    <li>Forensic reports must be objective, clear, and legally defensible</li>
+                    <li>Executive summary provides overview for non-technical readers</li>
+                    <li>Methodology section documents tools and procedures used</li>
+                    <li>All findings must be supported by referenced evidence</li>
+                    <li>Reports should be written for potential court presentation</li>
+                </ul>
+            </div>
+        </section>
+
         <!-- Unit Summary -->
         <div class="unit-summary">
             <h3>Unit IV Summary</h3>

